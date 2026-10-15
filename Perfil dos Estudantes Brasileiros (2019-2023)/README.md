@@ -1,322 +1,85 @@
-# Perfil dos Estudantes Brasileiros (2015–2024)
+# Perfil dos Estudantes Brasileiros (2019–2023)
 
-> Projeto de Engenharia de Dados e Análise de Dados desenvolvido utilizando SQL no Google BigQuery com dados públicos do INEP disponibilizados pela Base dos Dados.
+> **Pergunta central:** como evoluíram o perfil dos estudantes, a distribuição das matrículas e os indicadores de infraestrutura educacional entre 2019 e 2023?
 
-![Status](https://img.shields.io/badge/Status-Concluído-success)
-![SQL](https://img.shields.io/badge/SQL-GoogleSQL-blue)
-![BigQuery](https://img.shields.io/badge/Google-BigQuery-4285F4)
-![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-orange)
-![Data Engineering](https://img.shields.io/badge/Data-Engineering-purple)
-![Open Data](https://img.shields.io/badge/Open-Data-green)
+![Status](https://img.shields.io/badge/Status-Em%20evolução-success) ![SQL](https://img.shields.io/badge/SQL-GoogleSQL-blue) ![BigQuery](https://img.shields.io/badge/Google-BigQuery-4285F4) ![Power BI](https://img.shields.io/badge/BI-Power%20BI-F2C811)
 
----
+## Visão rápida
 
-# Sobre o Projeto
+Este projeto integra dados do Censo Escolar, do Censo da Educação Superior e de diretórios municipais disponibilizados pela [Base dos Dados](https://basedosdados.org/). A solução transforma fontes com diferentes níveis de granularidade em uma base analítica comum para exploração demográfica, geográfica, institucional e de infraestrutura.
 
-O Brasil disponibiliza um vasto volume de dados educacionais por meio do Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP). Entretanto, essas informações encontram-se distribuídas em diferentes bases, níveis de ensino e estruturas de dados, dificultando análises integradas sobre o perfil dos estudantes brasileiros.
+**Escopo implementado:** 2019–2023. O notebook executado retorna 1.648.945 linhas e 48 colunas; os valores são agregados por dimensões analíticas e não representam uma linha individual por estudante.
 
-Este projeto foi desenvolvido para integrar e transformar essas bases públicas utilizando SQL no Google BigQuery, construindo uma camada analítica consolidada contendo informações da Educação Básica e do Ensino Superior no período de **2015 a 2024**.
+## Insights demonstrados no notebook
 
-A solução aplica conceitos de Engenharia de Dados, Modelagem Analítica e Business Intelligence para disponibilizar uma base consistente, documentada e preparada para consumo em ferramentas analíticas, permitindo estudos demográficos, geográficos, institucionais, socioeconômicos e de infraestrutura educacional.
+- O notebook cobre os cinco anos de 2019 a 2023 e separa Ensino Fundamental, Ensino Médio e Ensino Superior.
+- Na saída registrada para 2019, foram contabilizados 26.923.730 estudantes no Ensino Fundamental, 7.465.891 no Ensino Médio e 8.604.526 no Ensino Superior.
+- Na Educação Básica, o percentual médio de estudantes em escolas com internet no notebook foi de 86,79% no Ensino Fundamental e 92,57% no Ensino Médio em 2019; a métrica deve ser interpretada como média dos agrupamentos, não como média ponderada nacional.
+- Os indicadores de infraestrutura e inclusão possuem valores nulos para dimensões em que a fonte não se aplica, especialmente no Ensino Superior. Isso é uma característica do modelo integrado, não necessariamente ausência do indicador.
 
-Além da construção da base analítica, o projeto demonstra boas práticas de documentação técnica, organização de repositório, padronização de consultas SQL e utilização de Inteligência Artificial como ferramenta de apoio ao desenvolvimento.
+## Prévia visual
 
----
+Os gráficos abaixo são extraídos do notebook executado e permitem avaliar rapidamente a narrativa analítica antes de abrir o Power BI.
 
-# Objetivos
+![Evolução de estudantes por nível de ensino](docs/assets/analise_01.png)
 
-- Integrar múltiplas bases públicas do INEP em uma única camada analítica.
-- Consolidar informações da Educação Básica e do Ensino Superior.
-- Aplicar técnicas de transformação e integração de dados utilizando SQL no Google BigQuery.
-- Construir uma base preparada para consumo em ferramentas de Business Intelligence.
-- Demonstrar boas práticas de Engenharia de Dados, Modelagem Analítica e Governança de Dados.
-- Produzir documentação técnica completa, incluindo dicionário de dados e especificações do projeto.
-- Demonstrar o uso responsável da Inteligência Artificial como apoio ao desenvolvimento de soluções analíticas.
+![Distribuição regional de estudantes](docs/assets/analise_02.png)
 
----
+![Acesso à internet na Educação Básica](docs/assets/analise_03.png)
 
-# Perguntas de Negócio
+![Distribuição por sexo](docs/assets/analise_04.png)
 
-A solução permite responder perguntas como:
-
-- Qual é o perfil demográfico dos estudantes brasileiros?
-- Como estão distribuídas as matrículas por estado e região?
-- Como evoluíram as matrículas entre **2015 e 2024**?
-- Qual a participação da rede pública e privada?
-- Quantos estudantes possuem deficiência?
-- Qual o percentual de escolas com acesso à internet?
-- Como evoluiu a infraestrutura das escolas brasileiras?
-- Qual a disponibilidade de bibliotecas, laboratórios e quadras esportivas?
-- Como está distribuído o ensino superior por área do conhecimento?
-- Qual a participação de estudantes beneficiados por financiamento estudantil?
-- Como evoluíram os indicadores de inclusão educacional ao longo dos anos?
-
----
-
-# Fontes de Dados
-
-Todas as informações utilizadas são provenientes de bases públicas oficiais.
-
-| Fonte | Descrição |
-|--------|-----------|
-| Base dos Dados | Plataforma de acesso aos datasets públicos brasileiros |
-| INEP | Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira |
-| Censo Escolar | Dados da Educação Básica |
-| Censo da Educação Superior | Dados das Instituições de Ensino Superior |
-| IBGE | Diretório Nacional de Municípios |
-
----
-
-# 🛠️ Tecnologias Utilizadas
-
-- SQL (GoogleSQL)
-- Google BigQuery
-- Base dos Dados
-- Git
-- GitHub
-- Business Intelligence
-- Engenharia de Dados
-- Modelagem Analítica
-- ETL / ELT
-- Open Data
-- Inteligência Artificial (ChatGPT)
-
----
-
-# Arquitetura da Solução
+## Arquitetura
 
 ```text
-             Dados Públicos
-      (Base dos Dados / INEP)
-                    │
-                    ▼
-           Google BigQuery
-                    │
-                    ▼
- Extração • Integração • Transformação
-    (SQL • CTEs • JOINs • Agregações)
-                    │
-                    ▼
-      Camada Analítica Consolidada
-                    │
-                    ▼
- Business Intelligence e Dashboards
-   (Power BI • Looker Studio • Qlik)
+INEP / Base dos Dados → BigQuery → CTEs e regras de negócio
+                                      ↓
+                         base analítica consolidada
+                              ↙              ↘
+                    notebook Python       Power BI
 ```
 
----
+## Regras analíticas importantes
 
-# Bases Integradas
+- A Educação Básica e o Ensino Superior são integrados por `UNION ALL`, mas não possuem exatamente as mesmas dimensões disponíveis.
+- No Ensino Superior, algumas dimensões demográficas são marcadas como agregadas e alguns indicadores da Educação Básica ficam nulos.
+- Os percentuais são derivados dos respectivos agrupamentos; não devem ser somados entre linhas.
+- A consulta usa `SAFE_DIVIDE` e tratamento de nulos para evitar erros em denominadores zerados ou campos não aplicáveis.
 
-O projeto integra informações provenientes de diferentes bases públicas:
-
-### Educação Básica
-
-- Matrículas
-- Escolas
-
-### Educação Superior
-
-- Cursos
-- Instituições de Ensino Superior (IES)
-
-### Dados Geográficos
-
-- Estados
-- Municípios
-- Regiões
-
----
-
-# Técnicas SQL Aplicadas
-
-Durante o desenvolvimento foram utilizadas técnicas de SQL Analítico, incluindo:
-
-- Common Table Expressions (CTEs)
-- LEFT JOIN
-- INNER JOIN
-- UNION ALL
-- CASE WHEN
-- COUNT()
-- COUNTIF()
-- SUM()
-- AVG()
-- ROUND()
-- SAFE_DIVIDE()
-- CAST()
-- COALESCE()
-- Window Functions
-- Agregações
-- Indicadores Percentuais
-- Tratamento de valores nulos
-- Padronização de atributos
-
----
-
-# Indicadores Produzidos
-
-Entre os principais indicadores gerados estão:
-
-## Perfil dos Estudantes
-
-- Quantidade de estudantes
-- Distribuição por sexo
-- Distribuição por raça/cor
-- Faixa etária
-- Nacionalidade
-- Estudantes com deficiência
-
-## Indicadores Educacionais
-
-- Matrículas por modalidade
-- Matrículas por etapa de ensino
-- Rede pública x privada
-- Evolução anual das matrículas
-
-## Infraestrutura Escolar
-
-- Internet
-- Biblioteca
-- Laboratórios
-- Quadra esportiva
-- Equipamentos tecnológicos
-
-## Ensino Superior
-
-- Cursos ofertados
-- Instituições de Ensino Superior
-- Financiamento estudantil
-- Reserva de vagas
-- Apoio social
-- Mobilidade acadêmica
-
----
-
-# Uso da Inteligência Artificial
-
-Durante o desenvolvimento do projeto foi utilizada Inteligência Artificial exclusivamente como ferramenta de apoio técnico.
-
-A IA auxiliou em atividades como:
-
-- revisão da lógica das consultas SQL;
-- identificação e correção de erros de sintaxe;
-- validação de JOINs;
-- otimização das consultas;
-- revisão da modelagem analítica;
-- elaboração da documentação técnica;
-- construção do dicionário de dados;
-- organização do repositório;
-- refinamento das especificações funcionais.
-
-Todas as consultas SQL foram desenvolvidas, testadas e validadas manualmente no Google BigQuery utilizando exclusivamente dados públicos oficiais disponibilizados pela Base dos Dados.
-
----
-
-# Estrutura do Projeto
+## Estrutura real
 
 ```text
-perfil-estudantes-brasileiros-2015-2024
-│
-├── README.md
-│
-├── docs/
-│   ├── Projeto_Analise_Dados.md
-│   ├── Dicionario_de_Dados.md
-│   ├── Especificacao_Dashboard.md
-│   └── Arquitetura.md
-│
-├── sql/
-│   ├── consulta_principal.sql
-│   ├── views.sql
-│   └── consultas_auxiliares.sql
-│
-├── prompts/
-│   └── Prompt_Documentacao.md
-│
-├── datasets/
-│
-├── notebooks/
-│
-├── powerbi/
-│
-├── images/
-│
-└── LICENSE
+README.md
+docs/
+├── Dicionario_de_Dados.md
+└── reproducibilidade.md
+power-bi/
+├── bi_perfil_estudante_brasileiro.pbip
+├── bi_perfil_estudante_brasileiro.pbix
+└── especificacao_funcional_do_dashboard.md
+python/
+└── Perfil_Estudantes_Brasileiros.ipynb
+sql/
+└── consulta_principal.sql
 ```
 
----
+A especificação funcional descreve uma evolução de oito páginas. O artefato versionado atual contém uma página e sete visuais; portanto, a especificação deve ser lida como roadmap do dashboard, e não como descrição de uma entrega já concluída.
 
-# Possíveis Aplicações
+## Reprodução
 
-A base produzida pode ser utilizada em:
+1. Leia [`docs/reproducibilidade.md`](docs/reproducibilidade.md).
+2. Configure um projeto Google Cloud próprio para cobrança/quota do BigQuery.
+3. Execute [`sql/consulta_principal.sql`](sql/consulta_principal.sql) no GoogleSQL.
+4. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
+5. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
 
-- Microsoft Power BI
-- Google Looker Studio
-- Tableau
-- Qlik Sense
-- Estudos Acadêmicos
-- Ciência de Dados
-- Engenharia de Dados
-- Business Intelligence
-- Analytics Educacional
-- Avaliação de Políticas Públicas
-- Apoio à Tomada de Decisão
+## Próximos passos
 
----
+- publicar screenshots do dashboard;
+- transformar as oito páginas planejadas em uma entrega implementada ou reduzir a especificação ao escopo atual;
+- adicionar testes de qualidade e métricas DAX para os KPIs documentados;
+- produzir uma análise ponderada nacional para evitar interpretar médias de agrupamentos como totais nacionais.
 
-# Competências Demonstradas
+## Autor
 
-Este projeto evidencia competências práticas nas seguintes áreas:
-
-- Engenharia de Dados
-- SQL (GoogleSQL)
-- Google BigQuery
-- Integração de Dados
-- ETL / ELT
-- Modelagem Analítica
-- Business Intelligence
-- Data Analytics
-- Open Data
-- Governança de Dados
-- Documentação Técnica
-- Versionamento com Git
-- Engenharia de Prompt
-- Inteligência Artificial aplicada à Engenharia de Dados
-
----
-
-# Documentação
-
-A documentação do projeto contempla:
-
-- Descrição da solução
-- Arquitetura analítica
-- Dicionário de Dados
-- Especificação do Dashboard
-- Consultas SQL
-- Organização do repositório
-- Regras de negócio
-- Fontes oficiais dos dados
-
----
-
-# Autor
-
-**Marcelo dos Santos Sampaio**
-
-Especialista em Business Intelligence | Data Analytics | Engenharia de Dados | Governança de Dados | Inteligência Artificial
-
-- **LinkedIn:** https://linkedin.com/in/msampaioac
-- **GitHub:** https://github.com/msampaioac/data-analytics-portfolio
-
----
-
-# Considerações Finais
-
-Este projeto foi desenvolvido com o objetivo de demonstrar competências práticas em Engenharia de Dados, SQL Analítico e Business Intelligence utilizando dados públicos brasileiros disponibilizados pelo INEP por meio da plataforma Base dos Dados.
-
-A solução integra diferentes bases educacionais em uma estrutura analítica consolidada, evidenciando boas práticas de integração, transformação e documentação de dados, além de organização de projetos em ambiente Git.
-
-Mais do que responder perguntas de negócio, o projeto demonstra a capacidade de projetar uma solução analítica completa, desde a compreensão das fontes de dados até a construção de uma base preparada para consumo em ferramentas de Business Intelligence.
-
-Toda a documentação, consultas SQL e estrutura do repositório foram desenvolvidas visando reprodutibilidade, clareza técnica e alinhamento às práticas adotadas em projetos corporativos de Engenharia de Dados e Analytics.
+**Marcelo dos Santos Sampaio** · [LinkedIn](https://linkedin.com/in/msampaioac) · [GitHub](https://github.com/msampaioac)

@@ -1,7 +1,7 @@
 /*==============================================================================
 PROJETO
 ------------------------------------------------------------------------------
-Perfil dos Estudantes Brasileiros (2015–2024)
+Perfil dos Estudantes Brasileiros (2019–2023)
 
 OBJETIVO
 ------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ FONTES DE DADOS
 
 PERÍODO ANALISADO
 ------------------------------------------------------------------------------
-2015 a 2024.
+2019 a 2023.
 
 ==============================================================================*/
 
@@ -113,7 +113,7 @@ WITH educacao_basica AS (
   LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun
     ON m.id_municipio = mun.id_municipio
 
-  WHERE m.ano BETWEEN 2015 AND 2024
+  WHERE m.ano BETWEEN 2019 AND 2023
     AND CAST(m.etapa_ensino AS STRING) IN (
       '14','15','16','17','18','19','20','21','41',
       '25','26','27','28','29','30','31','32','33','34','35','36','37','38'
@@ -214,7 +214,7 @@ educacao_superior AS (
   LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun
     ON c.id_municipio = mun.id_municipio
 
-  WHERE c.ano BETWEEN 2015 AND 2024
+  WHERE c.ano BETWEEN 2019 AND 2023
 
   GROUP BY
     c.ano,

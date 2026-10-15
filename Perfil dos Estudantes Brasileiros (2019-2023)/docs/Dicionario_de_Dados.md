@@ -2,7 +2,7 @@
 
 ## Projeto
 
-**Perfil dos Estudantes Brasileiros (2015–2024)**
+**Perfil dos Estudantes Brasileiros (2019–2023)**
 
 ## Fonte dos Dados
 
@@ -25,7 +25,7 @@ A base foi estruturada para apoiar projetos de Business Intelligence, Analytics,
 
 | Campo | Tipo | Descrição |
 |---|---|---|
-| ano | Inteiro | Ano de referência dos dados, considerando o período de 2015 a 2024. |
+| ano | Inteiro | Ano de referência dos dados, considerando o período de 2019 a 2023. |
 | fonte | Texto | Base de origem dos dados: `CENSO_ESCOLAR` ou `CENSO_SUPERIOR`. |
 | nivel_ensino | Texto | Nível de ensino analisado: Ensino Fundamental, Ensino Médio ou Ensino Superior. |
 | sigla_uf | Texto | Sigla da Unidade da Federação. |
@@ -127,7 +127,7 @@ A base analítica produzida por esta consulta foi desenvolvida para apoiar anál
 
 # Observações Técnicas
 
-- O período analisado compreende os anos de **2015 a 2024**.
+- O período analisado compreende os anos de **2019 a 2023**.
 - Os dados são provenientes exclusivamente de bases públicas oficiais disponibilizadas pela **Base dos Dados**.
 - A consulta integra múltiplas tabelas utilizando **CTEs**, **JOINs**, **agregações**, **tratamento de valores nulos** e **indicadores percentuais**.
 - A base foi projetada para consumo analítico em ferramentas de BI.

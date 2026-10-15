@@ -1,6 +1,6 @@
 # 📊 Storytelling Analítico do Dashboard
 
-# Painel Estratégico da Educação Brasileira (2015–2024)
+# Painel Estratégico da Educação Brasileira (2019–2023)
 
 ## Objetivo Geral
 
@@ -8,7 +8,7 @@ Este documento apresenta a especificação funcional do dashboard desenvolvido e
 
 O objetivo é orientar o desenvolvimento do painel, definindo as principais perguntas de negócio, indicadores estratégicos (KPIs), visualizações, interações e decisões que poderão ser apoiadas pela solução analítica.
 
-O dashboard foi concebido para atender gestores públicos, pesquisadores, profissionais de Business Intelligence, analistas de dados e tomadores de decisão interessados na evolução da educação brasileira entre **2015 e 2024**.
+O dashboard foi concebido para atender gestores públicos, pesquisadores, profissionais de Business Intelligence, analistas de dados e tomadores de decisão interessados na evolução da educação brasileira entre **2019 e 2023**.
 
 ---
 
@@ -33,7 +33,7 @@ Apresentar uma visão consolidada da educação brasileira, permitindo compreend
 
 ## Pergunta principal
 
-> **Como evoluiu a educação brasileira entre 2015 e 2024?**
+> **Como evoluiu a educação brasileira entre 2019 e 2023?**
 
 ## Perguntas respondidas
 
@@ -169,7 +169,7 @@ Avaliar a qualidade da infraestrutura das escolas brasileiras.
 - Quantas possuem biblioteca?
 - Quantas possuem laboratório?
 - Como está a infraestrutura por estado?
-- Houve evolução entre 2015 e 2024?
+- Houve evolução entre 2019 e 2023?
 
 ## KPIs
 
@@ -205,7 +205,7 @@ Avaliar os indicadores relacionados à inclusão educacional.
 
 ## Pergunta principal
 
-> **Como evoluíram os indicadores de inclusão entre 2015 e 2024?**
+> **Como evoluíram os indicadores de inclusão entre 2019 e 2023?**
 
 ## Perguntas respondidas
 
@@ -397,7 +397,7 @@ Fluxo recomendado de exploração do dashboard:
 
 Ao final da navegação, o usuário deverá compreender:
 
-- A evolução da educação brasileira entre **2015 e 2024**.
+- A evolução da educação brasileira entre **2019 e 2023**.
 - O perfil demográfico dos estudantes.
 - A distribuição geográfica das matrículas.
 - As diferenças entre redes pública e privada.
