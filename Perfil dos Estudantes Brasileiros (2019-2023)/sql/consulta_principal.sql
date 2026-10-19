@@ -179,10 +179,11 @@ educacao_superior AS (
     c.tipo_organizacao_administrativa,
 
     -- Métrica principal do Ensino Superior.
-    SUM(c.quantidade_matriculas) AS qtd_estudantes,
+    -- COALESCE evita que uma célula nula anule o total do agrupamento.
+    COALESCE(SUM(c.quantidade_matriculas), 0) AS qtd_estudantes,
 
     -- Indicador de inclusão no Ensino Superior.
-    SUM(c.quantidade_matriculas_deficiencia) AS qtd_com_deficiencia,
+    COALESCE(SUM(c.quantidade_matriculas_deficiencia), 0) AS qtd_com_deficiencia,
 
     CAST(NULL AS INT64) AS qtd_usa_transporte_publico,
 
@@ -199,11 +200,11 @@ educacao_superior AS (
     CAST(NULL AS INT64) AS qtd_em_escola_com_quadra,
 
     -- Indicadores específicos do Ensino Superior.
-    SUM(c.quantidade_matriculas_financiamento) AS qtd_financiamento,
-    SUM(c.quantidade_matriculas_reserva_vaga) AS qtd_reserva_vaga,
-    SUM(c.quantidade_matriculas_apoio_social) AS qtd_apoio_social,
-    SUM(c.quantidade_matriculas_atividade_extracurricular) AS qtd_atividade_extracurricular,
-    SUM(c.quantidade_matriculas_mobilidade_academica) AS qtd_mobilidade_academica
+    COALESCE(SUM(c.quantidade_matriculas_financiamento), 0) AS qtd_financiamento,
+    COALESCE(SUM(c.quantidade_matriculas_reserva_vaga), 0) AS qtd_reserva_vaga,
+    COALESCE(SUM(c.quantidade_matriculas_apoio_social), 0) AS qtd_apoio_social,
+    COALESCE(SUM(c.quantidade_matriculas_atividade_extracurricular), 0) AS qtd_atividade_extracurricular,
+    COALESCE(SUM(c.quantidade_matriculas_mobilidade_academica), 0) AS qtd_mobilidade_academica
 
   FROM `basedosdados.br_inep_censo_educacao_superior.curso` AS c
 
@@ -326,9 +327,15 @@ SELECT
   -- Indicadores percentuais.
   ROUND(SAFE_DIVIDE(SUM(qtd_com_deficiencia), SUM(qtd_estudantes)) * 100, 2) AS perc_com_deficiencia,
   ROUND(SAFE_DIVIDE(SUM(qtd_usa_transporte_publico), SUM(qtd_estudantes)) * 100, 2) AS perc_usa_transporte_publico,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_agua_potavel), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_agua_potavel,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_energia_rede_publica), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_energia_rede_publica,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_esgoto_rede_publica), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_esgoto_rede_publica,
   ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_internet), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_internet,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_internet_alunos), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_internet_alunos,
   ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_biblioteca), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_biblioteca,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_biblioteca_sala_leitura), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_biblioteca_sala_leitura,
   ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_lab_informatica), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_lab_informatica,
+  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_lab_ciencias), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_lab_ciencias,
   ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_quadra), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_quadra,
   ROUND(SAFE_DIVIDE(SUM(qtd_financiamento), SUM(qtd_estudantes)) * 100, 2) AS perc_financiamento,
   ROUND(SAFE_DIVIDE(SUM(qtd_reserva_vaga), SUM(qtd_estudantes)) * 100, 2) AS perc_reserva_vaga,

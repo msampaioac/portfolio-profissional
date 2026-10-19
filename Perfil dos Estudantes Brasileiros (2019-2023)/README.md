@@ -45,6 +45,8 @@ INEP / Base dos Dados → BigQuery → CTEs e regras de negócio
 - No Ensino Superior, algumas dimensões demográficas são marcadas como agregadas e alguns indicadores da Educação Básica ficam nulos.
 - Os percentuais são derivados dos respectivos agrupamentos; não devem ser somados entre linhas.
 - A consulta usa `SAFE_DIVIDE` e tratamento de nulos para evitar erros em denominadores zerados ou campos não aplicáveis.
+- A saída é agregada por dimensões analíticas; `qtd_estudantes` representa registros ou matrículas disponíveis na fonte, e não uma linha individual por estudante.
+- Os percentuais de água, energia, esgoto, internet para alunos, biblioteca/sala de leitura e laboratório de ciências foram incluídos para apoiar a próxima etapa de construção do índice de infraestrutura.
 
 ## Estrutura real
 
@@ -52,6 +54,7 @@ INEP / Base dos Dados → BigQuery → CTEs e regras de negócio
 README.md
 docs/
 ├── Dicionario_de_Dados.md
+├── validacao_consulta.md
 └── reproducibilidade.md
 power-bi/
 ├── bi_perfil_estudante_brasileiro.pbip
@@ -70,8 +73,9 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 1. Leia [`docs/reproducibilidade.md`](docs/reproducibilidade.md).
 2. Configure um projeto Google Cloud próprio para cobrança/quota do BigQuery.
 3. Execute [`sql/consulta_principal.sql`](sql/consulta_principal.sql) no GoogleSQL.
-4. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
-5. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
+4. Execute [`docs/validacao_consulta.md`](docs/validacao_consulta.md) e registre os resultados.
+5. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
+6. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
 
 ## Próximos passos
 

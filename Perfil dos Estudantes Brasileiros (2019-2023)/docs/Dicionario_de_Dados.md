@@ -19,6 +19,10 @@ Este dicionário descreve os campos produzidos pela consulta SQL desenvolvida pa
 
 A base foi estruturada para apoiar projetos de Business Intelligence, Analytics, Ciência de Dados, Engenharia de Dados e avaliação de políticas públicas educacionais.
 
+## Granularidade da saída
+
+Cada linha representa um agrupamento por ano, fonte, nível de ensino, território, unidade de ensino ou curso (quando aplicável), características demográficas disponíveis e demais dimensões institucionais. Portanto, a saída não é uma linha individual por estudante. `qtd_estudantes` representa a soma dos registros ou matrículas disponíveis na fonte para aquele agrupamento; os totais nacionais devem ser calculados a partir das contagens, nunca pela soma ou média simples dos percentuais.
+
 ---
 
 # Dicionário de Campos
@@ -78,9 +82,15 @@ A base foi estruturada para apoiar projetos de Business Intelligence, Analytics,
 |---|---|---|---|
 | perc_com_deficiencia | Decimal | `qtd_com_deficiencia / qtd_estudantes` | Percentual de estudantes com deficiência em relação ao total de estudantes. |
 | perc_usa_transporte_publico | Decimal | `qtd_usa_transporte_publico / qtd_estudantes` | Percentual de estudantes que utilizam transporte escolar público. |
+| perc_em_escola_com_agua_potavel | Decimal | `qtd_em_escola_com_agua_potavel / qtd_estudantes` | Percentual de estudantes em escolas com água potável. |
+| perc_em_escola_com_energia_rede_publica | Decimal | `qtd_em_escola_com_energia_rede_publica / qtd_estudantes` | Percentual de estudantes em escolas com energia da rede pública. |
+| perc_em_escola_com_esgoto_rede_publica | Decimal | `qtd_em_escola_com_esgoto_rede_publica / qtd_estudantes` | Percentual de estudantes em escolas com esgoto da rede pública. |
 | perc_em_escola_com_internet | Decimal | `qtd_em_escola_com_internet / qtd_estudantes` | Percentual de estudantes matriculados em escolas com acesso à internet. |
+| perc_em_escola_com_internet_alunos | Decimal | `qtd_em_escola_com_internet_alunos / qtd_estudantes` | Percentual de estudantes em escolas em que a internet está disponível para alunos. |
 | perc_em_escola_com_biblioteca | Decimal | `qtd_em_escola_com_biblioteca / qtd_estudantes` | Percentual de estudantes matriculados em escolas com biblioteca. |
+| perc_em_escola_com_biblioteca_sala_leitura | Decimal | `qtd_em_escola_com_biblioteca_sala_leitura / qtd_estudantes` | Percentual de estudantes em escolas com biblioteca ou sala de leitura. |
 | perc_em_escola_com_lab_informatica | Decimal | `qtd_em_escola_com_lab_informatica / qtd_estudantes` | Percentual de estudantes matriculados em escolas com laboratório de informática. |
+| perc_em_escola_com_lab_ciencias | Decimal | `qtd_em_escola_com_lab_ciencias / qtd_estudantes` | Percentual de estudantes em escolas com laboratório de ciências. |
 | perc_em_escola_com_quadra | Decimal | `qtd_em_escola_com_quadra / qtd_estudantes` | Percentual de estudantes matriculados em escolas com quadra esportiva. |
 | perc_financiamento | Decimal | `qtd_financiamento / qtd_estudantes` | Percentual de matrículas do Ensino Superior com financiamento estudantil. |
 | perc_reserva_vaga | Decimal | `qtd_reserva_vaga / qtd_estudantes` | Percentual de matrículas realizadas por reserva de vagas. |

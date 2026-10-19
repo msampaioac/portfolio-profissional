@@ -14,6 +14,8 @@
 3. Execute a consulta e valide a existência das colunas descritas no dicionário de dados.
 4. Para evitar custos inesperados, confira a estimativa de bytes processados e use filtros de ano durante a exploração.
 
+5. Execute os testes de [`docs/validacao_consulta.md`](validacao_consulta.md) antes de atualizar o notebook ou o Power BI.
+
 ## Notebook
 
 1. Abra `python/Perfil_Estudantes_Brasileiros.ipynb` no Colab ou Jupyter.
@@ -29,3 +31,4 @@
 - percentuais entre 0 e 100;
 - campos de infraestrutura nulos para registros do Ensino Superior quando não aplicáveis;
 - nenhuma soma direta de percentuais entre agrupamentos.
+- `qtd_estudantes` interpretado como contagem agregada de registros ou matrículas, não como uma linha individual por estudante.
