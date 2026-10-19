@@ -18,7 +18,7 @@ A consulta principal continua sendo a base consolidada do projeto. Os scripts 02
 - O índice só é calculado quando pelo menos seis dos dez indicadores de infraestrutura estão disponíveis.
 - Nulos significam indicador não disponível ou não aplicável; não são automaticamente tratados como infraestrutura ausente.
 - A classificação usa as variáveis do ano `t` para prever o quartil do índice no ano `t+1`.
-- A série de previsão por UF usa médias ponderadas pela quantidade de registros/matrículas.
+- A série de previsão por UF usa médias ponderadas pela quantidade de registros/matrículas. Como o período é anual e começa em 2015, o número de observações depende da atualização disponível na fonte.
 - A escolha de normalização, algoritmo, número de clusters, métricas e hiperparâmetros será feita no Python/Colab.
 
 ## Tabelas esperadas

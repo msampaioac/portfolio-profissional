@@ -2,7 +2,7 @@
 
 ## Projeto
 
-**Perfil dos Estudantes Brasileiros (2019–2023)**
+**Perfil dos Estudantes Brasileiros (2015–ano corrente)**
 
 ## Fonte dos Dados
 
@@ -29,7 +29,7 @@ Cada linha representa um agrupamento por ano, fonte, nível de ensino, territór
 
 | Campo | Tipo | Descrição |
 |---|---|---|
-| ano | Inteiro | Ano de referência dos dados, considerando o período de 2019 a 2023. |
+| ano | Inteiro | Ano de referência dos dados, considerando os anos disponíveis desde 2015 até o ano corrente da execução. |
 | fonte | Texto | Base de origem dos dados: `CENSO_ESCOLAR` ou `CENSO_SUPERIOR`. |
 | nivel_ensino | Texto | Nível de ensino analisado: Ensino Fundamental, Ensino Médio ou Ensino Superior. |
 | sigla_uf | Texto | Sigla da Unidade da Federação. |
@@ -137,7 +137,7 @@ A base analítica produzida por esta consulta foi desenvolvida para apoiar anál
 
 # Observações Técnicas
 
-- O período analisado compreende os anos de **2019 a 2023**.
+- O período analisado começa em **2015** e termina no ano corrente da execução, usando `EXTRACT(YEAR FROM CURRENT_DATE())`.
 - Os dados são provenientes exclusivamente de bases públicas oficiais disponibilizadas pela **Base dos Dados**.
 - A consulta integra múltiplas tabelas utilizando **CTEs**, **JOINs**, **agregações**, **tratamento de valores nulos** e **indicadores percentuais**.
 - A base foi projetada para consumo analítico em ferramentas de BI.

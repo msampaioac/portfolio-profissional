@@ -1,6 +1,6 @@
-# Perfil dos Estudantes Brasileiros (2019–2023)
+# Perfil dos Estudantes Brasileiros (2015–ano corrente)
 
-> **Pergunta central:** como evoluíram o perfil dos estudantes, a distribuição das matrículas e os indicadores de infraestrutura educacional entre 2019 e 2023?
+> **Pergunta central:** como evoluíram o perfil dos estudantes, a distribuição das matrículas e os indicadores de infraestrutura educacional desde 2015 até o ano corrente?
 
 ![Status](https://img.shields.io/badge/Status-Em%20evolução-success) ![SQL](https://img.shields.io/badge/SQL-GoogleSQL-blue) ![BigQuery](https://img.shields.io/badge/Google-BigQuery-4285F4) ![Power BI](https://img.shields.io/badge/BI-Power%20BI-F2C811)
 
@@ -8,13 +8,13 @@
 
 Este projeto integra dados do Censo Escolar, do Censo da Educação Superior e de diretórios municipais disponibilizados pela [Base dos Dados](https://basedosdados.org/). A solução transforma fontes com diferentes níveis de granularidade em uma base analítica comum para exploração demográfica, geográfica, institucional e de infraestrutura.
 
-**Escopo implementado:** 2019–2023. O notebook executado retorna 1.648.945 linhas e 48 colunas; os valores são agregados por dimensões analíticas e não representam uma linha individual por estudante.
+**Escopo SQL:** 2015 até o ano corrente da execução. O notebook versionado contém uma execução histórica e retorna 1.648.945 linhas e 48 colunas; os valores são agregados por dimensões analíticas e não representam uma linha individual por estudante.
 
 ## Insights demonstrados no notebook
 
-- O notebook cobre os cinco anos de 2019 a 2023 e separa Ensino Fundamental, Ensino Médio e Ensino Superior.
-- Na saída registrada para 2019, foram contabilizados 26.923.730 estudantes no Ensino Fundamental, 7.465.891 no Ensino Médio e 8.604.526 no Ensino Superior.
-- Na Educação Básica, o percentual médio de estudantes em escolas com internet no notebook foi de 86,79% no Ensino Fundamental e 92,57% no Ensino Médio em 2019; a métrica deve ser interpretada como média dos agrupamentos, não como média ponderada nacional.
+- A consulta SQL cobre os anos disponíveis desde 2015 até o ano corrente e separa Ensino Fundamental, Ensino Médio e Ensino Superior.
+- Na execução histórica registrada para 2019, foram contabilizados 26.923.730 estudantes no Ensino Fundamental, 7.465.891 no Ensino Médio e 8.604.526 no Ensino Superior.
+- Na execução histórica do notebook, o percentual médio de estudantes em escolas com internet no notebook foi de 86,79% no Ensino Fundamental e 92,57% no Ensino Médio em 2019; a métrica deve ser interpretada como média dos agrupamentos, não como média ponderada nacional.
 - Os indicadores de infraestrutura e inclusão possuem valores nulos para dimensões em que a fonte não se aplica, especialmente no Ensino Superior. Isso é uma característica do modelo integrado, não necessariamente ausência do indicador.
 
 ## Prévia visual
@@ -87,14 +87,15 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 5. Execute [`docs/validacao_consulta.md`](docs/validacao_consulta.md) e registre os resultados.
 6. Leia [`docs/modelagem_sql.md`](docs/modelagem_sql.md) para criar as tabelas específicas de modelagem.
 7. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
-8. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
+8. Valide o período efetivamente retornado, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
 
 ## Próximos passos
 
 - publicar screenshots do dashboard;
 - transformar as oito páginas planejadas em uma entrega implementada ou reduzir a especificação ao escopo atual;
 - adicionar testes de qualidade e métricas DAX para os KPIs documentados;
-- produzir uma análise ponderada nacional para evitar interpretar médias de agrupamentos como totais nacionais.
+- produzir uma análise ponderada nacional para evitar interpretar médias de agrupamentos como totais nacionais;
+- reexecutar o notebook no Colab para atualizar os outputs e gráficos para a janela 2015–ano corrente;
 - criar os notebooks de clusterização, classificação e previsão no Colab a partir das tabelas de modelagem.
 
 ## Autor

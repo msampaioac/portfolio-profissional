@@ -1,5 +1,5 @@
 /*=============================================================================
-PROJETO: Perfil dos Estudantes Brasileiros (2019–2023)
+PROJETO: Perfil dos Estudantes Brasileiros (2015–ano corrente)
 ARQUIVO: 06_serie_temporal_previsao.sql
 
 OBJETIVO
@@ -7,9 +7,10 @@ OBJETIVO
 Gerar uma série anual por UF para previsão no Colab. O índice estadual é uma
 média ponderada pelo número de registros/matrículas do município.
 
-Com apenas cinco anos, esta saída deve ser usada inicialmente para validação
-descritiva e comparação de baselines. Modelos complexos exigem atualização do
-período ou uma série com maior frequência.
+A quantidade de observações depende do último ano disponível na fonte. Esta
+saída deve ser usada inicialmente para validação descritiva e comparação de
+baselines. Se houver poucas observações, modelos complexos exigem uma série
+mais longa ou uma frequência maior.
 ==============================================================================*/
 
 SELECT

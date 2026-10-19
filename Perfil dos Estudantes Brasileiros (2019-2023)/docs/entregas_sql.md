@@ -2,6 +2,8 @@
 
 Esta pasta contém a evolução do Projeto 01 — **Perfil dos Estudantes Brasileiros**. A camada SQL foi organizada para separar a consulta consolidada do preparo específico para análise de infraestrutura, clusterização, classificação e previsão.
 
+Todos os scripts que consultam diretamente as fontes usam a janela `2015` até `EXTRACT(YEAR FROM CURRENT_DATE())`. Assim, novas execuções incorporam automaticamente os anos que já estiverem disponíveis na fonte. O ano corrente do calendário não implica que o dado daquele ano já tenha sido publicado pelo INEP.
+
 ## Visão geral do fluxo
 
 ```text
@@ -291,7 +293,7 @@ Municípios com quantidades muito diferentes de estudantes não devem ter o mesm
 
 ### Limitação atual
 
-O período de 2019 a 2023 possui apenas cinco observações anuais por UF. Portanto, a primeira utilização deve comparar baselines e servir como exercício metodológico. Modelos complexos exigem uma série mais longa ou uma frequência maior.
+A série anual começa em 2015 e termina no último ano disponível na execução. Antes de aplicar modelos complexos, confira a quantidade de observações por UF; caso ainda sejam poucas, compare primeiro baselines e trate a previsão como exercício metodológico.
 
 ### Modelos que serão testados no Colab
 

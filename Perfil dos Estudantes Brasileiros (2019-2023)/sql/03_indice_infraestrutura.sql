@@ -1,5 +1,5 @@
 /*=============================================================================
-PROJETO: Perfil dos Estudantes Brasileiros (2019–2023)
+PROJETO: Perfil dos Estudantes Brasileiros (2015–ano corrente)
 ARQUIVO: 03_indice_infraestrutura.sql
 
 OBJETIVO

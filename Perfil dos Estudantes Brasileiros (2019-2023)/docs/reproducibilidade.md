@@ -10,7 +10,7 @@
 ## SQL
 
 1. Abra `sql/consulta_principal.sql` no BigQuery usando GoogleSQL.
-2. Confirme que o período está entre 2019 e 2023.
+2. Confirme que o período retornado começa em 2015 e termina no maior ano disponível no momento da execução.
 3. Execute a consulta e valide a existência das colunas descritas no dicionário de dados.
 4. Para evitar custos inesperados, confira a estimativa de bytes processados e use filtros de ano durante a exploração.
 
@@ -26,7 +26,8 @@
 
 ## Validações mínimas
 
-- anos presentes: 2019, 2020, 2021, 2022 e 2023;
+- ano inicial esperado: 2015;
+- ano final esperado: maior ano disponível na fonte no momento da execução;
 - níveis de ensino esperados: Fundamental, Médio e Superior;
 - percentuais entre 0 e 100;
 - campos de infraestrutura nulos para registros do Ensino Superior quando não aplicáveis;

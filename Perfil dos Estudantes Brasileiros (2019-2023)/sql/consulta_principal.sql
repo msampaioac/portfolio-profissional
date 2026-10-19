@@ -1,7 +1,7 @@
 /*==============================================================================
 PROJETO
 ------------------------------------------------------------------------------
-Perfil dos Estudantes Brasileiros (2019–2023)
+Perfil dos Estudantes Brasileiros (2015–ano corrente)
 
 OBJETIVO
 ------------------------------------------------------------------------------
@@ -23,11 +23,16 @@ FONTES DE DADOS
 4. basedosdados.br_inep_censo_educacao_superior.ies
 5. basedosdados.br_bd_diretorios_brasil.municipio
 
-PERÍODO ANALISADO
+JANELA TEMPORAL
 ------------------------------------------------------------------------------
-2019 a 2023.
+2015 até o ano corrente no momento da execução.
+
+A janela final é dinâmica e usa EXTRACT(YEAR FROM CURRENT_DATE()).
 
 ==============================================================================*/
+
+DECLARE ano_inicio INT64 DEFAULT 2015;
+DECLARE ano_fim INT64 DEFAULT EXTRACT(YEAR FROM CURRENT_DATE());
 
 /*==============================================================================
 CTE: educacao_basica
@@ -113,7 +118,7 @@ WITH educacao_basica AS (
   LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun
     ON m.id_municipio = mun.id_municipio
 
-  WHERE m.ano BETWEEN 2019 AND 2023
+  WHERE m.ano BETWEEN ano_inicio AND ano_fim
     AND CAST(m.etapa_ensino AS STRING) IN (
       '14','15','16','17','18','19','20','21','41',
       '25','26','27','28','29','30','31','32','33','34','35','36','37','38'
@@ -215,7 +220,7 @@ educacao_superior AS (
   LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun
     ON c.id_municipio = mun.id_municipio
 
-  WHERE c.ano BETWEEN 2019 AND 2023
+  WHERE c.ano BETWEEN ano_inicio AND ano_fim
 
   GROUP BY
     c.ano,
