@@ -32,11 +32,13 @@ Os gráficos abaixo são extraídos do notebook executado e permitem avaliar rap
 ## Arquitetura
 
 ```text
-INEP / Base dos Dados → BigQuery → CTEs e regras de negócio
+INEP / Base dos Dados → BigQuery → base consolidada
                                       ↓
-                         base analítica consolidada
-                              ↙              ↘
-                    notebook Python       Power BI
+                      base município-ano e indicadores
+                             ↙          ↓          ↘
+                    clusterização  classificação  previsão
+                             ↘          ↓          ↙
+                           Python/Colab e Power BI
 ```
 
 ## Regras analíticas importantes
@@ -54,6 +56,7 @@ INEP / Base dos Dados → BigQuery → CTEs e regras de negócio
 README.md
 docs/
 ├── Dicionario_de_Dados.md
+├── modelagem_sql.md
 ├── validacao_consulta.md
 └── reproducibilidade.md
 power-bi/
@@ -63,7 +66,13 @@ power-bi/
 python/
 └── Perfil_Estudantes_Brasileiros.ipynb
 sql/
-└── consulta_principal.sql
+├── consulta_principal.sql
+├── 02_base_infraestrutura_municipio_ano.sql
+├── 03_indice_infraestrutura.sql
+├── 04_base_modelagem_cluster.sql
+├── 05_base_modelagem_classificacao.sql
+├── 06_serie_temporal_previsao.sql
+└── 07_validacoes_modelagem.sql
 ```
 
 A especificação funcional descreve uma evolução de oito páginas. O artefato versionado atual contém uma página e sete visuais; portanto, a especificação deve ser lida como roadmap do dashboard, e não como descrição de uma entrega já concluída.
@@ -74,8 +83,9 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 2. Configure um projeto Google Cloud próprio para cobrança/quota do BigQuery.
 3. Execute [`sql/consulta_principal.sql`](sql/consulta_principal.sql) no GoogleSQL.
 4. Execute [`docs/validacao_consulta.md`](docs/validacao_consulta.md) e registre os resultados.
-5. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
-6. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
+5. Leia [`docs/modelagem_sql.md`](docs/modelagem_sql.md) para criar as tabelas específicas de modelagem.
+6. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
+7. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
 
 ## Próximos passos
 
@@ -83,6 +93,7 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 - transformar as oito páginas planejadas em uma entrega implementada ou reduzir a especificação ao escopo atual;
 - adicionar testes de qualidade e métricas DAX para os KPIs documentados;
 - produzir uma análise ponderada nacional para evitar interpretar médias de agrupamentos como totais nacionais.
+- criar os notebooks de clusterização, classificação e previsão no Colab a partir das tabelas de modelagem.
 
 ## Autor
 
