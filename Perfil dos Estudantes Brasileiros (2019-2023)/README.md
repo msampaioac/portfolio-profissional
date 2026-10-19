@@ -56,6 +56,7 @@ INEP / Base dos Dados → BigQuery → base consolidada
 README.md
 docs/
 ├── Dicionario_de_Dados.md
+├── entregas_sql.md
 ├── modelagem_sql.md
 ├── validacao_consulta.md
 └── reproducibilidade.md
@@ -80,12 +81,13 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 ## Reprodução
 
 1. Leia [`docs/reproducibilidade.md`](docs/reproducibilidade.md).
-2. Configure um projeto Google Cloud próprio para cobrança/quota do BigQuery.
-3. Execute [`sql/consulta_principal.sql`](sql/consulta_principal.sql) no GoogleSQL.
-4. Execute [`docs/validacao_consulta.md`](docs/validacao_consulta.md) e registre os resultados.
-5. Leia [`docs/modelagem_sql.md`](docs/modelagem_sql.md) para criar as tabelas específicas de modelagem.
-6. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
-7. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
+2. Leia [`docs/entregas_sql.md`](docs/entregas_sql.md) para entender o que cada script entrega.
+3. Configure um projeto Google Cloud próprio para cobrança/quota do BigQuery.
+4. Execute [`sql/consulta_principal.sql`](sql/consulta_principal.sql) no GoogleSQL.
+5. Execute [`docs/validacao_consulta.md`](docs/validacao_consulta.md) e registre os resultados.
+6. Leia [`docs/modelagem_sql.md`](docs/modelagem_sql.md) para criar as tabelas específicas de modelagem.
+7. Para a exploração em Python, abra o notebook e ajuste `project_id` para o seu projeto.
+8. Valide o período, os totais por nível de ensino e os nulos esperados antes de construir visualizações.
 
 ## Próximos passos
 
