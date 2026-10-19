@@ -1,8 +1,0 @@
-expression base-dados = "D:\05_ANALISE_DADOS\Perfil dos Estudantes Brasileiros (2019-2023)\power_bi\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: a535010b-9655-42b4-a822-42f34d299e99
-	queryGroup: '01 - Endereço'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Text
-
