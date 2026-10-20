@@ -19,6 +19,12 @@ Este dicionário descreve os campos produzidos pela consulta SQL desenvolvida pa
 
 A base foi estruturada para apoiar projetos de Business Intelligence, Analytics, Ciência de Dados, Engenharia de Dados e avaliação de políticas públicas educacionais.
 
+## Snapshot da estrutura observada
+
+Na execução de referência incorporada ao notebook, a saída apresentou **54 colunas**, **4.582.798 linhas** e cobertura de **2015 a 2024**. A estrutura esperada pode variar quando a fonte for atualizada, mas os nomes documentados neste arquivo correspondem ao contrato analítico atual da consulta.
+
+Na execução de referência, o indicador `perc_em_escola_com_internet` da Educação Básica teve cobertura observada até 2020, enquanto a base integrada alcançou 2024. Indicadores distintos podem ter períodos de disponibilidade diferentes.
+
 ## Granularidade da saída
 
 Cada linha representa um agrupamento por ano, fonte, nível de ensino, território, unidade de ensino ou curso (quando aplicável), características demográficas disponíveis e demais dimensões institucionais. Portanto, a saída não é uma linha individual por estudante. `qtd_estudantes` representa a soma dos registros ou matrículas disponíveis na fonte para aquele agrupamento; os totais nacionais devem ser calculados a partir das contagens, nunca pela soma ou média simples dos percentuais.

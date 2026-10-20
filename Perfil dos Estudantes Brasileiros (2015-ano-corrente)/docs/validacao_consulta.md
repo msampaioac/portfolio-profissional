@@ -8,6 +8,27 @@ A consulta principal deve ser validada antes do consumo no Power BI ou no notebo
 2. Para executar os testes abaixo, salve o resultado em uma tabela temporária ou substitua `projeto.dataset.perfil_estudantes_2015_atual` pelo nome da tabela criada.
 3. Registre a data da execução, o período consultado e a estimativa de bytes processados.
 
+## Evidência da última execução registrada
+
+O notebook executado e versionado apresentou **4.582.798 linhas**, **54 colunas** e anos de **2015 a 2024**. A tabela de cobertura mostrou a seguinte quantidade agregada de estudantes por ano:
+
+| Ano | Linhas | Estudantes | Municípios |
+|---:|---:|---:|---:|
+| 2015 | 704.689 | 42.856.884 | 5.570 |
+| 2016 | 708.667 | 43.404.552 | 5.570 |
+| 2017 | 711.621 | 43.434.265 | 5.570 |
+| 2018 | 712.265 | 43.321.783 | 5.570 |
+| 2019 | 702.502 | 42.994.147 | 5.570 |
+| 2020 | 695.492 | 42.950.528 | 5.570 |
+| 2021 | 72.429 | 8.987.120 | 3.042 |
+| 2022 | 84.989 | 9.444.116 | 3.310 |
+| 2023 | 93.533 | 9.977.217 | 3.495 |
+| 2024 | 96.611 | 10.227.266 | 3.551 |
+
+A redução de cobertura observada a partir de 2021 deve ser investigada antes de comparações temporais nacionais. Ela pode refletir diferenças de disponibilidade, granularidade ou atualização das fontes integradas; não deve ser interpretada automaticamente como queda real de matrículas.
+
+Além disso, o indicador `perc_em_escola_com_internet` utilizado na visualização ponderada da Educação Básica apresentou dados até 2020 nesta execução. A cobertura de cada indicador deve ser verificada separadamente, e não apenas pelo `MIN(ano)` e `MAX(ano)` da base integrada.
+
 ## Testes recomendados
 
 ### Cobertura do período e dos níveis

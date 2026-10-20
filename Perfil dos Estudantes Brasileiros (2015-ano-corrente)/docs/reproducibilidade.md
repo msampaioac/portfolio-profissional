@@ -7,6 +7,20 @@
 - Python 3.10+ ou Google Colab;
 - bibliotecas `basedosdados`, `google-cloud-bigquery`, `pandas`, `matplotlib` e `seaborn`.
 
+## Snapshot validado da execução mais recente
+
+A versão executada e incorporada ao repositório em 20/10/2026 apresentou:
+
+- **4.582.798 linhas** e **54 colunas**;
+- cobertura de **2015 a 2024**;
+- níveis `ENSINO_FUNDAMENTAL`, `ENSINO_MEDIO` e `ENSINO_SUPERIOR`;
+- fontes `CENSO_ESCOLAR` e `CENSO_SUPERIOR`;
+- saídas gráficas atualizadas em `docs/assets/analise_01.png` a `analise_04.png`.
+
+O indicador de conectividade da Educação Básica utilizado no gráfico ponderado apresentou cobertura até 2020 nesta execução, embora a base integrada contenha registros até 2024. Essa diferença de cobertura deve ser registrada antes de comparar todos os indicadores no mesmo horizonte temporal.
+
+Esses números são um registro da execução, não valores fixos da consulta. Uma nova execução pode ampliar o ano final ou alterar a cobertura conforme a atualização das fontes.
+
 ## SQL
 
 1. Abra `sql/consulta_principal.sql` no BigQuery usando GoogleSQL.

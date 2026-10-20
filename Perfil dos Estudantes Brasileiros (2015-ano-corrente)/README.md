@@ -26,7 +26,9 @@ Este projeto transforma dados públicos do INEP em uma base analítica para resp
 
 Este projeto integra dados do Censo Escolar, do Censo da Educação Superior e de diretórios municipais disponibilizados pela [Base dos Dados](https://basedosdados.org/). A solução transforma fontes com diferentes níveis de granularidade em uma base analítica comum para exploração demográfica, geográfica, institucional e de infraestrutura.
 
-**Escopo SQL:** 2015 até o ano corrente da execução, usando `EXTRACT(YEAR FROM CURRENT_DATE())` como limite superior. O notebook versionado contém uma execução histórica de 2019–2023; seus outputs e gráficos precisam ser reexecutados para refletir os anos mais recentes disponíveis.
+**Escopo SQL:** 2015 até o ano corrente da execução, usando `EXTRACT(YEAR FROM CURRENT_DATE())` como limite superior.
+
+**Snapshot da execução versionada:** a execução mais recente retornou **4.582.798 linhas e 54 colunas**, com anos de **2015 a 2024**, os níveis `ENSINO_FUNDAMENTAL`, `ENSINO_MEDIO` e `ENSINO_SUPERIOR`, e as fontes `CENSO_ESCOLAR` e `CENSO_SUPERIOR`. O ano final depende da atualização disponível na Base dos Dados.
 
 **Granularidade:** as saídas são agregadas por dimensões analíticas. `qtd_estudantes` representa registros ou matrículas disponíveis na fonte, e não uma linha individual por estudante.
 
@@ -53,27 +55,27 @@ Este projeto integra dados do Censo Escolar, do Censo da Educação Superior e d
 
 Detalhes de cada entrega estão em [`docs/entregas_sql.md`](docs/entregas_sql.md).
 
-## Prévia visual — execução histórica
+## Prévia visual — execução 2015–2024
 
-Os gráficos abaixo são uma prévia da narrativa analítica produzida pelo notebook versionado. Eles representam uma execução histórica de 2019–2023, não a janela dinâmica completa desde 2015. Após a execução das consultas no BigQuery, o notebook deverá ser reexecutado e estas imagens deverão ser substituídas.
+Os gráficos abaixo foram extraídos da execução mais recente do notebook versionado. A consulta utiliza uma janela dinâmica, portanto os gráficos devem ser regenerados quando novos anos forem publicados na fonte.
 
 ### Evolução das matrículas por nível de ensino
 
-![Evolução de estudantes por nível de ensino — execução histórica](docs/assets/analise_01.png)
+![Evolução de estudantes por nível de ensino — execução 2015–2024](docs/assets/analise_01.png)
 
-### Distribuição regional no último ano da execução histórica
+### Distribuição regional no último ano disponível
 
-![Distribuição regional de estudantes — execução histórica](docs/assets/analise_02.png)
+![Distribuição regional de estudantes — execução 2015–2024](docs/assets/analise_02.png)
 
 ### Acesso à internet na Educação Básica
 
-![Acesso à internet na Educação Básica — execução histórica](docs/assets/analise_03.png)
+![Acesso à internet na Educação Básica — dados disponíveis de 2015–2020](docs/assets/analise_03.png)
 
 ### Distribuição por sexo e nível de ensino
 
-![Distribuição por sexo — execução histórica](docs/assets/analise_04.png)
+![Distribuição por sexo — execução 2015–2024](docs/assets/analise_04.png)
 
-> **Próxima atualização visual:** reexecutar o notebook com a janela 2015–ano corrente, corrigir a escala do eixo temporal do gráfico de internet e substituir gráficos de distribuição simples por visualizações com comparação temporal e participação percentual.
+> Os percentuais de conectividade e inclusão apresentados no notebook usam ponderação por `qtd_estudantes` quando indicado no título. Nesta execução, o indicador de internet da Educação Básica está disponível até 2020, enquanto a base integrada chega a 2024. As diferenças de cobertura entre anos e fontes devem ser consideradas antes de interpretar tendências.
 
 ## Arquitetura
 
@@ -137,8 +139,8 @@ A especificação funcional descreve uma evolução de oito páginas. O artefato
 
 ## Roadmap
 
-1. Executar as sete consultas no BigQuery e registrar a cobertura real dos dados.
-2. Reexecutar o notebook desde 2015 e atualizar outputs, métricas e gráficos.
+1. Reexecutar as sete consultas no BigQuery e registrar a cobertura real dos dados.
+2. Atualizar os outputs, métricas e gráficos quando a Base dos Dados publicar novos anos.
 3. Criar o notebook de clusterização e interpretar os perfis municipais.
 4. Criar o notebook de classificação com validação temporal e matriz de confusão.
 5. Criar o notebook de previsão com comparação de baselines e métricas de erro.

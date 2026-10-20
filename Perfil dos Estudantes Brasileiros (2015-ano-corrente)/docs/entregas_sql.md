@@ -4,6 +4,10 @@ Esta pasta contém a evolução do Projeto 01 — **Perfil dos Estudantes Brasil
 
 Todos os scripts que consultam diretamente as fontes usam a janela `2015` até `EXTRACT(YEAR FROM CURRENT_DATE())`. Assim, novas execuções incorporam automaticamente os anos que já estiverem disponíveis na fonte. O ano corrente do calendário não implica que o dado daquele ano já tenha sido publicado pelo INEP.
 
+## Execução de referência
+
+A execução mais recente do notebook, alinhada ao `consulta_principal.sql`, retornou **4.582.798 linhas e 54 colunas**, cobrindo **2015–2024**. O resultado é um snapshot de validação; o período final é dinâmico e depende dos dados disponíveis na fonte no momento da execução.
+
 ## Visão geral do fluxo
 
 ```text
