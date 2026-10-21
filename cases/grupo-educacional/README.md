@@ -1,108 +1,182 @@
-# Plano Estratégico de um Grupo Educacional
+# GENA — Gestão Estratégica e Projetos
 
+> **Estudo de caso inteiramente simulado.** O Grupo Educacional Nascente do Acre (GENA), seus contextos, números, papéis e decisões são fictícios e servem apenas para demonstrar raciocínio de gestão. Não representam emprego, experiência, certificação, resultado realizado ou análise de um dataset existente.
 
+**Horizonte estratégico:** 2027–2029 · **Janela de validação:** piloto dos primeiros 90 dias
+**Snapshot de referência:** 2025, a ser revalidado antes de usar qualquer baseline de 2027
 
-**Tipo:** estudo de caso simulado · **Horizonte:** 2027–2029 · **Setor:** educação básica, graduação e pós-graduação
+## Síntese de decisão
 
+Recomendo aprovar um portfólio sequenciado, começando por **governança mínima e revalidação de dados**, seguido de um piloto de **retenção na graduação EAD** e, somente após evidência de capacidade, pela expansão da jornada **Ensino Médio → Graduação**.
 
+A decisão não é escalar três projetos simultaneamente. É criar uma cadeia de evidências que responda, nesta ordem:
 
-## Contexto
+1. Os conceitos, denominadores e fontes permitem medir o problema em 2027?
+2. Uma intervenção de retenção é executável, aceitável e economicamente plausível?
+3. A continuidade entre etapas gera conversão sustentável sem depender apenas de desconto?
 
+O gate de escala deve exigir baseline validado, responsável nomeado por indicador, custo da intervenção, evidência de execução e sinal de efeito. Até lá, metas são hipóteses de planejamento; não são resultados alcançados.
 
+## Contexto e desafio
 
-Um grupo educacional fictício com origem em Rio Branco (AC) atua há mais de 20 anos na educação básica e no ensino superior. Precisa modernizar sua operação, enfrentar a expansão do EAD de baixo custo e melhorar a passagem de alunos do ensino médio para a graduação.
+A GENA é uma organização educacional privada fictícia, fundada em Rio Branco (AC), com Educação Básica, graduação presencial e EAD, pós-graduação e extensão. No cenário simulado, o snapshot de 2025 registra **10.040 alunos ativos**.
 
+O ponto de atenção é a graduação EAD: o snapshot indica **27,5% de churn anual**, 13,5% de inadimplência média e NPS 39. Esses números são referências do universo simulado de 2025, não uma medição do ciclo 2027.
 
+O desafio de gestão é converter sinais dispersos em decisões de portfólio: proteger permanência sem prometer impacto, conectar a jornada acadêmica sem mascarar conversão e criar indicadores que possam ser auditados.
 
-## Problema de negócio
+### Diagnóstico do problema
 
+- Dados de matrícula, acesso, pagamentos, desempenho e atendimento estão distribuídos em sistemas distintos.
+- Conceitos como aluno ativo, churn, evasão, inadimplência e conversão podem ter denominadores diferentes.
+- A intervenção tende a ocorrer depois de faltas, atraso, baixa atividade ou abandono já observáveis.
+- A passagem do Ensino Médio para a graduação ocorre sem uma jornada contínua mensurada por turma, canal e curso.
+- Bolsas, custos de atendimento e recuperação financeira precisam ser lidos junto da permanência, e não isoladamente.
 
+### SWOT concisa
 
-A liderança possui dados distribuídos em sistemas legados, pouca padronização de indicadores e dificuldade para transformar sinais operacionais em decisões. As perguntas prioritárias são: onde estão as maiores perdas de retenção e receita; quais iniciativas devem receber investimento primeiro; e como alinhar áreas acadêmicas, comerciais, financeiras e de tecnologia.
+| Dimensão | Evidência do cenário simulado | Implicação para a decisão |
+|:---|:---|:---|
+| Forças | Marca regional, proximidade comunitária e presença em várias etapas educacionais | Usar vínculo e continuidade como diferenciação, não competir somente por preço |
+| Fraquezas | Dados fragmentados, métricas inconsistentes e baixa visibilidade do funil | Priorizar dicionário, denominadores, rastreabilidade e rotina de decisão |
+| Oportunidades | Alertas de risco, trilhas de orientação e uso integrado de dados | Testar intervenções pequenas, mensuráveis e reversíveis |
+| Ameaças | Redes nacionais de baixo custo, inadimplência e expectativa digital crescente | Controlar custo, experiência e sustentabilidade antes de escalar |
 
+## Tese estratégica 2027–2029
 
+A tese é **crescer com sustentabilidade por meio de permanência, continuidade e gestão por evidências**. O horizonte 2027–2029 organiza três objetivos interdependentes:
 
-## Diagnóstico estratégico
+1. **Proteger a permanência:** reduzir churn EAD com intervenção antecipada e avaliação de custo.
+2. **Conectar a jornada:** melhorar a conversão do Ensino Médio para a graduação com orientação e relacionamento contínuos.
+3. **Decidir com consistência:** estabelecer governança de indicadores para tornar as decisões comparáveis e rastreáveis.
 
+O snapshot de 2025 orienta hipóteses, mas **não substitui a revalidação do baseline para 2027**. Antes do primeiro KR, a equipe deve confirmar população elegível, período, fórmula, fonte, coorte e exclusões.
 
+## Encadeamento: objetivos, iniciativas e KPIs
 
-**Forças:** marca regional, relacionamento comunitário e presença na educação básica e superior.
+| Objetivo | Iniciativa prioritária | KPI de efeito ou decisão | Evidência necessária |
+|:---|:---|:---|:---|
+| Proteger permanência no EAD | P01 — piloto de redução de churn | Churn anual por coorte; retenção; permanência pós-intervenção | Baseline 2027, coortes comparáveis e registro de intervenção |
+| Conectar Ensino Médio e graduação | P02 — jornada de transição | Conversão de elegíveis; funil por turma, curso e canal | Denominador de elegíveis, consentimento e trilha de contatos |
+| Decidir com indicadores confiáveis | H01 — governança e painel mínimo, habilitador transversal | Cobertura operacional, atualização, qualidade e decisões registradas | Dicionário, linhagem, proprietário, SLA e log de exceções |
+| Proteger sustentabilidade financeira | P03 — adimplência e finanças, frente a detalhar | Inadimplência, aging, recuperação e permanência por faixa de atraso | Regras financeiras e conciliação com status acadêmico |
 
+## Priorização e trade-offs
 
+### Critérios de decisão
 
-**Fraquezas:** dados fragmentados, definições inconsistentes e baixa visibilidade do funil de retenção.
+A priorização usa critérios qualitativos verificáveis, sem atribuir pontuações artificiais:
 
+- **Urgência do risco:** magnitude e proximidade do problema no cenário simulado.
+- **Valor estratégico:** contribuição para permanência, continuidade ou sustentabilidade.
+- **Dependências:** necessidade de definições, integração ou capacidade antes da execução.
+- **Testabilidade:** possibilidade de testar em coorte delimitada e interromper sem grande custo.
+- **Equidade e experiência:** risco de excluir alunos, pressionar atendimento ou usar preço como única resposta.
+- **Viabilidade:** capacidade disponível, dados acessíveis, custo e conformidade a validar.
 
+### Ordem recomendada
 
-**Oportunidades:** trilhas de continuidade entre ensino médio e graduação, personalização do acompanhamento e uso de BI para capacidade, evasão e inadimplência.
+| Ordem | Decisão | Por que agora | Trade-off assumido |
+|---:|:---|:---|:---|
+| 1 | Governança mínima e baseline 2027 | Sem medida comum, efeito e custo não são interpretáveis | Consome tempo inicial e pode adiar campanhas visíveis |
+| 2 | P01 — retenção EAD em piloto | Risco prioritário, hipótese testável e possibilidade de intervenção reversível | Concentra capacidade no EAD antes de cobrir todos os segmentos |
+| 3 | P02 — transição Médio → Graduação | Depende de funil, elegibilidade e baseline de conversão mais estáveis | Pode postergar ganho de captação no curto prazo para reduzir desperdício |
+| 4 | Escala seletiva e frente financeira integrada | Só após evidência de execução, efeito e custo | Evita escalar uma solução que apenas desloca custo ou inadimplência |
 
+A ordem pode mudar se a revalidação revelar risco financeiro ou operacional superior ao risco de churn. Essa mudança deve ser registrada no comitê, com evidência e consequência explícita.
 
+## OKRs e indicadores verificáveis
 
-**Ameaças:** concorrência nacional com mensalidades agressivas, pressão sobre inadimplência e mudança nas expectativas digitais dos alunos.
+### Objetivo 1 — Aumentar a permanência na graduação EAD
 
+| Tipo | Definição verificável | Condição de validade |
+|:---|:---|:---|
+| KR de efeito | Reduzir o churn anual da graduação EAD em **15% relativamente** ao baseline 2027 validado | Fixar coorte, janela, população elegível e fórmula antes do piloto |
+| Referência de planejamento | Snapshot 2025: 27,5%; se o baseline 2027 confirmar 27,5%, a referência calculada é `27,5% × (1 − 15%) = 23,375%` | Se o baseline mudar, recalcular; não tratar 23,375% como resultado observado |
+| Indicador de execução, não KR de efeito | Contatar pelo menos **90% dos alunos classificados em risco** dentro do SLA definido | Registrar elegibilidade, data, canal, tentativa e resposta; contato não prova retenção |
 
+**Iniciativas:** definição de churn e coortes; integração de matrícula, acesso, pagamentos, desempenho e atendimento; regra de risco; régua de relacionamento; avaliação de custo e permanência.
 
-## Direcionadores estratégicos
+### Objetivo 2 — Melhorar a continuidade Ensino Médio → Graduação
 
+| Tipo | Definição verificável | Condição de validade |
+|:---|:---|:---|
+| KR condicional | Aumentar em **20% relativamente** a conversão de elegíveis do Ensino Médio para a graduação | Só definir o alvo após baseline 2027, elegibilidade, período e denominador validados; fórmula: `baseline × 1,20` |
+| Indicadores de funil | Interessados, leads qualificados, orientações, inscrições, matrículas e retenção inicial | Cortar por turma, curso, canal e perfil; não confundir contato com matrícula |
 
+**Iniciativas:** mapa da jornada; orientação de carreira; experiências com cursos; CRM de potenciais ingressantes; oferta com critérios transparentes; mensuração de custo e continuidade.
 
-1. **Crescer com sustentabilidade:** proteger receita e margem por meio de retenção e eficiência.
-2. 
-2. **Entregar uma jornada integrada:** conectar aquisição, permanência e progressão acadêmica.
-3. 
-3. **Gerir com evidências:** estabelecer indicadores confiáveis e rituais de decisão.
-4. 
+### Objetivo 3 — Tornar a gestão orientada por indicadores
 
+| Tipo | Definição verificável | Condição de validade |
+|:---|:---|:---|
+| Meta operacional de implantação | Cobrir **95% dos indicadores operacionais priorizados** com definição, fórmula, fonte, proprietário, frequência, SLA e log de exceções | A base de indicadores e a cobertura inicial serão apuradas no piloto; não é KR de resultado de negócio |
+| Indicadores de governança | Atualização no prazo, completude, divergências, decisões registradas e tempo de resposta | Medir por ciclo mensal, com trilha de auditoria e plano de correção |
 
-## OKRs iniciais
+**Iniciativas:** dicionário de métricas; linhagem de dados; painel mínimo; rito mensal; registro de decisões; revisão trimestral do portfólio.
 
+## Piloto dos primeiros 90 dias
 
+O piloto testa viabilidade e sinais de efeito na janela observável. Não comprova sozinho o cumprimento de uma meta anual de churn; esse resultado exige acompanhamento por período compatível. O plano abaixo é proposto, não executado.
 
-| Objetivo | Resultados-chave | Iniciativas |
+| Período | Entregas e perguntas | Gate de saída |
+|:---|:---|:---|
+| Dias 1–15 | Confirmar sponsor, papéis, escopo EAD, fontes, privacidade, definições e critérios de sucesso | Acesso autorizado, escopo delimitado e riscos críticos registrados |
+| Dias 16–30 | Reconstituir snapshot 2025 apenas como referência, desenhar baseline 2027, dicionário e mapa de dados | Denominadores e fórmulas aprovados; lacunas explicitadas |
+| Dias 31–45 | Construir dataset sintético ou amostra autorizada, painel mínimo e classificação de risco | Qualidade mínima, rastreabilidade e regra de risco revisadas |
+| Dias 46–60 | Executar contato em coorte-piloto, registrar SLA, resposta, custo e encaminhamento | Pelo menos um ciclo de execução observável; sem afirmar efeito causal |
+| Dias 61–75 | Comparar execução e sinais de permanência, revisar experiência e testar jornada de transição em desenho | Evidência suficiente para ajustar escopo ou interromper hipótese |
+| Dias 76–90 | Consolidar resultados do piloto, business case, backlog, RACI e recomendação ao comitê | Decisão documentada: continuar, ajustar, pausar ou parar |
 
-|---|---|---|
+## Governança e responsabilidades
 
-| Aumentar a permanência | Reduzir churn EAD em 15%; contatar 90% dos alunos de risco | Modelo de risco e comitê de retenção |
+Os papéis abaixo são funções fictícias do desenho; não representam nomes, cargos ocupados ou experiência do candidato.
 
-| Melhorar a conversão entre etapas | Aumentar em 20% a conversão do ensino médio para a graduação | Jornada de transição e orientação |
+| Papel fictício | Responsabilidade no case |
+|:---|:---|
+| Sponsor Executivo | Destravar decisões, aprovar escopo, aceitar riscos e presidir o gate |
+| Dono de Retenção EAD | Definir jornada, validar intervenções e responder pelo resultado do P01 |
+| Dono da Jornada Acadêmica | Definir elegibilidade e experiência do P02 com áreas escolares e superiores |
+| Líder de Dados e Indicadores | Manter dicionário, linhagem, qualidade, painel e alertas |
+| Líder de Projetos | Integrar cronograma, dependências, riscos, decisões e benefícios esperados |
+| Representante Financeiro | Validar inadimplência, custos, descontos, recuperação e premissas econômicas |
+| Representante de Atendimento | Garantir capacidade, SLA, registro de contatos e feedback dos alunos |
+| Comitê de Portfólio | Revisar evidências e decidir continuar, ajustar, pausar ou parar |
 
-| Tornar a gestão orientada por indicadores | Publicar dicionário de métricas; atingir 95% de atualização mensal | Governança e dashboard executivo |
+Rituais: acompanhamento quinzenal de entregas e riscos; comitê de retenção quinzenal; reunião mensal de indicadores; revisão de portfólio ao fim do piloto e trimestralmente depois. Toda decisão deve registrar evidência, responsável, prazo, hipótese afetada e próximo teste.
 
+## Riscos e respostas
 
+| Risco | Sinal de alerta | Resposta planejada |
+|:---|:---|:---|
+| Baseline não comparável | Divergência de denominador ou coorte | Congelar comunicação de meta, revisar fórmula e aprovar nova linha de base |
+| Dados incompletos ou fragmentados | Campos ausentes, atraso ou reconciliação baixa | Priorizar dataset mínimo, registrar lacunas e não extrapolar efeito |
+| Contato sem mudança de comportamento | Alta cobertura e churn inalterado | Analisar qualidade e timing, ajustar intervenção ou interromper |
+| Pressão por desconto | Conversão sobe com margem ou inadimplência pior | Exigir leitura de custo, receita líquida e permanência antes de escalar |
+| Sobrecarga de atendimento | SLA cai ou reclamações aumentam | Limitar coorte, ajustar capacidade e criar fila de exceção |
+| Uso indevido de dados | Acesso sem finalidade ou consentimento inadequado | Restringir acesso, revisar governança e suspender uso não autorizado |
+| Dependência de sistema legado | Integração bloqueia o cronograma | Usar extração controlada, documentar dívida e replanejar o gate |
 
-As metas são propostas de planejamento, não resultados realizados.
+## Gates: continuar, ajustar, pausar ou parar
 
+- **Continuar:** baseline validado, execução dentro do SLA, qualidade suficiente, custo conhecido e sinal de efeito compatível com a hipótese.
+- **Ajustar:** execução possível, mas qualidade, experiência, custo ou segmentação exigem correção antes de ampliar.
+- **Pausar:** dependência crítica, risco de conformidade ou capacidade insuficiente impede teste responsável.
+- **Parar:** hipótese não se sustenta após teste, o custo supera o benefício esperado, ou há dano não aceitável à experiência e à equidade.
 
+Nenhum gate deve ser decidido apenas pelo dashboard: o comitê precisa revisar fonte, fórmula, população, incertezas e registro operacional.
 
-## Portfólio inicial
+## Limitações e próximos passos
 
+Este case não contém dataset real, série histórica auditável, custos de intervenção, margem por curso, consentimentos, desenho causal ou resultado realizado. O snapshot de 2025 não deve ser apresentado como baseline de 2027; a conversão de 20% é condicional; cobertura de indicadores de 95% é meta operacional a apurar.
 
+Próximos passos: validar o universo e os donos de dados; formalizar dicionário e RACI; revalidar o baseline 2027; estimar custo e capacidade; executar o piloto; registrar evidências; e submeter o gate de escala ao Comitê de Portfólio.
 
-- **Redução de churn no EAD:** preservação de receita e melhoria da experiência.
-- 
-- **Transição Ensino Médio → Graduação:** aumento de conversão e lifetime value.
-- 
-- **Governança de indicadores:** menos retrabalho e decisões mais rápidas.
-- 
+## Referências do portfólio
 
-
-## Governança de execução
-
-
-
-Comitê mensal para prioridades e decisões; ritual quinzenal para entregas e riscos; painel executivo com KPIs, metas, tendência, responsável e plano de reação; registro das decisões e evidências utilizadas.
-
-
-
-## Próximos passos
-
-
-
-Validar baseline e definições com os donos dos processos, detalhar o business case, criar backlog e RACI, construir um painel mínimo e rodar um piloto de 90 dias.
-
-
-
-
-
-
-
+- [Portfólio de Gestão Estratégica](../../README.md)
+- [Documento-base fictício da GENA](../../docs/empresa-ficticia-grupo-educacional.md)
+- [Apresentação executiva](../../docs/apresentacao-executiva.md)
+- [Detalhamento: redução de churn EAD](./reducao-churn-ead.md)
+- [Governança de indicadores e BI](../governanca-indicadores-bi.md)
+- [Templates do portfólio](../../templates/README.md)
