@@ -51,6 +51,6 @@ O [case de governança](gestao-estrategica-projetos/cases/gena/projetos/governan
 
 ## Manutenção e rastreabilidade
 
-Este é o ponto de entrada único para evolução do portfólio. Os conteúdos e históricos dos dois repositórios de origem foram incorporados. Os originais permanecem acessíveis como referência histórica, com indicação desta estrutura.
+Este é o ponto de entrada único para evolução do portfólio. Os conteúdos e históricos dos dois repositórios de origem foram incorporados. Após auditoria e confirmação, os repositórios redundantes foram excluídos em 21/10/2026. Os históricos e snapshots finais estão preservados neste repositório; as duas pastas de trabalho permanecem intactas.
 
 Mudanças devem atualizar documentos, links, índices e testes correspondentes em lote. Comandos de execução devem indicar se partem da raiz deste repositório ou da pasta de um projeto. A consolidação e suas origens estão registradas em [MIGRACAO.md](MIGRACAO.md).
