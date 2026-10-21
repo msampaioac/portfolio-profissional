@@ -13,6 +13,16 @@
 | [COVID-19 Brasil Analytics](./Análise%20Espacial%20e%20Temporal%20da%20COVID-19%20no%20Brasil/) | Comparar vacinação, pressão hospitalar e desigualdades territoriais | BigQuery, SQL analítico, modelagem dimensional | Consultas por pergunta de negócio e documentação técnica |
 | [Perfil dos Estudantes Brasileiros](./Perfil%20dos%20Estudantes%20Brasileiros%20%282015-ano-corrente%29/) | Integrar dados educacionais e acompanhar evolução, perfil e infraestrutura | BigQuery, GoogleSQL, Python, Power BI | Base analítica, notebook exploratório, modelo semântico e especificação de dashboard |
 
+## Descrição breve dos projetos
+
+### COVID-19 Brasil Analytics
+
+Integra dados públicos de vacinação, casos graves, óbitos, população e infraestrutura hospitalar para comparar a evolução da pandemia entre municípios, estados e períodos. O projeto apresenta cinco consultas analíticas em BigQuery/SQL e documentação de modelo e dados. As comparações descrevem padrões e não demonstram causalidade.
+
+### Perfil dos Estudantes Brasileiros
+
+Combina dados do INEP sobre Educação Básica, Ensino Superior e municípios para analisar matrículas, perfil dos estudantes e diferenças territoriais de infraestrutura educacional desde 2015. A base agregada é explorada com SQL/BigQuery, Python e Power BI; os materiais para clusterização, classificação e previsão estão preparados como etapas futuras, não como modelos já executados.
+
 ## O que este portfólio demonstra
 
 - Tradução de problemas de negócio em perguntas analíticas;
