@@ -1,56 +1,63 @@
-# Portfólio de Gestão Estratégica e de Projetos
+# Marcelo dos Santos Sampaio
 
-> **Marcelo dos Santos Sampaio** — Gestão Estratégica, Business Intelligence, Governança e Gestão de Projetos.
+## Gestão Estratégica e de Projetos orientada por Dados
 
-Este repositório reúne cases, frameworks e artefatos de planejamento para demonstrar como transformar dados, objetivos organizacionais e prioridades de negócio em decisões, indicadores e planos de execução.
+Meu foco profissional é conectar **análise de dados, prioridades de negócio e execução**: compreender o problema, definir indicadores, organizar iniciativas e estabelecer uma rotina de acompanhamento para apoiar decisões.
 
-## Posicionamento
+Este portfólio apresenta esse raciocínio aplicado ao setor educacional. O objetivo não é apenas mostrar ferramentas, mas explicar **qual decisão tomar, por que priorizá-la e como acompanhar sua execução**.
 
-Atuo na interseção entre **dados e gestão**: estruturo problemas de negócio, traduzo estratégia em objetivos mensuráveis, organizo portfólios de iniciativas e uso BI para acompanhar resultados e apoiar a tomada de decisão.
+[LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio) · [GitHub](https://github.com/msampaioac)
 
-O conteúdo combina:
+> **Natureza dos trabalhos:** estudos autorais estruturados com apoio de IA sobre uma empresa fictícia. Os artefatos são propostas documentadas; não representam projetos implantados, clientes atendidos ou resultados profissionais realizados.
 
-- **Estratégia:** diagnóstico, SWOT, análise de cenários, mapas estratégicos e desdobramento de objetivos;
-- **Gestão por resultados:** OKRs, KPIs, metas, rituais de acompanhamento e gestão à vista;
-- **Projetos e processos:** escopo, stakeholders, riscos, cronograma, Kanban, Scrum, PMBOK e planos 5W2H;
-- **Dados e governança:** definição de métricas, qualidade, papéis, decisões orientadas por evidências e Business Intelligence.
+## Comece por aqui
 
-## Projetos e cases
+**Leitura rápida:** [síntese executiva dos cases](docs/apresentacao-executiva.md). Veja o problema, a recomendação e a evidência disponível antes de abrir a documentação completa.
 
-| Case | Problema de negócio | Entregas principais | Status |
-|---|---|---|---|
-| [Plano Estratégico de um Grupo Educacional](cases/grupo-educacional/README.md) | Crescer com sustentabilidade diante da concorrência EAD e de gargalos operacionais | Diagnóstico, SWOT, mapa estratégico, OKRs e plano de ação | Em construção |
-| [Redução de Churn no Ensino Superior EAD](cases/grupo-educacional/reducao-churn-ead.md) | Aumentar retenção e priorizar intervenções por segmento | Hipóteses, indicadores, governança e backlog de iniciativas | Simulado |
-| [Governança de Indicadores e BI](cases/governanca-indicadores-bi.md) | Reduzir divergências de definição e aumentar confiança nos indicadores | Dicionário de métricas, RACI e rotina de qualidade | Em construção |
+**Avaliação aprofundada:** escolha um dos três estudos abaixo. Todos compartilham o mesmo [universo de negócio — GENA](docs/empresa-ficticia-grupo-educacional.md), permitindo acompanhar a conexão entre estratégia, projetos e governança.
 
-## Frameworks e templates
+## Cases em destaque
 
-- [Modelo de diagnóstico estratégico](frameworks/diagnostico-estrategico.md)
-- [Modelo de OKRs](frameworks/okrs.md)
-- [Modelo de plano de ação 5W2H](templates/5w2h.md)
-- [Modelo de canvas de projeto](templates/canvas-projeto.md)
-- [Checklist de governança de indicadores](templates/governanca-indicadores.md)
+| Estudo | Decisão de negócio | Evidências disponíveis |
+|:---|:---|:---|
+| **[Planejamento estratégico do GENA](cases/grupo-educacional/README.md)** | Como priorizar crescimento, retenção e transformação digital? | SWOT, objetivos, OKRs propostos, critérios de priorização, roteiro de 90 dias e riscos |
+| **[Redução de churn no EAD](cases/grupo-educacional/reducao-churn-ead.md)** | Como agir antes do abandono sem prometer um efeito ainda não medido? | Hipóteses, regras de segmentação propostas, backlog, desenho de piloto e critérios de avaliação |
+| **[Governança de indicadores e BI](cases/governanca-indicadores-bi.md)** | Como fazer áreas diferentes decidirem com métricas comparáveis? | Dicionário de indicadores, RACI, controles de qualidade e critérios de aceite |
 
-## Como ler os cases
+**Estágio dos três estudos:** planejamento documentado e simulado. A implementação, os datasets e a mensuração de impacto são etapas futuras, não entregas já concluídas.
 
-Cada case segue uma narrativa executiva:
+## Competências demonstradas nos artefatos
 
-1. **Contexto e problema de negócio** — qual decisão precisa ser tomada e por quê;
-2. **Diagnóstico estratégico** — causas, restrições, stakeholders e riscos;
-3. **Metodologia** — frameworks, dados, premissas e critérios de priorização;
-4. **Indicadores e evidências** — como medir progresso, resultado e impacto;
-5. **Plano de ação** — iniciativas, responsáveis, prazos e dependências;
-6. **Governança e próximos passos** — rituais, decisões pendentes e evolução.
+| Frente | Como aparece no portfólio |
+|:---|:---|
+| Diagnóstico e estratégia | Relação entre contexto, restrições, hipóteses e escolhas |
+| Gestão de projetos | Escopo, dependências, papéis, riscos e critérios para avançar ou interromper |
+| Gestão por resultados | Separação entre objetivo, resultado-chave, indicador operacional e iniciativa |
+| Business Intelligence e governança | Definições de métricas, granularidade, qualidade e rotina de decisão |
+| Comunicação executiva | Síntese que conecta evidência, recomendação e decisão requerida |
 
-## Nota sobre os dados
+SQL, Python, BigQuery e Power BI têm suas evidências técnicas no [portfólio de Análise de Dados](https://github.com/msampaioac/data-analytics-portfolio). Aqui, o foco é o **raciocínio de gestão que orienta a análise e a execução**. Não apresento dashboards ou modelos preditivos como implementados neste repositório.
 
-Os cases identificados como **simulados** são estudos de caso educacionais. Números, nomes de empresas e resultados projetados não representam clientes reais. Quando um resultado não foi medido, ele é apresentado como hipótese, baseline ou meta — nunca como impacto realizado.
+## Como avaliar o meu raciocínio
 
-## Relação com o portfólio de dados
+Nos cases, procure a sequência **problema → diagnóstico → escolha → execução → medição**. As alternativas descartadas, as limitações dos dados e as condições para revisar uma decisão fazem parte da proposta, e não ficam escondidas no final.
 
-Os projetos de análise de dados, SQL, Python, BigQuery e Power BI estão no [portfólio de Analytics](https://github.com/msampaioac/data-analytics-portfolio). Este repositório complementa aquele trabalho ao documentar o raciocínio de gestão que antecede a análise e a execução que deve seguir os insights.
+Para discutir os trabalhos em entrevista, três perguntas ajudam a aprofundar a avaliação:
 
-## Contato
+1. Por que priorizar governança e retenção antes de acelerar a expansão?
+2. Como distinguir uma meta de negócio de uma entrega do projeto?
+3. Que evidência justificaria continuar, ajustar ou interromper o piloto?
 
-- [LinkedIn](https://linkedin.com/in/msampaioac)
-- [GitHub](https://github.com/msampaioac)
+## Navegação do repositório
+
+| Área | Conteúdo |
+|:---|:---|
+| [Cases](cases/README.md) | Estudos aplicados e roteiro de avaliação |
+| [Documentação](docs/README.md) | Síntese executiva, empresa fictícia e estágio das entregas |
+| [Modelos de trabalho](templates/README.md) | Diagnóstico, OKRs, canvas, 5W2H, riscos e decisões |
+
+## Contato profissional
+
+Para conversar sobre oportunidades em **Gestão Estratégica, Gestão de Projetos e BI**, entre em contato pelo [LinkedIn](https://linkedin.com/in/msampaioac).
+
+Este repositório demonstra propostas e formas de raciocínio. Experiência profissional, formação e trajetória devem ser consultadas no perfil do autor; não são inferidas dos dados da empresa fictícia.
