@@ -1,6 +1,6 @@
 # Governança de indicadores para decisões consistentes
 
-> **Case complementar de portfólio — proposta simulada em Gestão Estratégica, Projetos e BI.** Nenhuma implementação foi realizada e nenhum dataset foi analisado.
+> **Case complementar de portfólio — proposta simulada em Gestão Estratégica, Projetos e BI.** A primeira melhoria já define uma base sintética verificável para exame e reconciliação; este case não apresenta análise causal, risco validado ou implementação de negócio.
 
 ## 1. Contexto e desafio
 
@@ -12,10 +12,19 @@ O desenho proposto cria uma camada semântica mínima antes de qualquer dashboar
 
 ### Fato simulado e limite de evidência
 
-- O **churn anual de 27,5% na graduação EAD** é um fato simulado do cenário de 2025 e serve apenas como baseline ilustrativo.
-- Esse percentual não foi reproduzido, recalculado ou validado por dataset neste case.
+- O **churn anual de 27,5% na graduação EAD** é reproduzido na base sintética a partir de 2.880 na abertura, 40 conclusões, 40 transferências, 2.800 elegíveis e 770 cancelamentos; continua sendo referência calibrada, não fato operacional.
+- A reconciliação verifica regras e totais sintéticos; não é validação real, análise causal nem validação de risco.
 - O snapshot de 2025 não substitui uma linha de base atualizada para o ciclo estratégico de 2027–2029.
 - Qualquer meta de melhoria depende de baseline a apurar, janela, coorte, custo e elegibilidade aprovados.
+
+### Base disponível para exame
+
+O contrato da primeira melhoria está no [índice da base](../dados/gena/README.md), na [especificação](../docs/contrato-dados-gena.md) e na [validação/reconciliação](../dados/gena/validacao.md). O gerador está referenciado em [`scripts/gerar_dados_gena.py`](../scripts/gerar_dados_gena.py) e os testes em [`tests/test_dados_gena.py`](../tests/test_dados_gena.py); não se antecipa que todos os testes passaram antes da execução correspondente.
+
+A convenção inclui 2.030 retidos (72,5%), 1.090 ingressantes ativos de março a novembro sem churn estimado no grupo, 3.120 no fechamento e 3.970 indivíduos distintos no ano. NPS 39 usa 200 respostas (118/42/40). Inadimplência significa **monetária na posição de referência**; no EAD, 13,5% é alvo de calibração em títulos vencidos até 31/12/2025, não validação real.
+
+No corte de features em 28/02/2025, financeiro, NPS e saídas de abril a dezembro de 2025 não entram; os sinais de oito semanas (06/01–28/02), gerados a partir da abertura de 2.880, são independentes do desfecho. Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira são premissas didáticas, não autorização para inferência.
+
 
 ## 2. Decisão de negócio e objetivos
 
@@ -48,12 +57,12 @@ A liderança precisa decidir **quais segmentos, coortes e ações priorizar** pa
 - Matriz de divergência e reconciliação para o snapshot de 2025.
 - Modelo lógico por aluno, matrícula, título e resposta, com IDs sintéticos.
 - Regras de qualidade, tratamento de falhas, RACI e rotina de governança.
-- Protótipo de painel executivo e roteiro de validação com áreas donas.
+- Roteiro de validação sem dashboard; a análise diagnóstica SQL e o painel executivo ficam para etapa futura.
 
 ### Não incluído
 
 - Implementação de ETL, data warehouse, CRM ou painel produtivo.
-- Análise exploratória de dataset, teste estatístico ou diagnóstico causal.
+- Análise diagnóstica SQL, teste estatístico, diagnóstico causal ou validação de risco.
 - Reprocessamento de uma série histórica real ou validação externa do cenário.
 - Definição de preço, concessão de bolsa, cobrança automática ou contato com aluno.
 - Decisão jurídica sobre base legal, retenção de dados ou compartilhamento.
@@ -68,7 +77,7 @@ A liderança precisa decidir **quais segmentos, coortes e ações priorizar** pa
 | **Churn anual** | `100 × saídas por cancelamento/evasão/abandono ÷ população elegível`. População elegível: IDs de matrícula ativos na abertura, sem status concluído ou transferido. Para manter o par complementar, IDs que se tornarem concluídos/transferidos na janela são retirados da população e reportados em “fora do escopo”; só cancelamento/evasão/abandono entra no numerador. | Matrícula-aluno × coorte × período, com cortes por segmento, modalidade, curso e polo. Mede perda entre elegíveis, não a soma de fotos anuais. |
 | **Retenção anual** | `100 × elegíveis ativos ao final ÷ população elegível`. Usa a mesma coorte e exclusões do churn. As regras são fixadas antes do cálculo; conclusões/transferências da janela são conciliadas separadamente. Retenção + churn = 100% somente quando todos os elegíveis terminam classificados em um dos dois estados. | Matrícula-aluno × coorte × período. Não misturar retenção de cursos curtos com graduação sem regra de renovação equivalente. |
 | **Adimplência monetária** | `100 × valor liquidado até a data de referência ÷ valor monetário dos títulos maturados`. Denominador: soma do valor devido líquido de títulos com vencimento alcançado na data (`vencimento ≤ snapshot`), excluídos cancelados e substituídos. O valor pago é alocado aos títulos pela regra financeira aprovada. | Título × snapshot, agregado por segmento, curso, polo e faixa de atraso. Maturação significa que o vencimento já ocorreu; títulos futuros não entram. |
-| **Inadimplência monetária** | `100 × saldo aberto dos títulos maturados ÷ valor monetário dos títulos maturados`. Tem o mesmo denominador da adimplência; portanto, no snapshot e após conciliação, os dois percentuais são complementares. Atraso, acordo e baixa parcial devem ser classificados antes do cálculo. | Título × snapshot × faixa de aging. Não usar quantidade de títulos no denominador desta versão e não misturar valor faturado futuro. |
+| **Inadimplência monetária na posição de referência** | `100 × saldo aberto dos títulos maturados ÷ valor monetário dos títulos maturados`. Tem o mesmo denominador da adimplência; portanto, no snapshot e após conciliação, os dois percentuais são complementares. Atraso, acordo e baixa parcial devem ser classificados antes do cálculo. | Título × snapshot × faixa de aging. Não usar quantidade de títulos no denominador desta versão e não misturar valor faturado futuro. O 13,5% EAD é calibração sintética de títulos vencidos em 31/12/2025, não validação real. |
 | **NPS** | `% promotores (notas 9–10) − % detratores (notas 0–6)`, entre respostas válidas; notas 7–8 são passivas. Escala de **−100 a 100**, não percentual de satisfação. | Resposta × pesquisa × período, com cortes por segmento, modalidade, curso e polo quando houver amostra. Taxa de resposta e tamanho da amostra acompanham o índice. |
 | **Conversão** | `100 × matrículas confirmadas ÷ concluintes elegíveis ou leads qualificados`, conforme funil aprovado. O evento, a janela e a população do denominador devem ser iguais entre etapas; não há baseline disponível neste case. | Pessoa/lead × etapa do funil × coorte de entrada. Exibir volume em cada etapa, conversão por etapa e origem; só definir meta após apurar a linha de base. |
 
@@ -125,8 +134,8 @@ A liderança precisa decidir **quais segmentos, coortes e ações priorizar** pa
 | Horizonte | Entregas propostas | Gate de decisão |
 |:---|:---|:---|
 | **0–30 dias** | Inventário de relatórios; mapa de divergências; contrato dos seis indicadores; RACI; população e grão; baseline a apurar; snapshot 2025 como referência simulada. | Donos aprovam 6/6 definições, fontes e exceções; regras para atualizar a linha de base ficam documentadas. |
-| **31–60 dias** | Modelo lógico; mapeamento de status; testes de qualidade; reconciliação de uma carga de referência; protótipo de painel; roteiro de ritual e log de decisões. | Casos de teste têm resultado esperado documentado; divergências têm classificação e responsável. |
-| **61–90 dias** | Piloto controlado; execução de dois rituais de retenção e um executivo; revisão de regras; apuração do baseline; aceite ou plano corretivo; transferência operacional. | Critérios mensuráveis atendidos ou exceções aprovadas pelo A, sem declarar melhoria de negócio. |
+| **31–60 dias** | Análise diagnóstica SQL futura; mapeamento de status, consultas de qualidade, reconciliação de uma carga e log de decisões. | Casos de teste têm resultado esperado documentado; divergências têm classificação e responsável. |
+| **61–90 dias** | Dashboard, piloto controlado, rituais, apuração de baseline e avaliação de efeito/custo, todos em etapa futura e condicionados ao aceite da base. | Critérios de entrada são revisados sem declarar melhoria de negócio; não são entregas desta primeira melhoria. |
 
 ## 8. Rotina de decisão e aceite
 
@@ -156,5 +165,6 @@ A proposta aplica minimização, controle de acesso, segregação de ambientes, 
 - [Grupo Educacional — índice](grupo-educacional/README.md)
 - [Empresa fictícia Grupo Educacional](../docs/empresa-ficticia-grupo-educacional.md)
 - [Templates do portfólio](../templates/README.md)
+- [Base sintética GENA](../dados/gena/README.md) · [Contrato](../docs/contrato-dados-gena.md) · [Validação](../dados/gena/validacao.md)
 
 **Contribuição demonstrada:** especificação de métricas, responsabilidades e controles que tornam uma proposta de BI verificável antes de sua implementação.

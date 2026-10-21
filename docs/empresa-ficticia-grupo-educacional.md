@@ -5,7 +5,7 @@ Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos
 
 [Portfólio](../README.md) · [Síntese executiva](apresentacao-executiva.md) · [Cases aplicados](../cases/README.md)
 
-> **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. Os dados não representam resultados profissionais realizados nem evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
+> **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. A base sintética é verificável para exame e reprodução, mas não representa alunos, operação, resultados profissionais realizados ou evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
 
 ## Visão executiva
 
@@ -22,7 +22,7 @@ No cenário simulado de 2025, a instituição reúne **10.040 alunos ativos**. O
 | Escala em 2025 | 10.040 alunos ativos nos quatro segmentos |
 | Principal ponto de atenção | Churn anual de 27,5% na graduação EAD |
 | Agenda estratégica | Retenção, continuidade da jornada e eficiência financeira |
-| Uso no portfólio | Cases, análises SQL/Python, dashboards e planos de execução |
+| Uso no portfólio | Cases, base sintética, reconciliação, análises futuras e planos de execução |
 
 ## Sumário
 
@@ -119,7 +119,7 @@ A trajetória combina três movimentos: consolidação da Educação Básica, di
 | Pós-graduação e extensão | Profissionais de gestão, educação, saúde e tecnologia | Atualização e progressão profissional | 1.020 | R$ 245 |
 | **Total** | — | — | **10.040** | — |
 
-*Tickets simulados por segmento. Não representam preços de todos os cursos nem receita efetivamente recebida. O ticket de pós-graduação/extensão é uma referência mensal equivalente para a simulação.*
+*Tickets simulados por segmento. Não representam preços de todos os cursos nem receita efetivamente recebida. O ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas; o ticket de pós-graduação/extensão é uma referência mensal equivalente. Não multiplicar alunos por ticket para inferir receita ou ROI.*
 
 ### Oferta acadêmica simulada
 
@@ -149,6 +149,22 @@ A trajetória combina três movimentos: consolidação da Educação Básica, di
 
 Os quantitativos abaixo compõem a base de referência para futuros estudos. **A série histórica é simulada; os KPIs apresentados referem-se a 2025.**
 
+### Contrato e calibração da base sintética de 2025
+
+A primeira melhoria disponibiliza uma base sintética verificável, gerador Python, testes de contrato/reconciliação e regras para exame. Ela é calibrada para coerência interna e é diferente de dados reais; nenhuma análise causal ou risco foi validado. O [contrato de dados](contrato-dados-gena.md), o [índice da base](../dados/gena/README.md) e a [validação/reconciliação](../dados/gena/validacao.md) detalham campos, períodos, exclusões e limites.
+
+| Reconciliação EAD | Regra/resultado |
+|:---|:---|
+| Abertura | 2.880 em 01/01/2025 |
+| Exclusões retroativas | 40 conclusões + 40 transferências; elegíveis = 2.800 |
+| Saídas e retenção | 770 cancelamentos = 27,5% de churn; 2.030 retidos = 72,5% |
+| Entradas | 1.090 ingressantes entre março e novembro, todos ativos no fechamento; sem churn estimado nesse grupo |
+| Fechamento e universo anual | 3.120 ativos no fechamento; 3.970 indivíduos distintos no ano, não 3.120 |
+
+O NPS 39 é reproduzido com 200 respostas finais (118 promotores, 42 passivos, 40 detratores). A inadimplência EAD de 13,5% é a posição monetária de títulos de 2025 vencidos em 31/12/2025, com alvo em centavos ao mais próximo: é calibração/checagem de coerência, não validação real. O CSV usa valores inteiros em centavos; o ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas e nunca deve ser usado como `alunos × ticket = receita/ROI`.
+
+A amostra didática EAD contempla Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; essa escolha é premissa, não autorização para inferir padrão factual. Financeiro, NPS e saídas de abril a dezembro de 2025 não são features para o corte de 28/02/2025; em particular, os dados de dezembro ficam fora. O engajamento de oito semanas (06/01–28/02), originado da abertura de 2.880, é gerado independentemente do desfecho; não se conclui que baixo engajamento provoque churn. A série histórica macro de 2021–2025 abaixo é preservada como referência institucional, separada da microbase sintética EAD.
+
 ### Evolução de alunos ativos — 2021 a 2025
 
 | Ano | Básica | Grad. presencial | Grad. EAD | Pós/extensão | Total |
@@ -168,11 +184,13 @@ Os quantitativos abaixo compõem a base de referência para futuros estudos. **A
 | Retenção anual | 91,5% | 82,0% | 72,5% | 76,0% |
 | Churn/evasão anual | 8,5% | 18,0% | **27,5%** | 24,0% |
 | Adimplência média | 94,0% | 91,0% | 86,5% | 88,0% |
-| Inadimplência média | 6,0% | 9,0% | **13,5%** | 12,0% |
+| Inadimplência monetária na posição de referência | 6,0% | 9,0% | **13,5%** | 12,0% |
 | Ticket médio mensal | R$ 980 | R$ 780 | R$ 310 | R$ 245 |
 | NPS | 68 | 55 | **39** | 46 |
 
-*Para esta simulação, retenção e churn são complementares na mesma população elegível; conclusões regulares devem ser tratadas separadamente. Adimplência e inadimplência devem manter a mesma base de cálculo. O NPS é um índice de −100 a 100, não uma porcentagem.*
+*Para esta simulação, retenção e churn são complementares na mesma população elegível; conclusões regulares devem ser tratadas separadamente. A inadimplência é monetária na posição de referência, sobre títulos vencidos até 31/12/2025; o valor EAD de 13,5% é alvo de calibração em centavos, não validação real. Os demais percentuais do painel são referências macro do cenário e não foram microgerados. Adimplência e inadimplência devem manter a mesma base de cálculo. O NPS é um índice de −100 a 100, não uma porcentagem.*
+
+A mudança semântica de “inadimplência média” para **inadimplência monetária na posição de referência** substitui uma média sem janela explícita por um snapshot financeiro: saldo aberto e valor maturado dos títulos com vencimento até 31/12/2025. A fonte única dos parâmetros sintéticos é o [`config.json`](../dados/gena/config.json); os percentuais dos demais segmentos continuam referências macro e não são apresentados como cálculo microgerado.
 
 ### Interpretação para a liderança
 
@@ -180,7 +198,7 @@ Os quantitativos abaixo compõem a base de referência para futuros estudos. **A
 |:---|:---|:---|
 | Básica: retenção de 91,5% e NPS 68 | Relacionamento com famílias é um ativo | Investigar permanência e continuidade para a graduação |
 | Presencial: evasão de 18,0% | Existe espaço para melhorar a jornada | Segmentar por curso, coorte e etapa acadêmica |
-| EAD: churn de 27,5%, inadimplência de 13,5% e NPS 39 | Crescimento convive com fragilidade na permanência | Cruzar engajamento, atendimento e situação financeira |
+| EAD: churn de 27,5%, inadimplência monetária na posição de referência de 13,5% e NPS 39 | Crescimento convive com fragilidade na permanência | Cruzar engajamento, atendimento e situação financeira |
 | Pós/extensão: retenção de 76,0% | Exige leitura compatível com cursos mais curtos | Separar conclusão, abandono e renovação por programa |
 
 Essas relações orientam hipóteses, não comprovam causalidade. As análises devem aprofundar curso, polo, coorte, faixa de mensalidade, forma de ingresso e motivo de saída.
@@ -328,6 +346,6 @@ Cada reunião deve registrar **evidência utilizada, decisão, responsável, pra
 | Receita | Não inferir receita recebida apenas de volume e ticket |
 | Rastreabilidade | Documentar premissas, fórmulas, fontes simuladas e limitações |
 
-**Uso no portfólio:** este documento é a referência do universo fictício. Cases derivados devem manter os nomes e a linha de base ou registrar explicitamente qualquer mudança de cenário.
+**Uso no portfólio:** este documento é a referência do universo fictício. Cases derivados devem manter os nomes e a linha de base ou registrar explicitamente qualquer mudança de cenário. A primeira melhoria limita-se à base sintética, gerador, testes e reconciliação; análise SQL, dashboard, modelo, piloto, efeito e ROI permanecem futuros.
 
 [Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão Estratégica](../README.md)

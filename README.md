@@ -8,7 +8,7 @@ Este portfólio apresenta esse raciocínio aplicado ao setor educacional. O obje
 
 [LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio) · [GitHub](https://github.com/msampaioac)
 
-> **Natureza dos trabalhos:** estudos autorais estruturados com apoio de IA sobre uma empresa fictícia. Os artefatos são propostas documentadas; não representam projetos implantados, clientes atendidos ou resultados profissionais realizados.
+> **Natureza dos trabalhos:** estudos autorais estruturados com apoio de IA sobre uma empresa fictícia. Há uma base sintética verificável para exame e reprodução; os artefatos não representam projetos implantados, clientes atendidos ou resultados profissionais realizados.
 
 ## Comece por aqui
 
@@ -21,10 +21,18 @@ Este portfólio apresenta esse raciocínio aplicado ao setor educacional. O obje
 | Estudo | Decisão de negócio | Evidências disponíveis |
 |:---|:---|:---|
 | **[Planejamento estratégico do GENA](cases/grupo-educacional/README.md)** | Como priorizar crescimento, retenção e transformação digital? | SWOT, objetivos, OKRs propostos, critérios de priorização, roteiro de 90 dias e riscos |
-| **[Redução de churn no EAD](cases/grupo-educacional/reducao-churn-ead.md)** | Como agir antes do abandono sem prometer um efeito ainda não medido? | Hipóteses, regras de segmentação propostas, backlog, desenho de piloto e critérios de avaliação |
+| **[Redução de churn no EAD](cases/grupo-educacional/reducao-churn-ead.md)** | Como agir antes do abandono sem prometer um efeito ainda não medido? | Hipóteses, [base sintética](dados/gena/README.md), [contrato de dados](docs/contrato-dados-gena.md) e [reconciliação e testes](dados/gena/validacao.md) |
 | **[Governança de indicadores e BI](cases/governanca-indicadores-bi.md)** | Como fazer áreas diferentes decidirem com métricas comparáveis? | Dicionário de indicadores, RACI, controles de qualidade e critérios de aceite |
 
-**Estágio dos três estudos:** planejamento documentado e simulado. A implementação, os datasets e a mensuração de impacto são etapas futuras, não entregas já concluídas.
+**Estágio:** planejamento documentado, com preparação de dados do case EAD executada em ambiente simulado. A implementação operacional, o dashboard, o modelo e o piloto continuam futuros; não há impacto ou ROI realizado.
+
+## Evidência técnica disponível para exame
+
+A [base fictícia da GENA](dados/gena/README.md) possui **seis CSV, gerador Python, dicionário e testes automatizados**. Os dados preservam os 3.120 ativos EAD finais e os 10.040 ativos institucionais, com entradas, saídas e população elegível documentadas.
+
+A [reconciliação](dados/gena/validacao.md) permite conferir churn, retenção, posição financeira, NPS e hashes dos arquivos. Os números são calibrados para o cenário fictício: demonstram consistência e reprodutibilidade, não eficácia de uma intervenção.
+
+Para examinar a implementação: [gerador](scripts/gerar_dados_gena.py) · [testes](tests/test_dados_gena.py) · [contrato e limites](docs/contrato-dados-gena.md).
 
 ## Competências demonstradas nos artefatos
 
@@ -36,7 +44,7 @@ Este portfólio apresenta esse raciocínio aplicado ao setor educacional. O obje
 | Business Intelligence e governança | Definições de métricas, granularidade, qualidade e rotina de decisão |
 | Comunicação executiva | Síntese que conecta evidência, recomendação e decisão requerida |
 
-SQL, Python, BigQuery e Power BI têm suas evidências técnicas no [portfólio de Análise de Dados](https://github.com/msampaioac/data-analytics-portfolio). Aqui, o foco é o **raciocínio de gestão que orienta a análise e a execução**. Não apresento dashboards ou modelos preditivos como implementados neste repositório.
+A primeira melhoria usa **Python para geração e testes de contrato/reconciliação**; SQL, BigQuery e Power BI têm evidências técnicas no [portfólio de Análise de Dados](https://github.com/msampaioac/data-analytics-portfolio), outro repositório. Aqui, o foco é o **raciocínio de gestão que orienta a análise e a execução**. A análise diagnóstica em SQL e o dashboard Power BI são etapas futuras; não apresento modelo, piloto, efeito ou ROI implementados neste repositório.
 
 ## Como avaliar o meu raciocínio
 
@@ -54,6 +62,7 @@ Para discutir os trabalhos em entrevista, três perguntas ajudam a aprofundar a 
 |:---|:---|
 | [Cases](cases/README.md) | Estudos aplicados e roteiro de avaliação |
 | [Documentação](docs/README.md) | Síntese executiva, empresa fictícia e estágio das entregas |
+| [Base sintética GENA](dados/gena/README.md) | Contrato, CSV, gerador, testes e reconciliação da primeira melhoria |
 | [Modelos de trabalho](templates/README.md) | Diagnóstico, OKRs, canvas, 5W2H, riscos e decisões |
 
 ## Contato profissional

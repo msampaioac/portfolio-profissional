@@ -1,6 +1,6 @@
 # GENA — Gestão Estratégica e Projetos
 
-> **Estudo de caso inteiramente simulado.** O Grupo Educacional Nascente do Acre (GENA), seus contextos, números, papéis e decisões são fictícios e servem apenas para demonstrar raciocínio de gestão. Não representam emprego, experiência, certificação, resultado realizado ou análise de um dataset existente.
+> **Estudo de caso inteiramente simulado.** O Grupo Educacional Nascente do Acre (GENA), seus contextos, números, papéis e decisões são fictícios e servem apenas para demonstrar raciocínio de gestão. Há uma base sintética verificável para exame; ela não representa emprego, experiência, certificação, resultado realizado, análise causal ou risco validado.
 
 **Horizonte estratégico:** 2027–2029 · **Janela de validação:** piloto dos primeiros 90 dias
 **Snapshot de referência:** 2025, a ser revalidado antes de usar qualquer baseline de 2027
@@ -21,9 +21,18 @@ O gate de escala deve exigir baseline validado, responsável nomeado por indicad
 
 A GENA é uma organização educacional privada fictícia, fundada em Rio Branco (AC), com Educação Básica, graduação presencial e EAD, pós-graduação e extensão. No cenário simulado, o snapshot de 2025 registra **10.040 alunos ativos**.
 
-O ponto de atenção é a graduação EAD: o snapshot indica **27,5% de churn anual**, 13,5% de inadimplência média e NPS 39. Esses números são referências do universo simulado de 2025, não uma medição do ciclo 2027.
+O ponto de atenção é a graduação EAD: o snapshot indica **27,5% de churn anual**, 13,5% de inadimplência **monetária na posição de referência** e NPS 39. Esses números são referências sintéticas calibradas de 2025, não uma medição do ciclo 2027.
 
 O desafio de gestão é converter sinais dispersos em decisões de portfólio: proteger permanência sem prometer impacto, conectar a jornada acadêmica sem mascarar conversão e criar indicadores que possam ser auditados.
+
+## Base disponível para exame
+
+A primeira melhoria autorizada é a base sintética, gerador Python, testes de contrato/reconciliação e conciliação do snapshot EAD. A abertura de 2.880 em janeiro perde 40 conclusões e 40 transferências do denominador, deixando 2.800 elegíveis; 770 cancelamentos produzem 27,5% de churn e 2.030 retidos (72,5%). Há 1.090 ingressantes entre março e novembro, todos ativos no fechamento e sem churn estimado no grupo; o fechamento é 3.120 e o total anual distinto é 3.970.
+
+NPS 39 usa 200 respostas (118/42/40). A inadimplência EAD de 13,5% é monetária na posição de referência de títulos de 2025 vencidos até 31/12/2025, com alvo em centavos ao mais próximo: calibração, não validação real. O corte de 28/02/2025 exclui financeiro, NPS e saídas de abril a dezembro de 2025; engajamento de 06/01 a 28/02 é independente do desfecho, sem conclusão de que baixo engajamento provoque churn.
+
+A amostra didática EAD usa Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; isso é premissa, não autorização para inferência. Consulte o [índice da base](../../dados/gena/README.md), o [contrato](../../docs/contrato-dados-gena.md), a [validação](../../dados/gena/validacao.md), o [gerador](../../scripts/gerar_dados_gena.py) e os [testes](../../tests/test_dados_gena.py).
+
 
 ### Diagnóstico do problema
 
@@ -115,7 +124,7 @@ A ordem pode mudar se a revalidação revelar risco financeiro ou operacional su
 
 **Iniciativas:** dicionário de métricas; linhagem de dados; painel mínimo; rito mensal; registro de decisões; revisão trimestral do portfólio.
 
-## Piloto dos primeiros 90 dias
+## Piloto dos primeiros 90 dias (etapa futura)
 
 O piloto testa viabilidade e sinais de efeito na janela observável. Não comprova sozinho o cumprimento de uma meta anual de churn; esse resultado exige acompanhamento por período compatível. O plano abaixo é proposto, não executado.
 
@@ -123,7 +132,7 @@ O piloto testa viabilidade e sinais de efeito na janela observável. Não compro
 |:---|:---|:---|
 | Dias 1–15 | Confirmar sponsor, papéis, escopo EAD, fontes, privacidade, definições e critérios de sucesso | Acesso autorizado, escopo delimitado e riscos críticos registrados |
 | Dias 16–30 | Reconstituir snapshot 2025 apenas como referência, desenhar baseline 2027, dicionário e mapa de dados | Denominadores e fórmulas aprovados; lacunas explicitadas |
-| Dias 31–45 | Construir dataset sintético ou amostra autorizada, painel mínimo e classificação de risco | Qualidade mínima, rastreabilidade e regra de risco revisadas |
+| Dias 31–45 | Em etapa futura: construir painel mínimo e classificação de risco após a base sintética e a reconciliação | Qualidade mínima, rastreabilidade e regra de risco revisadas |
 | Dias 46–60 | Executar contato em coorte-piloto, registrar SLA, resposta, custo e encaminhamento | Pelo menos um ciclo de execução observável; sem afirmar efeito causal |
 | Dias 61–75 | Comparar execução e sinais de permanência, revisar experiência e testar jornada de transição em desenho | Evidência suficiente para ajustar escopo ou interromper hipótese |
 | Dias 76–90 | Consolidar resultados do piloto, business case, backlog, RACI e recomendação ao comitê | Decisão documentada: continuar, ajustar, pausar ou parar |
@@ -168,9 +177,9 @@ Nenhum gate deve ser decidido apenas pelo dashboard: o comitê precisa revisar f
 
 ## Limitações e próximos passos
 
-Este case não contém dataset real, série histórica auditável, custos de intervenção, margem por curso, consentimentos, desenho causal ou resultado realizado. O snapshot de 2025 não deve ser apresentado como baseline de 2027; a conversão de 20% é condicional; cobertura de indicadores de 95% é meta operacional a apurar.
+Este case usa uma base sintética verificável, não dados reais. Ainda não há série histórica auditável de operação, custos de intervenção, margem por curso, consentimentos, análise causal, risco validado ou resultado realizado. O snapshot de 2025 não deve ser apresentado como baseline de 2027; a conversão de 20% é condicional; cobertura de indicadores de 95% é meta operacional a apurar.
 
-Próximos passos: validar o universo e os donos de dados; formalizar dicionário e RACI; revalidar o baseline 2027; estimar custo e capacidade; executar o piloto; registrar evidências; e submeter o gate de escala ao Comitê de Portfólio.
+Próximos passos: executar a geração e os testes, registrar a reconciliação e a validação de regras da base; depois, em etapas futuras, desenvolver análise diagnóstica SQL, dashboard, modelo, piloto e avaliação de efeito/custo. O gate de escala segue condicionado a evidência de negócio.
 
 ## Referências do portfólio
 
@@ -180,3 +189,4 @@ Próximos passos: validar o universo e os donos de dados; formalizar dicionário
 - [Detalhamento: redução de churn EAD](./reducao-churn-ead.md)
 - [Governança de indicadores e BI](../governanca-indicadores-bi.md)
 - [Templates do portfólio](../../templates/README.md)
+- [Base sintética GENA](../../dados/gena/README.md) · [Contrato](../../docs/contrato-dados-gena.md) · [Validação](../../dados/gena/validacao.md) · [Gerador](../../scripts/gerar_dados_gena.py) · [Testes](../../tests/test_dados_gena.py)

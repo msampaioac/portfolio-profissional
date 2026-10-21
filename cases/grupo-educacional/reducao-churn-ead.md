@@ -1,14 +1,14 @@
 # Redução de churn na graduação EAD
 
-**GENA · Estudo simulado · Projeto de retenção e experiência do aluno**
+**Estudo simulado · Retenção e experiência do aluno, com base sintética para exame**
 
-[Portfólio](../../README.md) · [Plano estratégico](README.md) · [Empresa fictícia](../../docs/empresa-ficticia-grupo-educacional.md) · [Governança de indicadores](../governanca-indicadores-bi.md)
+[Portfólio](../../README.md) · [Plano estratégico](README.md) · [Empresa fictícia](../../docs/empresa-ficticia-grupo-educacional.md) · [Governança de indicadores](../governanca-indicadores-bi.md) · [Base](../../dados/gena/README.md) · [Contrato](../../docs/contrato-dados-gena.md) · [Validação](../../dados/gena/validacao.md)
 
-> **Estágio:** desenho de projeto, não implementação. Não há base individual, modelo treinado, piloto executado ou impacto medido. Os indicadores abaixo pertencem ao cenário fictício de 2025 e exigem atualização antes de aplicação.
+> **Estágio:** a base sintética é verificável para exame e a primeira melhoria cobre gerador, testes e reconciliação; este case continua sendo desenho de projeto. Não há modelo treinado, piloto executado, análise causal, risco validado, efeito medido ou ROI. Os números são sintéticos/calibrados e diferentes de operação real.
 
 ## 1. A decisão de negócio
 
-**Recomendação:** iniciar um piloto de atendimento preventivo em uma coorte EAD, com regras de risco simples e explicáveis, em vez de começar por um modelo preditivo complexo ou por descontos indiscriminados.
+**Recomendação para etapa futura:** iniciar um piloto de atendimento preventivo em uma coorte EAD, com regras de risco simples e explicáveis, em vez de começar por um modelo preditivo complexo ou por descontos indiscriminados. Esta decisão não integra a primeira melhoria de base sintética.
 
 Essa escolha reduz dependências técnicas, permite testar a capacidade de atendimento e exige que a instituição meça permanência e custo. O piloto não presume que atraso ou baixo acesso causam evasão; esses sinais orientam hipóteses a investigar.
 
@@ -18,10 +18,19 @@ Essa escolha reduz dependências técnicas, permite testar a capacidade de atend
 |:---|---:|:---|
 | Alunos ativos | 3.120 | Fotografia de volume, não denominador automático de churn |
 | Churn anual | 27,5% | Coortes, janela, motivos de saída e população elegível |
-| Inadimplência média | 13,5% | Relação entre dificuldades financeiras e continuidade |
+| Inadimplência monetária na posição de referência | 13,5% | Relação entre títulos maturados, dificuldades financeiras e continuidade |
 | NPS | 39 | Motivos de insatisfação e pontos de atrito |
 
 A empresa possui sinais acadêmicos, financeiros e de atendimento em sistemas distintos. O problema de gestão é organizar esses sinais para decidir **quem atender, como atender e como avaliar a intervenção**.
+
+## Base disponível para exame
+
+A primeira melhoria autoriza base sintética, gerador Python, testes e reconciliação — não dashboard, modelo, piloto, efeito ou ROI. A conciliação EAD usa 2.880 na abertura de 01/01/2025; 40 conclusões e 40 transferências são retiradas retroativamente, deixando 2.800 elegíveis. São 770 cancelamentos (27,5%), 2.030 retidos (72,5%) e 1.090 ingressantes de março a novembro, todos ativos no fechamento e sem churn estimado no grupo. O fechamento é 3.120, enquanto 3.970 é o total anual de indivíduos distintos.
+
+NPS 39 é calibrado com 200 respostas finais (118 promotores, 42 passivos, 40 detratores). A inadimplência monetária na posição de referência é de 13,5% dos títulos de 2025 vencidos em 31/12/2025, alvo em centavos ao mais próximo; é calibração/checagem de coerência, não validação real. O ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas; valores inteiros em centavos não significam `alunos × ticket = receita/ROI`.
+
+Para o corte de features em 28/02/2025, financeiro, NPS e saídas de abril a dezembro de 2025 não são utilizáveis; em particular, dezembro fica fora. O engajamento de oito semanas (06/01–28/02), gerado a partir dos 2.880 da abertura, é independente do desfecho; portanto, não existe conclusão de que baixo engajamento provoque churn. Administração, Pedagogia e Gestão Pública e os polos Cidade Nova, Cruzeiro do Sul e Sena Madureira são premissas didáticas, não autorização para inferência. Detalhes de entradas, saídas e contrato estão no [índice da base](../../dados/gena/README.md), [contrato](../../docs/contrato-dados-gena.md) e [validação](../../dados/gena/validacao.md).
+
 
 ## 3. Objetivo e critério de sucesso
 
@@ -36,7 +45,7 @@ A meta anual ilustrativa é reduzir o churn em **15% relativos** na mesma popula
 
 **Limite temporal:** 90 dias permitem avaliar viabilidade e sinais de resultado, mas não comprovam uma redução anual. O efeito anual depende de acompanhamento posterior.
 
-## 4. Escopo do projeto
+## 4. Escopo do projeto (etapa futura)
 
 | Incluído no piloto | Fora do escopo inicial |
 |:---|:---|
@@ -109,6 +118,6 @@ Definir antes do início a janela, os desfechos, a população elegível, o trat
 
 Tradução de um indicador em decisão de projeto; delimitação de escopo; hipóteses testáveis; priorização de entregas; coordenação de áreas; avaliação de riscos e resultados sem prometer impacto não observado.
 
-**Próximos passos:** produzir base sintética reproduzível, implementar consultas e controles, desenhar painel e executar uma simulação do piloto. Nenhuma dessas etapas é apresentada como concluída.
+**Próximos passos:** executar o gerador e os testes, registrar a reconciliação e a validação das regras da base sintética. Em etapas futuras, implementar análise diagnóstica SQL, desenhar dashboard, avaliar modelo, executar piloto e medir efeito/custo; nenhuma dessas frentes é apresentada como concluída.
 
-[Modelos de gestão](../../templates/README.md) · [Índice dos cases](../README.md) · [Voltar ao portfólio](../../README.md)
+[Modelos de gestão](../../templates/README.md) · [Índice dos cases](../README.md) · [Base sintética](../../dados/gena/README.md) · [Gerador](../../scripts/gerar_dados_gena.py) · [Testes](../../tests/test_dados_gena.py) · [Voltar ao portfólio](../../README.md)

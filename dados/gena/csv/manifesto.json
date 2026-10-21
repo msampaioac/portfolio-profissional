@@ -1,0 +1,89 @@
+{
+  "arquivos": {
+    "alunos_ead.csv": {
+      "contagem": 3970,
+      "granularidade": "uma linha por aluno sintético EAD (3970 linhas)",
+      "sha256": "b4c61c4d334051f4153d1fb80799d39b3d737f58d0d09216509343777fff3c97",
+      "tamanho_bytes": 290690
+    },
+    "engajamento_semanal_ead.csv": {
+      "contagem": 23040,
+      "granularidade": "uma linha por matrícula da abertura de 2025 e semana de sinal; 8 semanas",
+      "sha256": "35e03dde7f1ab2936a8899b91bf1f9f2fa03fb6cb8a2a2c851ae97fb3eee988f",
+      "tamanho_bytes": 1112703
+    },
+    "financeiro_ead.csv": {
+      "contagem": 37742,
+      "granularidade": "uma linha por título mensal de 2025, no máximo 12 por matrícula",
+      "sha256": "a043ff6c8abf5ba487504458995018dcb6dfd293bdee812dbc5a834d3bb3573c",
+      "tamanho_bytes": 2953288
+    },
+    "matriculas_ead.csv": {
+      "contagem": 3970,
+      "granularidade": "uma linha por matrícula sintética, uma por aluno (3970 linhas)",
+      "sha256": "fc00679dbbb9fd0edd36f8131e7ed892e88d24caa708d087b8ce7f670b6de7a9",
+      "tamanho_bytes": 423681
+    },
+    "pesquisa_nps_ead.csv": {
+      "contagem": 200,
+      "granularidade": "uma linha por resposta NPS sintética; amostra distinta de alunos ativos no fechamento",
+      "sha256": "b73848de17410486a053408f6bbd264d901192051138106851bb467a9991df74",
+      "tamanho_bytes": 9088
+    },
+    "referencias_segmentos.csv": {
+      "contagem": 4,
+      "granularidade": "uma linha agregada por segmento de referência, sem entidades individuais",
+      "sha256": "6b7bf5385a766dfb756fde3e1a1d14d171a21ef2759fd3ce2719a33b6fd05ead",
+      "tamanho_bytes": 345
+    }
+  },
+  "aviso": "Dados inteiramente fictícios e calibrados para a primeira melhoria; não são evidência de efeito, não incluem modelo, dashboard, custos, ROI, desempenho causal ou atendimentos. A inadimplência é uma posição monetária em 2025-12-31, não uma média mensal anual, e o NPS é uma amostra sintética de 200 ativos, não uma estimativa da população.",
+  "aviso_calibrado": "Dados inteiramente fictícios e calibrados para a primeira melhoria; não são evidência de efeito, não incluem modelo, dashboard, custos, ROI, desempenho causal ou atendimentos. A inadimplência é uma posição monetária em 2025-12-31, não uma média mensal anual, e o NPS é uma amostra sintética de 200 ativos, não uma estimativa da população.",
+  "calibracoes": {
+    "churn": "770 cancelamentos entre 2800 elegíveis; conclusões e transferências são excluídas da elegibilidade",
+    "financeiro": "saldo aberto total = ROUND_HALF_UP(total devido * 0.135) em centavos",
+    "nps": "118 promotores, 42 passivos e 40 detratores entre 200 respostas"
+  },
+  "config": {
+    "arquivo": "dados/gena/config.json",
+    "sha256": "98444bcb176af6ecdc0b1925cf1c1af642e6203e192a9003520cca15664dc561"
+  },
+  "config_sha256": "98444bcb176af6ecdc0b1925cf1c1af642e6203e192a9003520cca15664dc561",
+  "contagens": {
+    "alunos_ead.csv": 3970,
+    "engajamento_semanal_ead.csv": 23040,
+    "financeiro_ead.csv": 37742,
+    "matriculas_ead.csv": 3970,
+    "pesquisa_nps_ead.csv": 200,
+    "referencias_segmentos.csv": 4
+  },
+  "data_corte_sinais": "2025-02-28",
+  "granularidade": {
+    "alunos_ead.csv": "uma linha por aluno sintético EAD (3970 linhas)",
+    "engajamento_semanal_ead.csv": "uma linha por matrícula da abertura de 2025 e semana de sinal; 8 semanas",
+    "financeiro_ead.csv": "uma linha por título mensal de 2025, no máximo 12 por matrícula",
+    "matriculas_ead.csv": "uma linha por matrícula sintética, uma por aluno (3970 linhas)",
+    "pesquisa_nps_ead.csv": "uma linha por resposta NPS sintética; amostra distinta de alunos ativos no fechamento",
+    "referencias_segmentos.csv": "uma linha agregada por segmento de referência, sem entidades individuais"
+  },
+  "seed": 20251021,
+  "semente": 20251021,
+  "sha256": {
+    "alunos_ead.csv": "b4c61c4d334051f4153d1fb80799d39b3d737f58d0d09216509343777fff3c97",
+    "engajamento_semanal_ead.csv": "35e03dde7f1ab2936a8899b91bf1f9f2fa03fb6cb8a2a2c851ae97fb3eee988f",
+    "financeiro_ead.csv": "a043ff6c8abf5ba487504458995018dcb6dfd293bdee812dbc5a834d3bb3573c",
+    "matriculas_ead.csv": "fc00679dbbb9fd0edd36f8131e7ed892e88d24caa708d087b8ce7f670b6de7a9",
+    "pesquisa_nps_ead.csv": "b73848de17410486a053408f6bbd264d901192051138106851bb467a9991df74",
+    "referencias_segmentos.csv": "6b7bf5385a766dfb756fde3e1a1d14d171a21ef2759fd3ce2719a33b6fd05ead"
+  },
+  "sizes": {
+    "alunos_ead.csv": 290690,
+    "engajamento_semanal_ead.csv": 1112703,
+    "financeiro_ead.csv": 2953288,
+    "matriculas_ead.csv": 423681,
+    "pesquisa_nps_ead.csv": 9088,
+    "referencias_segmentos.csv": 345
+  },
+  "snapshot": "2025-12-31",
+  "versao": "1.0.0"
+}

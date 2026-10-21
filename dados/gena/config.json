@@ -1,0 +1,34 @@
+{
+  "versao": "1.0.0",
+  "semente": 20251021,
+  "natureza": "DADOS INTEIRAMENTE FICTICIOS; nao representam alunos, operacao ou resultados reais",
+  "ano_referencia": 2025,
+  "snapshot": "2025-12-31",
+  "data_corte_sinais": "2025-02-28",
+  "churn_meta_reducao_relativa": "0.15",
+  "segmentos_referencia": [
+    {"segmento": "Educacao Basica", "ativos_2024": 3260, "ativos_2025": 3340, "ticket_centavos": 98000, "churn_percentual_referencia": "8.5", "inadimplencia_percentual_referencia": "6.0", "nps_referencia": 68},
+    {"segmento": "Graduacao presencial", "ativos_2024": 2510, "ativos_2025": 2560, "ticket_centavos": 78000, "churn_percentual_referencia": "18.0", "inadimplencia_percentual_referencia": "9.0", "nps_referencia": 55},
+    {"segmento": "Graduacao EAD", "ativos_2024": 2880, "ativos_2025": 3120, "ticket_centavos": 31000, "churn_percentual_referencia": "27.5", "inadimplencia_percentual_referencia": "13.5", "nps_referencia": 39},
+    {"segmento": "Pos-graduacao e extensao", "ativos_2024": 930, "ativos_2025": 1020, "ticket_centavos": 24500, "churn_percentual_referencia": "24.0", "inadimplencia_percentual_referencia": "12.0", "nps_referencia": 46}
+  ],
+  "ead": {
+    "populacao_abertura": 2880,
+    "conclusoes_coorte_abertura": 40,
+    "transferencias_coorte_abertura": 40,
+    "populacao_elegivel_churn": 2800,
+    "saidas_churn": 770,
+    "retidos_coorte_abertura": 2030,
+    "novas_matriculas": 1090,
+    "ativos_fechamento": 3120,
+    "ticket_mensal_centavos": 31000,
+    "inadimplencia_monetaria_alvo": "0.135",
+    "polos": ["Polo Cidade Nova", "Polo Cruzeiro do Sul", "Polo Sena Madureira"],
+    "cursos": ["Administracao", "Pedagogia", "Gestao Publica"],
+    "semanas_sinais_abertura": 8,
+    "nps_respostas": 200,
+    "nps_promotores": 118,
+    "nps_passivos": 42,
+    "nps_detratores": 40
+  }
+}
