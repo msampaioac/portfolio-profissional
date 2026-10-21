@@ -190,3 +190,8 @@ Próximos passos: executar a geração e os testes, registrar a reconciliação 
 - [Governança de indicadores e BI](../governanca-indicadores/README.md)
 - [Templates do portfólio](../../../../templates/README.md)
 - [Base sintética GENA](../retencao-ead/dados/README.md) · [Contrato](../retencao-ead/docs/contrato-dados.md) · [Validação](../retencao-ead/dados/validacao.md) · [Gerador](../retencao-ead/scripts/gerar_dados_gena.py) · [Testes](../retencao-ead/tests/test_dados_gena.py)
+
+
+## Simulação retrospectiva de COVID-19
+
+O [cenário de resposta estratégica à COVID-19](docs/simulacao-resposta-covid19.md) aplica a tese de continuidade, priorização, liquidez e governança a uma crise fictícia de 2020. A cronologia respeita o início do EAD em 2019, a resposta remota em 2020 e o CRM/painéis a partir de 2022. Etapas, orçamento e resultados são hipóteses didáticas; não alteram o plano 2027–2029 nem representam decisões ou impacto realizados.

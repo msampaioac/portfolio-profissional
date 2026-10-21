@@ -7,14 +7,14 @@ Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos
 
 > **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. A base sintética é verificável para exame e reprodução, mas não representa alunos, operação, resultados profissionais realizados ou evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
 >
-> **Estágio disponível:** Retenção EAD possui base sintética, gerador e 13 testes de contrato. Governança reúne inventário, modelo lógico, decisões e um ciclo técnico reproduzível de cinco indicadores, com testes próprios. Análise diagnóstica, dashboard, modelo, implantação empresarial, piloto e comprovação de impacto permanecem futuros.
+> **Estágio disponível:** Retenção EAD possui base sintética de 2025, gerador e 13 testes de contrato; a simulação COVID-19 tem configuração e sete testes separados. Governança reúne inventário, modelo lógico, decisões e um ciclo técnico reproduzível de cinco indicadores, com testes próprios. A análise diagnóstica da base 2025, dashboard, modelo, implantação empresarial, piloto e comprovação de impacto permanecem futuros; a simulação COVID-19 não é execução nem impacto.
 
 ## Projetos da GENA
 
 | Projeto | Documento e estágio |
 |:---|:---|
 | Planejamento estratégico | [Proposta documentada](projetos/planejamento-estrategico/README.md) |
-| Retenção EAD | [Base sintética, gerador, dicionário e 13 testes; análise e piloto futuros](projetos/retencao-ead/README.md) |
+| Retenção EAD | [Base 2025, gerador e 13 testes de contrato; cenário COVID-19 com sete testes separados; análise e piloto da base futuros](projetos/retencao-ead/README.md) |
 | Governança de indicadores | [Ciclo técnico com evidências e testes próprios; implantação futura e conversão preliminar](projetos/governanca-indicadores/README.md) |
 
 **Roadmap:** P02 — Médio → Graduação e P03 — Financeiro são frentes planejadas. Não há pastas ou links de projeto publicados para elas; as descrições de planejamento permanecem neste documento.
@@ -164,7 +164,7 @@ Os quantitativos abaixo compõem a base de referência para futuros estudos. **A
 
 ### Contrato e calibração da base sintética de 2025
 
-O estágio disponível contempla uma base sintética verificável, gerador Python, dicionário, reconciliação e regras para exame; os 13 testes estão aprovados para a próxima execução, que ocorrerá após o remapeamento dos paths nos três scripts. A base é calibrada para coerência interna e é diferente de dados reais; nenhuma análise causal ou risco foi validado. O [projeto de Retenção EAD](projetos/retencao-ead/README.md) reúne o [contrato de dados](projetos/retencao-ead/docs/contrato-dados.md), o [índice da base](projetos/retencao-ead/dados/README.md) e a [validação/reconciliação](projetos/retencao-ead/dados/validacao.md), que detalham campos, períodos, exclusões e limites.
+O estágio disponível contempla uma base sintética verificável, gerador Python, dicionário, reconciliação e regras para exame. Os 13 testes de contrato da base 2025 foram executados e aprovados nesta revisão; a simulação COVID-19 tem sete testes próprios e configuração separada. A base é calibrada para coerência interna e é diferente de dados reais; nenhuma análise causal ou risco foi validado. O [projeto de Retenção EAD](projetos/retencao-ead/README.md) reúne o [contrato de dados](projetos/retencao-ead/docs/contrato-dados.md), o [índice da base](projetos/retencao-ead/dados/README.md) e a [validação/reconciliação](projetos/retencao-ead/dados/validacao.md), que detalham campos, períodos, exclusões e limites.
 
 | Reconciliação EAD | Regra/resultado |
 |:---|:---|
@@ -364,3 +364,8 @@ Cada reunião deve registrar **evidência utilizada, decisão, responsável, pra
 **Estágio disponível:** a base sintética, o gerador, o dicionário, os testes e a reconciliação estão organizados para exame; análise SQL, dashboard, modelo, piloto, efeito e ROI permanecem futuros. Os artefatos operacionais ficam nos respectivos projetos.
 
 [Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão e Negócios](../../README.md)
+
+
+## Simulação transversal da crise de COVID-19
+
+A crise é tratada como **uma simulação documental que atravessa os três projetos existentes**, não como um quarto projeto nem como experiência real. O [Planejamento Estratégico](projetos/planejamento-estrategico/docs/simulacao-resposta-covid19.md) registra etapas e escolhas; a [Retenção EAD](projetos/retencao-ead/docs/simulacao-covid19-resultados.md) apresenta um espelho numérico calculado a partir de premissas fictícias; e a [Governança de Indicadores](projetos/governanca-indicadores/docs/simulacao-covid19-processos.md) contém mapas de processos antes/depois, definições e cadência. Os números de 2020 não são vinculados à base de 2025, à série 2021–2025 ou a resultados reais.

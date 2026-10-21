@@ -1,0 +1,94 @@
+{
+  "scenario_id": "gena-covid19-2020",
+  "status": "simulacao_ficticia",
+  "title": "Continuidade EAD durante a crise de COVID-19",
+  "horizon_weeks": 8,
+  "horizon_days": 56,
+  "cohort_size": 1000,
+  "denominators": {
+    "planned_lessons": 300,
+    "students_with_access_need": 200,
+    "support_requests": 150,
+    "financial_requests": 160
+  },
+  "branches": {
+    "without_coordinated_package": {
+      "lessons_delivered": 174,
+      "students_engaged_4_of_8_weeks": 620,
+      "access_needs_resolved_10_business_days": 40,
+      "support_resolved_48_hours": 45,
+      "financial_requests_answered_5_business_days": 48,
+      "cancellations_8_weeks": 120
+    },
+    "with_hypothetical_package": {
+      "lessons_delivered": 270,
+      "students_engaged_4_of_8_weeks": 760,
+      "access_needs_resolved_10_business_days": 150,
+      "support_resolved_48_hours": 120,
+      "financial_requests_answered_5_business_days": 128,
+      "cancellations_8_weeks": 90
+    }
+  },
+  "metrics": [
+    {
+      "key": "lesson_continuity",
+      "label": "Aulas entregues conforme calendário",
+      "numerator": "lessons_delivered",
+      "denominator": "planned_lessons",
+      "direction": "higher_is_better",
+      "definition": "Aulas com registro de entrega dentro do calendário de referência divididas por 300 aulas previstas em 56 dias.",
+      "maturity_rule": "Calendário e denominador congelados no dia 0; leitura final no dia 56.",
+      "interpretation_limit": "Não mede aprendizagem; reprogramação de aula não altera silenciosamente o denominador."
+    },
+    {
+      "key": "recurring_engagement",
+      "label": "Alunos com atividade em pelo menos 4 das 8 semanas",
+      "numerator": "students_engaged_4_of_8_weeks",
+      "denominator": "cohort_size",
+      "direction": "higher_is_better",
+      "definition": "Aluno com ao menos uma atividade acadêmica validada em quatro ou mais semanas distintas da janela.",
+      "maturity_rule": "Coorte fixa de 1.000; leituras antes do dia 56 são parciais; resultado final somente após oito semanas completas.",
+      "interpretation_limit": "Atividade baixa não prova desinteresse e não estabelece causalidade com cancelamentos."
+    },
+    {
+      "key": "access_support",
+      "label": "Necessidades de acesso resolvidas em até 10 dias úteis",
+      "numerator": "access_needs_resolved_10_business_days",
+      "denominator": "students_with_access_need",
+      "direction": "higher_is_better",
+      "definition": "Necessidade de equipamento ou conectividade resolvida em até 10 dias úteis após registro.",
+      "maturity_rule": "Denominador fixo de 200 necessidades; incluir somente casos com janela completa de 10 dias úteis.",
+      "interpretation_limit": "Resolução concluída; tentativa de contato não conta como necessidade resolvida."
+    },
+    {
+      "key": "support_sla",
+      "label": "Solicitações de suporte resolvidas em até 48 horas",
+      "numerator": "support_resolved_48_hours",
+      "denominator": "support_requests",
+      "direction": "higher_is_better",
+      "definition": "Solicitação encerrada em até 48 horas contadas da abertura.",
+      "maturity_rule": "Denominador fixo de 150; incluir solicitações cuja janela de 48 horas já tenha amadurecido no cutoff.",
+      "interpretation_limit": "Solicitação vencida e não resolvida não cumpre SLA; taxa não equivale à satisfação do aluno."
+    },
+    {
+      "key": "financial_response_sla",
+      "label": "Pedidos de negociação com primeira resposta em até 5 dias úteis",
+      "numerator": "financial_requests_answered_5_business_days",
+      "denominator": "financial_requests",
+      "direction": "higher_is_better",
+      "definition": "Primeira resposta registrada em até 5 dias úteis após o pedido de negociação.",
+      "maturity_rule": "Denominador fixo de 160; incluir pedidos cuja janela completa de 5 dias úteis tenha transcorrido.",
+      "interpretation_limit": "Resposta não significa acordo, pagamento, recuperação ou redução de inadimplência."
+    },
+    {
+      "key": "cancellations_8_weeks",
+      "label": "Cancelamentos registrados em 8 semanas",
+      "numerator": "cancellations_8_weeks",
+      "denominator": "cohort_size",
+      "direction": "lower_is_better",
+      "definition": "Cancelamentos registrados do dia 0 ao dia 56 divididos pelas 1.000 matrículas ativas no dia 0.",
+      "maturity_rule": "Coorte e janela acumulada de 56 dias fixas; conclusão regular e transferência são contabilizadas separadamente.",
+      "interpretation_limit": "Não anualizar; diferença entre ramos simulados não é efeito causal nem evasão evitada observada."
+    }
+  ]
+}

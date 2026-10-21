@@ -38,7 +38,7 @@ Antes de um piloto, proponho uma revisão de trabalho com Coordenação, Negóci
 
 ## 5. O que os testes demonstram — e o que não demonstram?
 
-**Os 13 testes da Retenção EAD verificam o contrato da base gerada.** Eles cobrem integridade, populações, financeiro, NPS, janelas iniciais e reprodução. Não comprovam os seis indicadores de uma operação, conversão, governança implantada ou efeito de intervenção.
+**Os 13 testes da Retenção EAD verificam o contrato da base gerada de 2025.** Eles cobrem integridade, populações, financeiro, NPS, janelas iniciais e reprodução. Não comprovam operação real, conversão, governança implantada ou efeito de intervenção. Os cinco indicadores recalculados no contrato EAD 2025 são distintos dos seis KPIs da simulação COVID-19; os testes desta última verificam apenas a consistência de suas premissas fictícias.
 
 A [suíte própria deste projeto](../tests/test_reconciliacao.py) verifica a reconciliação, o cenário de denominador inadequado e o cálculo dos cinco indicadores disponíveis. A contagem e os resultados executados constam no [relatório](../evidencias/reconciliacao.md). Não confundo repetir arquivos sintéticos com validar duas cargas reais de produção.
 

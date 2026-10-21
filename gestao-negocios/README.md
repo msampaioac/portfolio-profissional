@@ -90,3 +90,8 @@ Após alterações de pastas, verificar os links e executar novamente os comando
 ## Contato
 
 [LinkedIn](https://linkedin.com/in/msampaioac) para conversar sobre Gestão e Negócios, Estratégia e Business Intelligence.
+
+
+## Simulação transversal COVID-19
+
+A GENA agora possui uma simulação retrospectiva documentada dentro dos três projetos existentes — planejamento, retenção EAD e governança de indicadores. Ela não cria um quarto projeto nem substitui o próximo trabalho de análise da base EAD; os resultados de crise são didáticos, separados dos dados de 2025 e não representam execução ou impacto real. O ponto de entrada é a [apresentação da GENA](cases/gena/README.md).

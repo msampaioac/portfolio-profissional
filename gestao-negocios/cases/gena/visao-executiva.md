@@ -31,9 +31,13 @@ Essas interpretações são hipóteses de planejamento; os indicadores não comp
 | Retenção EAD | Tradução de um indicador em hipótese, piloto e critério de decisão | [Plano de intervenção e avaliação](projetos/retencao-ead/README.md) |
 | Governança de indicadores | Correção de uma divergência didática, cinco indicadores recalculados e decisões rastreáveis | [Contrato, evidências, testes próprios e defesa do case](projetos/governanca-indicadores/README.md) |
 
+## Simulação transversal COVID-19 — 2020
+
+O cenário retrospectivo é um exercício didático que conecta os três projetos existentes, não um quarto projeto nem um diagnóstico da base de 2025. Consulte a [resposta estratégica e as etapas](projetos/planejamento-estrategico/docs/simulacao-resposta-covid19.md), o [espelho de resultados simulados](projetos/retencao-ead/docs/simulacao-covid19-resultados.md) e o [mapa de processos e governança](projetos/governanca-indicadores/docs/simulacao-covid19-processos.md). Os seis indicadores COVID são separados dos cinco indicadores recalculados para 2025 e não representam resultados observados ou efeito causal.
+
 ## O que levar ao comitê
 
-**Estágio disponível no cenário simulado:** base sintética, gerador e 13 testes de contrato no projeto de Retenção EAD; ciclo de governança com fontes, modelo lógico, decisões, cálculo independente de cinco indicadores e testes próprios. Dashboard, modelo, implantação empresarial, piloto, efeito e ROI ficam para etapas posteriores.
+**Estágio disponível no cenário simulado:** base sintética, gerador e 13 testes de contrato no projeto de Retenção EAD; ciclo de governança com fontes, modelo lógico, decisões, cálculo independente de cinco indicadores e testes próprios; documentação transversal de resposta simulada à COVID-19 com sete testes próprios de consistência. Dashboard, modelo, implantação empresarial, piloto, efeito e ROI ficam para etapas posteriores.
 
 No exemplo de governança, a leitura de churn com denominador inadequado é 24,68%; com a coorte elegível, 27,50%. A diferença de 2,82 pontos percentuais é **correção de definição**, não aumento de evasão ou efeito de intervenção. Conversão Médio → Graduação permanece preliminar, sem dados de funil.
 

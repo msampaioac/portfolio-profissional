@@ -103,3 +103,8 @@ A rotina obrigatória de mudança é: modificar configuração ou gerador; regen
 Não foram gerados dados pessoais reais, atendimento, notas acadêmicas, intervenção, custos, margens, grupos de controle ou efeitos de retenção. Não há dashboard, modelo preditivo treinado nem ROI. Esses itens não devem aparecer como concluídos no portfólio.
 
 Os artefatos são estruturados com apoio de IA. O que se demonstra aqui é um contrato de dados consistente, geração reproduzível e controles testáveis para uma empresa fictícia.
+
+
+## 9. Cenário COVID-19 fictício de 2020 — contrato separado
+
+A extensão [COVID-19: espelho de resultados simulados](simulacao-covid19-resultados.md) usa uma configuração e um CSV próprios, sob `dados/covid19_config.json` e `dados/covid19_espelho_resultados.csv`. A coorte de 1.000 alunos, as janelas de oito semanas e todos os numeradores são premissas didáticas; não são extraídos da base de 2025, não integram seu manifesto e não alteram o contrato, o gerador ou os resultados de 2025. A execução reproduz as premissas e não valida qualquer resultado de negócio.

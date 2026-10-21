@@ -86,3 +86,10 @@ O projeto lê a base de [Retenção EAD](../retencao-ead/dados/README.md). Os **
 A [defesa do case](docs/defesa-do-case.md) responde: por que usar essas exclusões, como investigar divergências, quem pode mudar uma fórmula, quais controles priorizar, o que os testes demonstram e como o apoio de IA foi utilizado.
 
 **Síntese da minha abordagem:** apresentar uma decisão sustentada por definição, evidência e limite de interpretação. A maturidade do estudo está em tornar a escolha verificável e saber o que ainda depende de fonte, validação ou implantação.
+
+
+## Extensão retrospectiva COVID-19 — processo e indicadores
+
+O [mapa de processos da resposta simulada](docs/simulacao-covid19-processos.md) compara o fluxo presumido antes da crise com o fluxo proposto após as decisões, define responsáveis e apresenta um contrato mínimo de seis indicadores. O desenho de 2020 usa registro temporário controlado, coerente com a cronologia fictícia em que CRM e primeiros painéis aparecem em 2022.
+
+Essas métricas e seus resultados são um cenário didático independente dos cinco indicadores recalculados na base de 2025. Não representam implantação empresarial, aprovação humana real, resultado observado ou comprovação de causalidade.

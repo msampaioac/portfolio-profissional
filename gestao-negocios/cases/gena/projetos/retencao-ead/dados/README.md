@@ -54,3 +54,8 @@ Não use os desfechos de dezembro, a elegibilidade retrospectiva ou a posição 
 ## Manutenção em lote
 
 A configuração é a fonte única de parâmetros. Qualquer mudança deve regenerar os dados e atualizar simultaneamente os documentos relacionados. O [registro de mudanças](../docs/registro-mudancas.md) explica o que foi preservado, o que foi definido e o que continua pendente.
+
+
+## Artefato separado: cenário COVID-19 de 2020
+
+O arquivo [`covid19_config.json`](covid19_config.json) contém premissas fictícias de uma coorte didática de oito semanas. O [`covid19_espelho_resultados.csv`](covid19_espelho_resultados.csv) é calculado por script e tem teste próprio. Esses arquivos **não fazem parte** dos seis CSV, da configuração `config.json`, do manifesto ou da reconciliação do cenário EAD de 2025. Leia as definições e limites em [Simulação COVID-19](../docs/simulacao-covid19-resultados.md).

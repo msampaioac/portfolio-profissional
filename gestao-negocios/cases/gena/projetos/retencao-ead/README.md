@@ -132,3 +132,10 @@ Tradução de um indicador em decisão de projeto; delimitação de escopo; hip�
 **Próximo trabalho:** análise diagnóstica da base sintética e consultas SQL. Gerador, testes e reconciliação já estão disponíveis e foram executados; devem ser reexecutados quando houver alterações. Dashboard, modelo, piloto e avaliação de efeito/custo permanecem etapas futuras.
 
 [Modelos de gestão](../../../../templates/README.md) · [Índice dos cases](../../../README.md) · [Base sintética](dados/README.md) · [Gerador](scripts/gerar_dados_gena.py) · [Testes](tests/test_dados_gena.py) · [Voltar ao portfólio](../../../../README.md)
+
+
+## Extensão retrospectiva COVID-19 — separada do cenário de 2025
+
+O [espelho de resultados simulados](docs/simulacao-covid19-resultados.md) apresenta uma coorte didática de 1.000 alunos e duas ramificações hipotéticas de oito semanas. A configuração, o CSV calculado, o gerador e os testes ficam em [`dados/covid19_config.json`](dados/covid19_config.json), [`dados/covid19_espelho_resultados.csv`](dados/covid19_espelho_resultados.csv), [`scripts/simular_espelho_covid19.py`](scripts/simular_espelho_covid19.py) e [`tests/test_espelho_covid19.py`](tests/test_espelho_covid19.py).
+
+Essa extensão não altera a base, a configuração, os testes nem o churn anual da referência de 2025. Os valores do ramo com pacote hipotético são premissas de cenário, não medições, previsão ou efeito causal. Consulte também o [mapa de processos e governança](../governanca-indicadores/docs/simulacao-covid19-processos.md) e a [resposta estratégica](../planejamento-estrategico/docs/simulacao-resposta-covid19.md).

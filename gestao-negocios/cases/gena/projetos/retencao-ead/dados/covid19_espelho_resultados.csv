@@ -1,0 +1,7 @@
+scenario_id,status,metric_key,metric_label,direction,numerator_without_package,denominator,rate_without_package_pct,numerator_with_hypothetical_package,rate_with_hypothetical_package_pct,difference_percentage_points,relative_change_pct
+gena-covid19-2020,simulacao_ficticia,lesson_continuity,Aulas entregues conforme calendário,higher_is_better,174,300,58.00,270,90.00,32.00,55.17
+gena-covid19-2020,simulacao_ficticia,recurring_engagement,Alunos com atividade em pelo menos 4 das 8 semanas,higher_is_better,620,1000,62.00,760,76.00,14.00,22.58
+gena-covid19-2020,simulacao_ficticia,access_support,Necessidades de acesso resolvidas em até 10 dias úteis,higher_is_better,40,200,20.00,150,75.00,55.00,275.00
+gena-covid19-2020,simulacao_ficticia,support_sla,Solicitações de suporte resolvidas em até 48 horas,higher_is_better,45,150,30.00,120,80.00,50.00,166.67
+gena-covid19-2020,simulacao_ficticia,financial_response_sla,Pedidos de negociação com primeira resposta em até 5 dias úteis,higher_is_better,48,160,30.00,128,80.00,50.00,166.67
+gena-covid19-2020,simulacao_ficticia,cancellations_8_weeks,Cancelamentos registrados em 8 semanas,lower_is_better,120,1000,12.00,90,9.00,-3.00,-25.00
