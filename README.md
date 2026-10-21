@@ -1,5 +1,9 @@
 # Portfólio de Gestão Estratégica e de Projetos
 
+> **Portfólio consolidado:** os trabalhos atuais estão em [portfolio-profissional — Gestão Estratégica e de Projetos](https://github.com/msampaioac/portfolio-profissional/tree/main/gestao-estrategica-projetos).
+>
+> Este repositório permanece como referência histórica. A evolução dos trabalhos será publicada na estrutura unificada, sem sincronização automática com esta cópia.
+
 Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são organizados por empresa e, dentro de cada empresa, por projeto. Esta página documenta o escopo geral, o conteúdo das pastas e a evolução prevista.
 
 [LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio)
