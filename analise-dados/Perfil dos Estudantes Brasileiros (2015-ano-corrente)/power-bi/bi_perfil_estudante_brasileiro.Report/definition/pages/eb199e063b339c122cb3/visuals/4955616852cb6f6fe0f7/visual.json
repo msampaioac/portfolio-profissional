@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "4955616852cb6f6fe0f7",
+  "position": {
+    "x": 937.86163522012578,
+    "y": 0,
+    "z": 5000,
+    "height": 135.84905660377359,
+    "width": 342.13836477987422,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bd_perfil_estudante_brasileiro"
+                    }
+                  },
+                  "Property": "nivel_ensino"
+                }
+              },
+              "queryRef": "bd_perfil_estudante_brasileiro.nivel_ensino",
+              "nativeQueryRef": "nivel_ensino"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bd_perfil_estudante_brasileiro"
+                        }
+                      },
+                      "Property": "qtd_estudantes"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bd_perfil_estudante_brasileiro.qtd_estudantes)",
+              "nativeQueryRef": "Soma de qtd_estudantes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

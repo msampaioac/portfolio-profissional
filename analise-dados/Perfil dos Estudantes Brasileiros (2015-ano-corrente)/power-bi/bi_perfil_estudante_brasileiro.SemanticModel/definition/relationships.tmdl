@@ -1,0 +1,16 @@
+relationship AutoDetected_0bfeaddf-6479-4411-996c-91ba2b3506ab
+	fromColumn: bd_perfil_estudante_brasileiro.fonte
+	toColumn: d_fonte.fonte
+
+relationship AutoDetected_f0811a95-8de0-4cc9-99f0-7e706039a196
+	fromColumn: bd_perfil_estudante_brasileiro.nivel_ensino
+	toColumn: d_nivel_ensino.nivel_ensino
+
+relationship b921a3ea-28de-88c0-3dd1-185ca3445ec5
+	fromColumn: bd_perfil_estudante_brasileiro.ano
+	toColumn: d_ano.ano
+
+relationship 5c02366a-10a6-8ba4-59f9-60867d3d266b
+	fromColumn: bd_perfil_estudante_brasileiro.rede
+	toColumn: d_rede.rede
+

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "901545df92fba0cf59e7",
+  "position": {
+    "x": 0,
+    "y": 143.89937106918239,
+    "z": 2000,
+    "height": 265.66037735849056,
+    "width": 236.47798742138363,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Total_Estudantes"
+                }
+              },
+              "queryRef": "00_Metricas.Total_Estudantes",
+              "nativeQueryRef": "Total_Estudantes",
+              "format": "0"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "00_Metricas"
+                  }
+                },
+                "Property": "Total_Estudantes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

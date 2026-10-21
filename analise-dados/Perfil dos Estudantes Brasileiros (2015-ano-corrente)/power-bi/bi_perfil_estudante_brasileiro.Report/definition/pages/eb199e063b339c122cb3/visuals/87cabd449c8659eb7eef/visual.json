@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "87cabd449c8659eb7eef",
+  "position": {
+    "x": 225.40880503144655,
+    "y": 143.89937106918239,
+    "z": 3000,
+    "height": 265.66037735849056,
+    "width": 266.66666666666669,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Ensino_Fundamental"
+                }
+              },
+              "queryRef": "00_Metricas.Ensino_Fundamental",
+              "nativeQueryRef": "Ensino_Fundamental",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Ensino_Medio"
+                }
+              },
+              "queryRef": "00_Metricas.Ensino_Medio",
+              "nativeQueryRef": "Ensino_Medio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Ensino_Superior"
+                }
+              },
+              "queryRef": "00_Metricas.Ensino_Superior",
+              "nativeQueryRef": "Ensino_Superior"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "00_Metricas"
+                  }
+                },
+                "Property": "Ensino_Fundamental"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "paddingUniform": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

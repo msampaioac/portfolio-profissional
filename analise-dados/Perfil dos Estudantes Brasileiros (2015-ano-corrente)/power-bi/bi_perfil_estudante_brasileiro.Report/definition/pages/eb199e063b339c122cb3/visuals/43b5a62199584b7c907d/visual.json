@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "43b5a62199584b7c907d",
+  "position": {
+    "x": 945.91194968553452,
+    "y": 107.67295597484276,
+    "z": 4000,
+    "height": 271.69811320754718,
+    "width": 334.08805031446542,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_ano"
+                    }
+                  },
+                  "Property": "ano"
+                }
+              },
+              "queryRef": "d_ano.ano",
+              "nativeQueryRef": "ano"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Total_Estudantes"
+                }
+              },
+              "queryRef": "00_Metricas.Total_Estudantes",
+              "nativeQueryRef": "Total_Estudantes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

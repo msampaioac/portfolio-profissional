@@ -1,0 +1,442 @@
+table bd_perfil_estudante_brasileiro
+	lineageTag: fb050752-54c9-42ef-982e-c39e900117b9
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: 6306646f-74d1-40aa-9041-cb8423eaf681
+		summarizeBy: none
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column fonte
+		dataType: string
+		lineageTag: b5803183-a741-4b09-b953-f0386d964616
+		summarizeBy: none
+		sourceColumn: fonte
+
+		annotation SummarizationSetBy = Automatic
+
+	column nivel_ensino
+		dataType: string
+		lineageTag: 83dfbe71-c6f2-4d56-8fd3-46c84ed965d0
+		summarizeBy: none
+		sourceColumn: nivel_ensino
+
+		annotation SummarizationSetBy = Automatic
+
+	column sigla_uf
+		dataType: string
+		lineageTag: 8e10dffc-6ad1-4746-b44c-93973ccd4887
+		summarizeBy: none
+		sourceColumn: sigla_uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_municipio
+		dataType: string
+		lineageTag: cf81ad85-a1da-4856-88a3-85d620ba1322
+		summarizeBy: none
+		sourceColumn: id_municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_municipio
+		dataType: string
+		lineageTag: 9db5ed4a-441d-46da-8070-af06aeeb623d
+		summarizeBy: none
+		sourceColumn: nome_municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column regiao
+		dataType: string
+		lineageTag: 88e7b632-5632-4253-939a-9a049d1129eb
+		summarizeBy: none
+		sourceColumn: regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: deb8c513-c06a-4b94-8614-d6e1773979a8
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column raca_cor
+		dataType: string
+		lineageTag: 09840ec0-5008-46e1-bdfa-82de2b196676
+		summarizeBy: none
+		sourceColumn: raca_cor
+
+		annotation SummarizationSetBy = Automatic
+
+	column faixa_etaria
+		dataType: string
+		lineageTag: 547a2028-8224-4bc5-9e74-8d920c9babb0
+		summarizeBy: none
+		sourceColumn: faixa_etaria
+
+		annotation SummarizationSetBy = Automatic
+
+	column nacionalidade
+		dataType: string
+		lineageTag: df678490-b4af-484a-8749-68a6820fcfc3
+		summarizeBy: none
+		sourceColumn: nacionalidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column rede
+		dataType: string
+		lineageTag: 71f7c971-9183-4381-a063-c6694c4602ac
+		summarizeBy: none
+		sourceColumn: rede
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_localizacao
+		dataType: string
+		lineageTag: 1134a5f1-dca3-4a0b-9fdb-0d0ab877b33e
+		summarizeBy: none
+		sourceColumn: tipo_localizacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_localizacao_diferenciada
+		dataType: string
+		lineageTag: 2ccebb39-5594-43ab-8857-5f2aee1d96b9
+		summarizeBy: none
+		sourceColumn: tipo_localizacao_diferenciada
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_modalidade_ensino
+		dataType: string
+		lineageTag: 598dd277-4473-4637-9490-ae9bfa54945b
+		summarizeBy: none
+		sourceColumn: tipo_modalidade_ensino
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_grau_academico
+		dataType: string
+		lineageTag: 6fb4afd4-d4a0-4347-a58d-ddc29bc85263
+		summarizeBy: none
+		sourceColumn: tipo_grau_academico
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_organizacao_academica
+		dataType: string
+		lineageTag: 27f87c80-0b4a-44b6-9899-a99a1decea32
+		summarizeBy: none
+		sourceColumn: tipo_organizacao_academica
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_organizacao_administrativa
+		dataType: string
+		lineageTag: d3b4353b-3b87-4fe3-9798-6e88f0a96a96
+		summarizeBy: none
+		sourceColumn: tipo_organizacao_administrativa
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_conhecimento
+		dataType: string
+		lineageTag: 907e440a-7b1d-4081-a6d9-3e8b6e4646b2
+		summarizeBy: none
+		sourceColumn: area_conhecimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_estudantes
+		dataType: int64
+		formatString: 0
+		lineageTag: 48f09997-bff5-4ed4-a170-eb0d5bbf4574
+		summarizeBy: sum
+		sourceColumn: qtd_estudantes
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_com_deficiencia
+		dataType: int64
+		formatString: 0
+		lineageTag: ecec4207-a28c-48e5-b239-badc6b08e38b
+		summarizeBy: sum
+		sourceColumn: qtd_com_deficiencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_usa_transporte_publico
+		dataType: int64
+		formatString: 0
+		lineageTag: d6fee46e-11db-4b1a-92a6-f365c17bedd1
+		summarizeBy: sum
+		sourceColumn: qtd_usa_transporte_publico
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_agua_potavel
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ad1aefb-2f3c-4881-90a9-7fa47fc3a044
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_agua_potavel
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_energia_rede_publica
+		dataType: int64
+		formatString: 0
+		lineageTag: ec3939e4-3227-41f9-a978-9572a3d3f191
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_energia_rede_publica
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_esgoto_rede_publica
+		dataType: int64
+		formatString: 0
+		lineageTag: c3382a47-4bd8-42a7-9675-3be3e8ee775f
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_esgoto_rede_publica
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_internet
+		dataType: int64
+		formatString: 0
+		lineageTag: 52d1d4ce-28ac-4d8c-a92a-00a8aa760cfc
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_internet
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_internet_alunos
+		dataType: int64
+		formatString: 0
+		lineageTag: fde57ae2-37e5-4c87-b7c3-15a99c50567c
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_internet_alunos
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_biblioteca
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cabd0a0-59a9-4f07-8ed0-9c9d3a296882
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_biblioteca
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_biblioteca_sala_leitura
+		dataType: int64
+		formatString: 0
+		lineageTag: 581cfd4b-a376-474f-9ee0-bf8e769e6c78
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_biblioteca_sala_leitura
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_lab_informatica
+		dataType: int64
+		formatString: 0
+		lineageTag: ddbdded0-271a-41ba-9837-bba40aefc035
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_lab_informatica
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_lab_ciencias
+		dataType: int64
+		formatString: 0
+		lineageTag: b561694d-6457-4918-b715-c74b945ea37f
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_lab_ciencias
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_em_escola_com_quadra
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e58395c-a507-4f26-a509-d85d79a1297e
+		summarizeBy: sum
+		sourceColumn: qtd_em_escola_com_quadra
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_financiamento
+		dataType: int64
+		formatString: 0
+		lineageTag: 337e9c96-9962-41f9-90fc-b437c375d570
+		summarizeBy: sum
+		sourceColumn: qtd_financiamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_reserva_vaga
+		dataType: int64
+		formatString: 0
+		lineageTag: 524c2879-863e-4456-ade1-001d5431d584
+		summarizeBy: sum
+		sourceColumn: qtd_reserva_vaga
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_apoio_social
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b76df67-cf20-4bd3-8da9-755007536d55
+		summarizeBy: sum
+		sourceColumn: qtd_apoio_social
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_atividade_extracurricular
+		dataType: int64
+		formatString: 0
+		lineageTag: a24e9a10-b5e5-44f7-9f76-57139bb7516b
+		summarizeBy: sum
+		sourceColumn: qtd_atividade_extracurricular
+
+		annotation SummarizationSetBy = Automatic
+
+	column qtd_mobilidade_academica
+		dataType: int64
+		formatString: 0
+		lineageTag: 20b4d063-92f5-467c-a487-468b87e9b315
+		summarizeBy: sum
+		sourceColumn: qtd_mobilidade_academica
+
+		annotation SummarizationSetBy = Automatic
+
+	column perc_com_deficiencia
+		dataType: double
+		lineageTag: f8f13c3a-13a8-4d73-a787-596c546291db
+		summarizeBy: sum
+		sourceColumn: perc_com_deficiencia
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_usa_transporte_publico
+		dataType: double
+		lineageTag: dfbd2c63-a88d-4f17-80cb-0e67d06fedb6
+		summarizeBy: sum
+		sourceColumn: perc_usa_transporte_publico
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_em_escola_com_internet
+		dataType: double
+		lineageTag: 729fa83c-5adf-488d-856e-8004550cbbb4
+		summarizeBy: sum
+		sourceColumn: perc_em_escola_com_internet
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_em_escola_com_biblioteca
+		dataType: double
+		lineageTag: 153a1b70-61b9-497e-a98c-cd3488d3287c
+		summarizeBy: sum
+		sourceColumn: perc_em_escola_com_biblioteca
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_em_escola_com_lab_informatica
+		dataType: double
+		lineageTag: 09c8cde5-7ec1-4f4d-a50a-1376b76a5c60
+		summarizeBy: sum
+		sourceColumn: perc_em_escola_com_lab_informatica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_em_escola_com_quadra
+		dataType: double
+		lineageTag: 48ba1c68-74e1-4859-830c-45a2b6aa87d3
+		summarizeBy: sum
+		sourceColumn: perc_em_escola_com_quadra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_financiamento
+		dataType: double
+		lineageTag: 3faf6596-f154-4785-8459-f1d0277d0a43
+		summarizeBy: sum
+		sourceColumn: perc_financiamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_reserva_vaga
+		dataType: double
+		lineageTag: a5d81aac-d888-41e8-90e9-cdd726cc4647
+		summarizeBy: sum
+		sourceColumn: perc_reserva_vaga
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_apoio_social
+		dataType: double
+		lineageTag: 6422e6d0-490b-4998-84b3-2c991a6a212b
+		summarizeBy: sum
+		sourceColumn: perc_apoio_social
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_atividade_extracurricular
+		dataType: double
+		lineageTag: eb7ee76f-1f20-43b4-ab22-7350fb13b47e
+		summarizeBy: sum
+		sourceColumn: perc_atividade_extracurricular
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column perc_mobilidade_academica
+		dataType: double
+		lineageTag: 52914267-bd6c-4a3c-9a51-1c055a5d43a8
+		summarizeBy: sum
+		sourceColumn: perc_mobilidade_academica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition bd_perfil_estudante_brasileiro = m
+		mode: import
+		queryGroup: '02 - Fato'
+		source =
+				let
+				    Fonte = Value.NativeQuery(GoogleBigQuery.Database([Implementation="2.0"]){[Name="estudosdados-489915"]}[Data], "/*==============================================================================#(lf)PROJETO#(lf)------------------------------------------------------------------------------#(lf)Perfil dos Estudantes Brasileiros (2015–2024)#(lf)#(lf)OBJETIVO#(lf)------------------------------------------------------------------------------#(lf)Construir uma base analítica consolidada sobre o perfil dos estudantes#(lf)brasileiros dos ensinos Fundamental, Médio e Superior, utilizando dados públicos#(lf)do INEP disponibilizados na Base dos Dados e consultados no Google BigQuery.#(lf)#(lf)DESCRIÇÃO DA SOLUÇÃO#(lf)------------------------------------------------------------------------------#(lf)Este script integra dados do Censo Escolar, Censo da Educação Superior e#(lf)Diretório de Municípios, criando uma visão única para análise demográfica,#(lf)geográfica, institucional, social e de infraestrutura escolar.#(lf)#(lf)FONTES DE DADOS#(lf)------------------------------------------------------------------------------#(lf)1. basedosdados.br_inep_censo_escolar.matricula#(lf)2. basedosdados.br_inep_censo_escolar.escola#(lf)3. basedosdados.br_inep_censo_educacao_superior.curso#(lf)4. basedosdados.br_inep_censo_educacao_superior.ies#(lf)5. basedosdados.br_bd_diretorios_brasil.municipio#(lf)#(lf)PERÍODO ANALISADO#(lf)------------------------------------------------------------------------------#(lf)2015 a 2024.#(lf)#(lf)==============================================================================*/#(lf)#(lf)/*==============================================================================#(lf)CTE: educacao_basica#(lf)------------------------------------------------------------------------------#(lf)Consolida dados da Educação Básica: Ensino Fundamental e Ensino Médio.#(lf)==============================================================================*/#(lf)WITH educacao_basica AS (#(lf)  SELECT#(lf)    m.ano,#(lf)    'CENSO_ESCOLAR' AS fonte,#(lf)#(lf)    -- Classificação das etapas de ensino.#(lf)    CASE#(lf)      WHEN CAST(m.etapa_ensino AS STRING) IN ('14','15','16','17','18','19','20','21','41') THEN 'ENSINO_FUNDAMENTAL'#(lf)      WHEN CAST(m.etapa_ensino AS STRING) IN ('25','26','27','28','29','30','31','32','33','34','35','36','37','38') THEN 'ENSINO_MEDIO'#(lf)      ELSE 'OUTRA_ETAPA'#(lf)    END AS nivel_ensino,#(lf)#(lf)    m.sigla_uf,#(lf)    m.id_municipio,#(lf)    mun.nome AS nome_municipio,#(lf)#(lf)    CAST(m.id_escola AS STRING) AS id_unidade_ensino,#(lf)    CAST(NULL AS STRING) AS nome_unidade_ensino,#(lf)    CAST(NULL AS STRING) AS id_curso,#(lf)    CAST(NULL AS STRING) AS nome_curso,#(lf)    CAST(NULL AS STRING) AS area_conhecimento,#(lf)#(lf)    m.sexo,#(lf)    m.raca_cor,#(lf)    m.idade,#(lf)    m.nacionalidade,#(lf)#(lf)    -- Tradução do código da rede de ensino da Educação Básica.#(lf)    CASE#(lf)      WHEN CAST(m.rede AS STRING) = '1' THEN 'Federal'#(lf)      WHEN CAST(m.rede AS STRING) = '2' THEN 'Estadual'#(lf)      WHEN CAST(m.rede AS STRING) = '3' THEN 'Municipal'#(lf)      WHEN CAST(m.rede AS STRING) = '4' THEN 'Privada'#(lf)      ELSE 'Não Informado'#(lf)    END AS rede,#(lf)#(lf)    e.tipo_localizacao,#(lf)    e.tipo_localizacao_diferenciada,#(lf)#(lf)    CAST(NULL AS STRING) AS tipo_modalidade_ensino,#(lf)    CAST(NULL AS STRING) AS tipo_grau_academico,#(lf)    CAST(NULL AS STRING) AS tipo_organizacao_academica,#(lf)    CAST(NULL AS STRING) AS tipo_organizacao_administrativa,#(lf)#(lf)    -- Métrica principal da Educação Básica.#(lf)    COUNT(*) AS qtd_estudantes,#(lf)#(lf)    -- Indicadores de inclusão e transporte.#(lf)    COUNTIF(CAST(m.necessidade_especial AS STRING) IN ('1','true','TRUE')) AS qtd_com_deficiencia,#(lf)    COUNTIF(CAST(m.transporte_publico AS STRING) IN ('1','true','TRUE')) AS qtd_usa_transporte_publico,#(lf)#(lf)    -- Indicadores de infraestrutura escolar.#(lf)    COUNTIF(CAST(e.agua_potavel AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_agua_potavel,#(lf)    COUNTIF(CAST(e.energia_rede_publica AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_energia_rede_publica,#(lf)    COUNTIF(CAST(e.esgoto_rede_publica AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_esgoto_rede_publica,#(lf)    COUNTIF(CAST(e.internet AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_internet,#(lf)    COUNTIF(CAST(e.internet_alunos AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_internet_alunos,#(lf)    COUNTIF(CAST(e.biblioteca AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_biblioteca,#(lf)    COUNTIF(CAST(e.biblioteca_sala_leitura AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_biblioteca_sala_leitura,#(lf)    COUNTIF(CAST(e.laboratorio_informatica AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_lab_informatica,#(lf)    COUNTIF(CAST(e.laboratorio_ciencias AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_lab_ciencias,#(lf)    COUNTIF(CAST(e.quadra_esportes AS STRING) IN ('1','true','TRUE')) AS qtd_em_escola_com_quadra,#(lf)#(lf)    -- Campos exclusivos do Ensino Superior.#(lf)    CAST(NULL AS INT64) AS qtd_financiamento,#(lf)    CAST(NULL AS INT64) AS qtd_reserva_vaga,#(lf)    CAST(NULL AS INT64) AS qtd_apoio_social,#(lf)    CAST(NULL AS INT64) AS qtd_atividade_extracurricular,#(lf)    CAST(NULL AS INT64) AS qtd_mobilidade_academica#(lf)#(lf)  FROM `basedosdados.br_inep_censo_escolar.matricula` AS m#(lf)#(lf)  LEFT JOIN `basedosdados.br_inep_censo_escolar.escola` AS e#(lf)    ON m.ano = e.ano#(lf)   AND m.id_escola = e.id_escola#(lf)#(lf)  LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun#(lf)    ON m.id_municipio = mun.id_municipio#(lf)#(lf)  WHERE m.ano BETWEEN 2015 AND 2024#(lf)    AND CAST(m.etapa_ensino AS STRING) IN (#(lf)      '14','15','16','17','18','19','20','21','41',#(lf)      '25','26','27','28','29','30','31','32','33','34','35','36','37','38'#(lf)    )#(lf)#(lf)  GROUP BY#(lf)    m.ano,#(lf)    nivel_ensino,#(lf)    m.sigla_uf,#(lf)    m.id_municipio,#(lf)    nome_municipio,#(lf)    id_unidade_ensino,#(lf)    m.sexo,#(lf)    m.raca_cor,#(lf)    m.idade,#(lf)    m.nacionalidade,#(lf)    rede,#(lf)    e.tipo_localizacao,#(lf)    e.tipo_localizacao_diferenciada#(lf)),#(lf)#(lf)#(lf)/*==============================================================================#(lf)CTE: educacao_superior#(lf)------------------------------------------------------------------------------#(lf)Consolida dados do Ensino Superior.#(lf)==============================================================================*/#(lf)educacao_superior AS (#(lf)  SELECT#(lf)    c.ano,#(lf)    'CENSO_SUPERIOR' AS fonte,#(lf)    'ENSINO_SUPERIOR' AS nivel_ensino,#(lf)#(lf)    c.sigla_uf,#(lf)    c.id_municipio,#(lf)    mun.nome AS nome_municipio,#(lf)#(lf)    CAST(c.id_ies AS STRING) AS id_unidade_ensino,#(lf)    i.nome AS nome_unidade_ensino,#(lf)    CAST(c.id_curso AS STRING) AS id_curso,#(lf)    c.nome_curso,#(lf)    c.nome_area_geral AS area_conhecimento,#(lf)#(lf)    -- Campos demográficos agregados no Ensino Superior.#(lf)    'AGREGADO' AS sexo,#(lf)    'AGREGADO' AS raca_cor,#(lf)    CAST(NULL AS INT64) AS idade,#(lf)    'AGREGADO' AS nacionalidade,#(lf)#(lf)    -- Tradução do código da rede de ensino do Ensino Superior.#(lf)    CASE#(lf)      WHEN CAST(c.rede AS STRING) = '1' THEN 'Pública'#(lf)      WHEN CAST(c.rede AS STRING) = '2' THEN 'Privada'#(lf)      ELSE 'Não Informado'#(lf)    END AS rede,#(lf)#(lf)    CAST(NULL AS STRING) AS tipo_localizacao,#(lf)    CAST(NULL AS STRING) AS tipo_localizacao_diferenciada,#(lf)#(lf)    c.tipo_modalidade_ensino,#(lf)    c.tipo_grau_academico,#(lf)    c.tipo_organizacao_academica,#(lf)    c.tipo_organizacao_administrativa,#(lf)#(lf)    -- Métrica principal do Ensino Superior.#(lf)    SUM(c.quantidade_matriculas) AS qtd_estudantes,#(lf)#(lf)    -- Indicador de inclusão no Ensino Superior.#(lf)    SUM(c.quantidade_matriculas_deficiencia) AS qtd_com_deficiencia,#(lf)#(lf)    CAST(NULL AS INT64) AS qtd_usa_transporte_publico,#(lf)#(lf)    -- Campos de infraestrutura aplicáveis apenas à Educação Básica.#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_agua_potavel,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_energia_rede_publica,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_esgoto_rede_publica,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_internet,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_internet_alunos,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_biblioteca,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_biblioteca_sala_leitura,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_lab_informatica,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_lab_ciencias,#(lf)    CAST(NULL AS INT64) AS qtd_em_escola_com_quadra,#(lf)#(lf)    -- Indicadores específicos do Ensino Superior.#(lf)    SUM(c.quantidade_matriculas_financiamento) AS qtd_financiamento,#(lf)    SUM(c.quantidade_matriculas_reserva_vaga) AS qtd_reserva_vaga,#(lf)    SUM(c.quantidade_matriculas_apoio_social) AS qtd_apoio_social,#(lf)    SUM(c.quantidade_matriculas_atividade_extracurricular) AS qtd_atividade_extracurricular,#(lf)    SUM(c.quantidade_matriculas_mobilidade_academica) AS qtd_mobilidade_academica#(lf)#(lf)  FROM `basedosdados.br_inep_censo_educacao_superior.curso` AS c#(lf)#(lf)  LEFT JOIN `basedosdados.br_inep_censo_educacao_superior.ies` AS i#(lf)    ON c.ano = i.ano#(lf)   AND c.id_ies = i.id_ies#(lf)#(lf)  LEFT JOIN `basedosdados.br_bd_diretorios_brasil.municipio` AS mun#(lf)    ON c.id_municipio = mun.id_municipio#(lf)#(lf)  WHERE c.ano BETWEEN 2015 AND 2024#(lf)#(lf)  GROUP BY#(lf)    c.ano,#(lf)    c.sigla_uf,#(lf)    c.id_municipio,#(lf)    nome_municipio,#(lf)    id_unidade_ensino,#(lf)    nome_unidade_ensino,#(lf)    id_curso,#(lf)    c.nome_curso,#(lf)    area_conhecimento,#(lf)    rede,#(lf)    c.tipo_modalidade_ensino,#(lf)    c.tipo_grau_academico,#(lf)    c.tipo_organizacao_academica,#(lf)    c.tipo_organizacao_administrativa#(lf)),#(lf)#(lf)#(lf)/*==============================================================================#(lf)CTE: base_unificada#(lf)------------------------------------------------------------------------------#(lf)Une os dados da Educação Básica e do Ensino Superior.#(lf)==============================================================================*/#(lf)base_unificada AS (#(lf)  SELECT * FROM educacao_basica#(lf)  UNION ALL#(lf)  SELECT * FROM educacao_superior#(lf))#(lf)#(lf)#(lf)/*==============================================================================#(lf)RESULTADO FINAL COMPLETO (Todos os Níveis de Ensino)#(lf)------------------------------------------------------------------------------#(lf)Retorna a tabela analítica unificada com todas as quebras originais.#(lf)==============================================================================*/#(lf)SELECT#(lf)  ano,#(lf)  fonte,#(lf)  nivel_ensino,#(lf)  sigla_uf,#(lf)  id_municipio,#(lf)  nome_municipio,#(lf)#(lf)  -- Classificação da região geográfica.#(lf)  CASE#(lf)    WHEN sigla_uf IN ('AC','AP','AM','PA','RO','RR','TO') THEN 'NORTE'#(lf)    WHEN sigla_uf IN ('AL','BA','CE','MA','PB','PE','PI','RN','SE') THEN 'NORDESTE'#(lf)    WHEN sigla_uf IN ('DF','GO','MT','MS') THEN 'CENTRO-OESTE'#(lf)    WHEN sigla_uf IN ('ES','MG','RJ','SP') THEN 'SUDESTE'#(lf)    WHEN sigla_uf IN ('PR','RS','SC') THEN 'SUL'#(lf)    ELSE 'NAO_IDENTIFICADO'#(lf)  END AS regiao,#(lf)#(lf)  sexo,#(lf)  raca_cor,#(lf)#(lf)  -- Criação de faixas etárias.#(lf)  CASE#(lf)    WHEN idade IS NULL THEN 'AGREGADO_SUPERIOR'#(lf)    WHEN idade BETWEEN 0 AND 5 THEN '00 A 05'#(lf)    WHEN idade BETWEEN 6 AND 10 THEN '06 A 10'#(lf)    WHEN idade BETWEEN 11 AND 14 THEN '11 A 14'#(lf)    WHEN idade BETWEEN 15 AND 17 THEN '15 A 17'#(lf)    WHEN idade BETWEEN 18 AND 24 THEN '18 A 24'#(lf)    WHEN idade BETWEEN 25 AND 29 THEN '25 A 29'#(lf)    WHEN idade BETWEEN 30 AND 34 THEN '30 A 34'#(lf)    WHEN idade BETWEEN 35 AND 39 THEN '35 A 39'#(lf)    WHEN idade BETWEEN 40 AND 49 THEN '40 A 49'#(lf)    WHEN idade BETWEEN 50 AND 59 THEN '50 A 59'#(lf)    WHEN idade >= 60 THEN '60+'#(lf)    ELSE 'NAO_INFORMADO'#(lf)  END AS faixa_etaria,#(lf)#(lf)  nacionalidade,#(lf)  rede,#(lf)  tipo_localizacao,#(lf)  tipo_localizacao_diferenciada,#(lf)  tipo_modalidade_ensino,#(lf)  tipo_grau_academico,#(lf)  tipo_organizacao_academica,#(lf)  tipo_organizacao_administrativa,#(lf)  area_conhecimento,#(lf)#(lf)  -- Métricas principais.#(lf)  SUM(qtd_estudantes) AS qtd_estudantes,#(lf)  SUM(qtd_com_deficiencia) AS qtd_com_deficiencia,#(lf)  SUM(qtd_usa_transporte_publico) AS qtd_usa_transporte_publico,#(lf)#(lf)  -- Métricas de infraestrutura escolar.#(lf)  SUM(qtd_em_escola_com_agua_potavel) AS qtd_em_escola_com_agua_potavel,#(lf)  SUM(qtd_em_escola_com_energia_rede_publica) AS qtd_em_escola_com_energia_rede_publica,#(lf)  SUM(qtd_em_escola_com_esgoto_rede_publica) AS qtd_em_escola_com_esgoto_rede_publica,#(lf)  SUM(qtd_em_escola_com_internet) AS qtd_em_escola_com_internet,#(lf)  SUM(qtd_em_escola_com_internet_alunos) AS qtd_em_escola_com_internet_alunos,#(lf)  SUM(qtd_em_escola_com_biblioteca) AS qtd_em_escola_com_biblioteca,#(lf)  SUM(qtd_em_escola_com_biblioteca_sala_leitura) AS qtd_em_escola_com_biblioteca_sala_leitura,#(lf)  SUM(qtd_em_escola_com_lab_informatica) AS qtd_em_escola_com_lab_informatica,#(lf)  SUM(qtd_em_escola_com_lab_ciencias) AS qtd_em_escola_com_lab_ciencias,#(lf)  SUM(qtd_em_escola_com_quadra) AS qtd_em_escola_com_quadra,#(lf)#(lf)  -- Métricas específicas do Ensino Superior.#(lf)  SUM(qtd_financiamento) AS qtd_financiamento,#(lf)  SUM(qtd_reserva_vaga) AS qtd_reserva_vaga,#(lf)  SUM(qtd_apoio_social) AS qtd_apoio_social,#(lf)  SUM(qtd_atividade_extracurricular) AS qtd_atividade_extracurricular,#(lf)  SUM(qtd_mobilidade_academica) AS qtd_mobilidade_academica,#(lf)#(lf)  -- Indicadores percentuais.#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_com_deficiencia), SUM(qtd_estudantes)) * 100, 2) AS perc_com_deficiencia,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_usa_transporte_publico), SUM(qtd_estudantes)) * 100, 2) AS perc_usa_transporte_publico,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_internet), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_internet,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_biblioteca), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_biblioteca,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_lab_informatica), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_lab_informatica,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_em_escola_com_quadra), SUM(qtd_estudantes)) * 100, 2) AS perc_em_escola_com_quadra,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_financiamento), SUM(qtd_estudantes)) * 100, 2) AS perc_financiamento,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_reserva_vaga), SUM(qtd_estudantes)) * 100, 2) AS perc_reserva_vaga,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_apoio_social), SUM(qtd_estudantes)) * 100, 2) AS perc_apoio_social,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_atividade_extracurricular), SUM(qtd_estudantes)) * 100, 2) AS perc_atividade_extracurricular,#(lf)  ROUND(SAFE_DIVIDE(SUM(qtd_mobilidade_academica), SUM(qtd_estudantes)) * 100, 2) AS perc_mobilidade_academica#(lf)#(lf)FROM base_unificada#(lf)#(lf)GROUP BY#(lf)  ano,#(lf)  fonte,#(lf)  nivel_ensino,#(lf)  sigla_uf,#(lf)  id_municipio,#(lf)  nome_municipio,#(lf)  regiao,#(lf)  sexo,#(lf)  raca_cor,#(lf)  faixa_etaria,#(lf)  nacionalidade,#(lf)  rede,#(lf)  tipo_localizacao,#(lf)  tipo_localizacao_diferenciada,#(lf)  tipo_modalidade_ensino,#(lf)  tipo_grau_academico,#(lf)  tipo_organizacao_academica,#(lf)  tipo_organizacao_administrativa,#(lf)  area_conhecimento#(lf)#(lf)ORDER BY#(lf)  ano,#(lf)  regiao,#(lf)  sigla_uf,#(lf)  nome_municipio,#(lf)  nivel_ensino,#(lf)  qtd_estudantes DESC", null, [EnableFolding=true]),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each true)
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

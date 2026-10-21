@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "0f308cd9dc1ca43df12b",
+  "position": {
+    "x": 0,
+    "y": 444.77987421383648,
+    "z": 6000,
+    "height": 275.72327044025155,
+    "width": 1280,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_ano"
+                    }
+                  },
+                  "Property": "ano"
+                }
+              },
+              "queryRef": "d_ano.ano",
+              "nativeQueryRef": "ano",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_nivel_ensino"
+                    }
+                  },
+                  "Property": "nivel_ensino"
+                }
+              },
+              "queryRef": "d_nivel_ensino.nivel_ensino",
+              "nativeQueryRef": "nivel_ensino"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "00_Metricas"
+                    }
+                  },
+                  "Property": "Total_Estudantes"
+                }
+              },
+              "queryRef": "00_Metricas.Total_Estudantes",
+              "nativeQueryRef": "Total_Estudantes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "00_Metricas"
+                  }
+                },
+                "Property": "Total_Estudantes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
