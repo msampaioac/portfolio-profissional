@@ -88,31 +88,76 @@ A liderança precisa decidir **quais segmentos, coortes e ações priorizar** pa
 - Um indicador não será comparado entre segmentos se a janela acadêmica ou a regra de renovação não for equivalente.
 - A fotografia de 2025 será tratada como referência simulada do case, nunca como evidência de dataset validado.
 
-## 5. Arquitetura de governança proposta
+## 5. Governança: quem executa, quem valida e quem decide
 
-### Papéis
+**Objetivo:** evitar que a liderança tome decisões com indicadores calculados de formas diferentes. A proposta separa o conhecimento do negócio, a execução técnica, a coordenação do trabalho e a autoridade para decidir.
 
-- **Patrocinador/Direção:** arbitra prioridade, risco e investimento; aprova decisões de negócio.
-- **Dono do produto — Escritório de Estratégia, Projetos e Dados:** mantém backlog, contrato de métricas e calendário.
-- **Data Steward — Acadêmico/Financeiro:** conhece o processo de origem, valida significado e exceções.
-- **BI/Engenharia de Dados:** modela, reconcilia, testa e publica evidências técnicas, sem aprovar regra de negócio sozinho.
+**Leitura rápida:** as áreas de negócio validam o significado dos dados; BI calcula e testa; a coordenação organiza e formaliza as entregas; a Direção decide prioridades, recursos e avanço do piloto.
 
-### RACI por atividade
+> Os papéis abaixo são propostos para a empresa fictícia GENA. Não representam uma equipe contratada, governança implantada ou resultados obtidos. O painel e o piloto continuam sendo etapas futuras.
 
-| Atividade | Patrocinador/Direção | Dono do produto | Data Steward | BI/Engenharia |
+### 5.1. Papéis e entregas esperadas
+
+| Papel proposto | Responsabilidade principal | Entrega que permite verificar o trabalho |
+|:---|:---|:---|
+| **Direção — patrocinador** | Define a decisão de negócio, resolve conflitos de prioridade e aprova investimento e avanço do piloto. | Decisão registrada, com prioridade, recursos autorizados e condições para avançar ou pausar. |
+| **Coordenação — Escritório de Estratégia, Projetos e Dados** | Organiza entregas, responsáveis e prazos; formaliza o contrato dos indicadores após validação das áreas. Corresponde ao dono do produto neste desenho. | Plano de trabalho, definições aprovadas, registro de pendências e calendário de acompanhamento. |
+| **Negócio — responsável pelo dado** | Acadêmico/Financeiro, conforme o indicador: explica os registros de origem e valida população, fórmula e exceções. Corresponde ao papel de *Data Steward*. | Definição do indicador validada pela área, mapeamento de status e justificativa das exceções. |
+| **BI — equipe técnica** | Organiza o modelo de dados, implementa os cálculos, confere os totais e registra falhas. Não aprova sozinho uma regra de negócio. | Cálculo reproduzível, relatório de conciliação e resultados dos testes de qualidade. |
+
+**Limite de autoridade:** validação do negócio e aprovação formal são etapas distintas. A Coordenação não substitui o conhecimento das áreas; BI não altera uma fórmula para fazer um resultado parecer melhor; mudanças de regra são registradas e submetidas à aprovação indicada na matriz.
+
+### 5.2. Como uma definição vira uma decisão
+
+| Etapa | Como o trabalho acontece | Condição para avançar |
+|:---|:---|:---|
+| **1. Definir a pergunta** | A Coordenação organiza a necessidade e a Direção aprova o objetivo. | Está claro qual decisão será apoiada e qual é o escopo. |
+| **2. Acordar a métrica** | Negócio valida população, fórmula, período e exceções; BI avalia a viabilidade; a Coordenação formaliza o contrato. | A definição e as fontes estão documentadas e aprovadas. |
+| **3. Conferir o cálculo** | BI implementa e concilia; Negócio explica as exceções; a Coordenação acompanha a correção das falhas. | Divergências críticas têm causa e tratamento documentados; não se usa uma taxa não conciliada como base de decisão. |
+| **4. Decidir e acompanhar** | A Coordenação apresenta evidências e alternativas; a Direção decide; cada ação recebe responsável, prazo e condição de revisão. | A decisão e sua justificativa ficam registradas. Painel e piloto só avançam após os critérios de aceite. |
+
+### 5.3. Exemplo aplicado à retenção EAD
+
+No cenário fictício, o churn de **27,5%** usa **770 cancelamentos entre 2.800 matrículas elegíveis**, e não os 3.120 alunos ativos da fotografia final.
+
+Se dois relatórios usarem denominadores diferentes, **BI identifica e registra a divergência**, **Negócio verifica as exclusões e os status** e **a Coordenação encaminha a definição aprovada e a correção versionada**. A Direção recebe a evidência conciliada para decidir sobre a iniciativa de retenção. Até resolver a divergência, a taxa afetada não deve orientar a priorização.
+
+Esse fluxo é uma proposta de controle. A base sintética permite conferir a regra, mas não comprova que a governança foi implantada ou que houve redução de evasão.
+
+### 5.4. Matriz RACI — referência detalhada
+
+A matriz complementa a leitura executiva: mostra quem participa de cada atividade e quem responde pela aprovação final.
+
+| Letra | Significado | O que a pessoa ou área faz |
+|:---:|:---|:---|
+| **R** | Responsável por executar | Realiza o trabalho e prepara a entrega. |
+| **A** | Aprovador e responsável final | Aceita a entrega e responde pela atividade. Há **um único A por linha**. |
+| **C** | Consultado | Fornece conhecimento ou validação antes da decisão. |
+| **I** | Informado | Recebe o resultado; não executa nem aprova essa atividade apenas por estar informado. |
+
+Responsáveis pela execução podem ser mais de um. As colunas usam os mesmos quatro papéis da seção 5.1.
+
+<details>
+<summary><strong>Abrir a matriz RACI por atividade</strong></summary>
+
+| Atividade | Direção | Coordenação | Negócio | BI |
 |:---|:---:|:---:|:---:|:---:|
-| Aprovar objetivo e decisão apoiada | A | R | C | I |
-| Aprovar contrato dos seis indicadores | C | A | R | C |
+| Definir e aprovar o objetivo de negócio | A | R | C | I |
+| Preparar, validar e formalizar o contrato dos seis indicadores | C | A | R | C |
 | Mapear fontes, campos e status | I | A | R | R |
-| Definir população, fórmula e grão | C | A | R | C |
-| Construir modelo lógico e reconciliação | I | A | C | R |
+| Definir população, fórmula e nível de detalhe dos registros | C | A | R | C |
+| Construir o modelo de dados e conciliar os totais | I | A | C | R |
 | Registrar e classificar falhas de qualidade | I | A | R | R |
-| Homologar protótipo de painel | A | R | C | R |
-| Conduzir ritual de decisão | A | R | C | I |
-| Aceitar entrada em piloto | A | R | C | C |
-| Revisar regra ou alterar versão | A | R | C | C |
+| Verificar e aprovar o protótipo de painel — etapa futura | A | R | C | R |
+| Conduzir a reunião de decisão | A | R | C | I |
+| Autorizar a entrada em piloto — etapa futura | A | R | C | C |
+| Revisar a regra e aprovar nova versão | A | R | C | C |
 
-**R:** responsável pela execução; **A:** aprovador que responde pela atividade; **C:** consultado; **I:** informado. Cada atividade tem **um único A**. Responsáveis e consultados podem ser mais de um; informado não aprova nem altera a regra.
+</details>
+
+### 5.5. Competências demonstradas nesta proposta
+
+O desenho evidencia **coordenação entre áreas, delimitação de autoridade, critérios de aceite, tratamento de divergências e comunicação executiva**. A contribuição de gestão está em transformar o indicador em uma decisão rastreável, com responsável, prazo e regra de revisão — não apenas em produzir um painel.
 
 ## 6. Qualidade, tratamento e falhas
 
@@ -133,7 +178,7 @@ A liderança precisa decidir **quais segmentos, coortes e ações priorizar** pa
 
 | Horizonte | Entregas propostas | Gate de decisão |
 |:---|:---|:---|
-| **0–30 dias** | Inventário de relatórios; mapa de divergências; contrato dos seis indicadores; RACI; população e grão; baseline a apurar; snapshot 2025 como referência simulada. | Donos aprovam 6/6 definições, fontes e exceções; regras para atualizar a linha de base ficam documentadas. |
+| **0–30 dias** | Inventário de relatórios; mapa de divergências; contrato dos seis indicadores; RACI; população e grão; baseline a apurar; snapshot 2025 como referência simulada. | Negócio valida as seis definições, fontes e exceções; a Coordenação aprova formalmente o contrato. As regras para atualizar a linha de base ficam documentadas. |
 | **31–60 dias** | Análise diagnóstica SQL futura; mapeamento de status, consultas de qualidade, reconciliação de uma carga e log de decisões. | Casos de teste têm resultado esperado documentado; divergências têm classificação e responsável. |
 | **61–90 dias** | Dashboard, piloto controlado, rituais, apuração de baseline e avaliação de efeito/custo, todos em etapa futura e condicionados ao aceite da base. | Critérios de entrada são revisados sem declarar melhoria de negócio; não são entregas desta primeira melhoria. |
 
