@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "case": {
+    "company": "NorteVia Distribuição",
+    "fictional": true,
+    "context": "Distribuidora B2B fictícia sediada em Rio Branco-AC; somente premissas didáticas, sem dados operacionais reais.",
+    "period": {
+      "duration_weeks": 8,
+      "duration_days": 56,
+      "interpretation": "Janela hipotética única de simulação; não representa período observado nem série histórica."
+    },
+    "cohort": {
+      "planned_orders": 100,
+      "denominator_fixed": true,
+      "interpretation": "Coorte didática fixa de 100 pedidos planejados em cada ramo; não se altera o denominador para refletir pedidos entregues."
+    },
+    "branches": ["sem pacote coordenado", "com pacote hipotético"],
+    "comparison_warning": "Ramos hipotéticos paralelos para aritmética de cenário. Não são pré/pós, experimento, estimativa causal ou evidência de impacto.",
+    "selection_warning": "Todos os valores foram selecionados para exercício; não constituem evidência nem dados reais da NorteVia."
+  },
+  "metrics": [
+    {
+      "id": "otif",
+      "name": "OTIF — pedidos no prazo e completos",
+      "definition": "Pedidos da coorte entregues no prazo e completos, divididos pelos pedidos planejados da coorte.",
+      "numerator": {"name": "pedidos entregues no prazo e completos", "unit": "pedido"},
+      "denominator": {"name": "pedidos planejados da coorte fixa", "unit": "pedido", "value": "100"},
+      "unit": "%",
+      "kind": "proportion",
+      "precision": 1,
+      "maturity": "Cutoff da coorte no dia 56; provas e status podem maturar por até 5 dias úteis, com fechamento até o dia 63, sem ampliar a janela.",
+      "interpretation_limits": ["Não há definição operacional observada de prazo, completude, cancelamento ou entrega parcial.", "Denominador permanece em 100 pedidos planejados nos dois ramos.", "Diferença entre ramos é aritmética de cenário, sem atribuição causal."] ,
+      "branches": {
+        "sem pacote coordenado": {"numerator": "62", "denominator": "100"},
+        "com pacote hipotético": {"numerator": "82", "denominator": "100"}
+      }
+    },
+    {
+      "id": "fill_rate",
+      "name": "Fill rate — unidades entregues sobre pedidas",
+      "definition": "Unidades entregues divididas por 10.000 unidades pedidas na base hipotética da coorte.",
+      "numerator": {"name": "unidades entregues", "unit": "unidade"},
+      "denominator": {"name": "unidades pedidas", "unit": "unidade", "value": "10000"},
+      "unit": "%",
+      "kind": "proportion",
+      "precision": 1,
+      "maturity": "Cutoff das unidades no dia 56; consolidação documental pode maturar por até 5 dias úteis, com fechamento até o dia 63.",
+      "interpretation_limits": ["As 10.000 unidades pedidas são uma premissa fixa do exercício; não equivalem a volume real.", "O indicador não mede pontualidade nem substitui OTIF.", "Diferença entre ramos é aritmética de cenário, sem atribuição causal."],
+      "branches": {
+        "sem pacote coordenado": {"numerator": "8000", "denominator": "10000"},
+        "com pacote hipotético": {"numerator": "9100", "denominator": "10000"}
+      }
+    },
+    {
+      "id": "disponibilidade_skus",
+      "name": "Disponibilidade de SKUs críticos",
+      "definition": "SKU-dias com disponibilidade entre 10 SKUs críticos ao longo de 40 dias úteis, divididos pelos 400 SKU-dias possíveis.",
+      "numerator": {"name": "SKU-dias disponíveis", "unit": "SKU-dia"},
+      "denominator": {"name": "10 SKUs × 40 dias úteis", "unit": "SKU-dia", "value": "400"},
+      "unit": "%",
+      "kind": "proportion",
+      "precision": 1,
+      "maturity": "Snapshots congelados no cutoff de 56 dias após 40 dias úteis hipotéticos; não há observação posterior ao período.",
+      "interpretation_limits": ["Os 10 SKUs e 40 dias úteis são parâmetros didáticos, sem cadastro ou calendário real.", "Cada SKU-dia tem peso igual; não há ponderação por demanda ou criticidade.", "Diferença entre ramos é aritmética de cenário, sem atribuição causal."],
+      "branches": {
+        "sem pacote coordenado": {"numerator": "250", "denominator": "400"},
+        "com pacote hipotético": {"numerator": "340", "denominator": "400"}
+      }
+    },
+    {
+      "id": "perda_avaria_validade",
+      "name": "Perda por avaria/validade em caixas",
+      "definition": "Caixas perdidas por avaria ou validade divididas por 1.000 caixas da base hipotética do exercício.",
+      "numerator": {"name": "caixas perdidas por avaria/validade", "unit": "caixa"},
+      "denominator": {"name": "caixas da base hipotética", "unit": "caixa", "value": "1000"},
+      "unit": "%",
+      "kind": "proportion",
+      "precision": 1,
+      "maturity": "Cutoff das ocorrências no dia 56; reclamações documentadas podem maturar até 5 dias úteis, com fechamento até o dia 63.",
+      "interpretation_limits": ["A base de 1.000 caixas é premissa do exercício; não define o volume real movimentado.", "A composição entre avaria e validade não é detalhada.", "Diferença entre ramos é aritmética de cenário, sem atribuição causal."],
+      "branches": {
+        "sem pacote coordenado": {"numerator": "35", "denominator": "1000"},
+        "com pacote hipotético": {"numerator": "20", "denominator": "1000"}
+      }
+    },
+    {
+      "id": "custo_transporte_por_pedido",
+      "name": "Custo de transporte alocado por pedido planejado",
+      "definition": "Custo de transporte alocado no período dividido pelos 100 pedidos planejados fixos.",
+      "numerator": {"name": "custo de transporte alocado no período", "unit": "BRL", "currency": "BRL"},
+      "denominator": {"name": "pedidos planejados da coorte fixa", "unit": "pedido", "value": "100"},
+      "unit": "BRL/pedido planejado",
+      "kind": "ratio",
+      "precision": 2,
+      "maturity": "Custo atribuído somente à janela encerrada no dia 56; conciliação pode maturar até 5 dias úteis, com fechamento até o dia 63.",
+      "interpretation_limits": ["Valores de R$ 9.200 e R$ 8.400 são premissas selecionadas para o exercício.", "Não há regra real de alocação, composição de custo ou ajuste monetário.", "A comparação absoluta é cenário aritmético; a variação relativa usa como base o ramo sem pacote coordenado e não é ROI nem impacto causal."],
+      "branches": {
+        "sem pacote coordenado": {"numerator": "9200", "denominator": "100"},
+        "com pacote hipotético": {"numerator": "8400", "denominator": "100"}
+      }
+    },
+    {
+      "id": "contas_vencidas_30d",
+      "name": "Contas a receber vencidas há mais de 30 dias",
+      "definition": "Saldo vencido há mais de 30 dias no cutoff dividido pela exposição a receber fixa de R$ 1.000.000.",
+      "numerator": {"name": "saldo vencido há mais de 30 dias no cutoff", "unit": "BRL", "currency": "BRL"},
+      "denominator": {"name": "exposição a receber fixa", "unit": "BRL", "currency": "BRL", "value": "1000000"},
+      "unit": "%",
+      "kind": "proportion",
+      "precision": 1,
+      "maturity": "Saldo fixado no cutoff do dia 56; movimentos posteriores ficam fora da medição, ainda que o relatório feche até o dia 63.",
+      "interpretation_limits": ["A exposição de R$ 1.000.000 é fixa e didática nos dois ramos.", "Não há carteira real, calendário de vencimentos, pagamentos ou regra de aging observada.", "Diferença entre ramos é aritmética de cenário, sem atribuição causal."],
+      "branches": {
+        "sem pacote coordenado": {"numerator": "220000", "denominator": "1000000"},
+        "com pacote hipotético": {"numerator": "150000", "denominator": "1000000"}
+      }
+    }
+  ]
+}

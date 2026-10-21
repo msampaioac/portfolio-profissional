@@ -9,6 +9,7 @@ Esta pasta reúne os **universos de negócio** utilizados nos estudos. Cada empr
 | Empresa | Natureza | Conteúdo |
 |:---|:---|:---|
 | [GENA — Grupo Educacional Nascente do Acre](gena/README.md) | Empresa educacional fictícia | Contexto institucional e projetos de planejamento estratégico, retenção EAD e governança de indicadores |
+| [NorteVia Distribuição](nortevia-distribuicao/README.md) | Distribuidora B2B fictícia de alimentos, sediada no cenário em Rio Branco-AC | Planejamento estratégico, abastecimento e logística, governança de indicadores e simulação COVID-19 |
 
 ## Padrão para novas empresas
 

@@ -1,0 +1,13 @@
+schema_version,metric_id,metric_name,branch,numerator,denominator,unit,value,comparison_delta,comparison_delta_unit,comparison_relative_pct
+1.0,otif,OTIF — pedidos no prazo e completos,sem pacote coordenado,62,100,%,62.0,20.0,p.p.,
+1.0,otif,OTIF — pedidos no prazo e completos,com pacote hipotético,82,100,%,82.0,20.0,p.p.,
+1.0,fill_rate,Fill rate — unidades entregues sobre pedidas,sem pacote coordenado,8000,10000,%,80.0,11.0,p.p.,
+1.0,fill_rate,Fill rate — unidades entregues sobre pedidas,com pacote hipotético,9100,10000,%,91.0,11.0,p.p.,
+1.0,disponibilidade_skus,Disponibilidade de SKUs críticos,sem pacote coordenado,250,400,%,62.5,22.5,p.p.,
+1.0,disponibilidade_skus,Disponibilidade de SKUs críticos,com pacote hipotético,340,400,%,85.0,22.5,p.p.,
+1.0,perda_avaria_validade,Perda por avaria/validade em caixas,sem pacote coordenado,35,1000,%,3.5,-1.5,p.p.,
+1.0,perda_avaria_validade,Perda por avaria/validade em caixas,com pacote hipotético,20,1000,%,2.0,-1.5,p.p.,
+1.0,custo_transporte_por_pedido,Custo de transporte alocado por pedido planejado,sem pacote coordenado,9200.00,100.00,BRL/pedido planejado,92.00,-8.00,BRL/pedido planejado,-8.70
+1.0,custo_transporte_por_pedido,Custo de transporte alocado por pedido planejado,com pacote hipotético,8400.00,100.00,BRL/pedido planejado,84.00,-8.00,BRL/pedido planejado,-8.70
+1.0,contas_vencidas_30d,Contas a receber vencidas há mais de 30 dias,sem pacote coordenado,220000,1000000,%,22.0,-7.0,p.p.,
+1.0,contas_vencidas_30d,Contas a receber vencidas há mais de 30 dias,com pacote hipotético,150000,1000000,%,15.0,-7.0,p.p.,

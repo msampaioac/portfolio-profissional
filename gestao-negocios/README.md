@@ -13,24 +13,15 @@ gestao-negocios/
 ├── README.md                         Guia geral do portfólio
 ├── cases/
 │   ├── README.md                     Índice das empresas
-│   └── gena/
-│       ├── README.md                 Apresentação e contexto da empresa
-│       ├── visao-executiva.md         Síntese dos projetos da GENA
+│   ├── gena/                         Empresa fictícia de educação
+│   │   └── ...                       Planejamento, retenção EAD e governança
+│   └── nortevia-distribuicao/        Empresa fictícia de distribuição de alimentos
+│       ├── README.md                 Contexto do negócio e dos projetos
+│       ├── visao-executiva.md         Decisão, estágio e navegação
 │       └── projetos/
 │           ├── planejamento-estrategico/
-│           │   └── README.md         Diagnóstico, prioridades e OKRs
-│           ├── governanca-indicadores/
-│           │   ├── README.md         Problema, decisões e evidências
-│           │   ├── docs/             Contrato, fontes, modelo e defesa do case
-│           │   ├── evidencias/       Comparação e reconciliação executada
-│           │   ├── scripts/          Cálculo reproduzível dos indicadores
-│           │   └── tests/            Controles do ciclo de governança
-│           └── retencao-ead/
-│               ├── README.md         Problema, escopo e entregas do projeto
-│               ├── dados/            CSV, configuração, dicionário e conferência
-│               ├── docs/             Contrato de dados e registro de mudanças
-│               ├── scripts/          Geração e validação da base fictícia
-│               └── tests/            Testes automatizados
+│           ├── abastecimento-logistica/  Simulação, dados, script e testes
+│           └── governanca-indicadores/   Mapas, contratos e controles
 └── templates/
     └── README.md                     Modelos genéricos de gestão
 ```
@@ -44,6 +35,7 @@ Os [modelos genéricos](templates/README.md) são a única biblioteca compartilh
 | Empresa | Contexto | Onde começar |
 |:---|:---|:---|
 | **GENA — Grupo Educacional Nascente do Acre** | Grupo educacional fictício; estratégia, permanência e gestão por indicadores | [Apresentação da empresa](cases/gena/README.md) ou [visão executiva](cases/gena/visao-executiva.md) |
+| **NorteVia Distribuição** | Distribuidora B2B de alimentos fictícia; abastecimento, estoque, logística e capital de giro | [Apresentação da empresa](cases/nortevia-distribuicao/README.md) ou [visão executiva](cases/nortevia-distribuicao/visao-executiva.md) |
 
 Novas empresas serão incluídas em `cases/<empresa>/`, cada uma com sua própria apresentação e seus projetos. Não serão criadas pastas vazias apenas para sugerir experiência inexistente.
 
@@ -54,6 +46,9 @@ Novas empresas serão incluídas em `cases/<empresa>/`, cada uma com sua própri
 | GENA / [Planejamento estratégico](cases/gena/projetos/planejamento-estrategico/README.md) | Diagnóstico, SWOT, objetivos, OKRs propostos, prioridades, riscos e roteiro de execução | Aplicação operacional e acompanhamento dos resultados |
 | GENA / [Retenção EAD](cases/gena/projetos/retencao-ead/README.md) | Plano do projeto, seis CSV fictícios, gerador Python, dicionário, reconciliação e 13 testes | Análise diagnóstica, SQL, painel, segmentação validada e avaliação do piloto |
 | GENA / [Governança de indicadores](cases/gena/projetos/governanca-indicadores/README.md) | Inventário, modelo lógico, contrato, decisões, comparação de denominadores, cinco indicadores recalculados, script, testes próprios e defesa do case | Implantação e homologação operacional; conversão ainda preliminar e sem dados de funil |
+| NorteVia / [Planejamento estratégico](cases/nortevia-distribuicao/projetos/planejamento-estrategico/README.md) | Diagnóstico por hipóteses, trade-offs, objetivos condicionais, gates, riscos e plano fictício de 90 dias | Validar qualquer baseline, capacidade, caixa, regras de qualidade e alçadas antes de aplicar |
+| NorteVia / [Abastecimento e logística](cases/nortevia-distribuicao/projetos/abastecimento-logistica/README.md) | Espelho sintético de COVID-19, seis indicadores, configuração, script de geração, CSV reproduzível e sete testes | Não há dados operacionais reais; análises de negócio, implantação e efeitos permanecem inexistentes |
+| NorteVia / [Governança de indicadores](cases/nortevia-distribuicao/projetos/governanca-indicadores/README.md) | Mapas de processo hipotéticos, definições, denominadores, papéis e controles para decisão | Homologação com responsáveis e reconciliação de fontes só seriam etapas futuras num cenário real |
 
 As frentes **Jornada Ensino Médio → Graduação** e **Adimplência e Finanças** constam do planejamento da GENA, mas ainda não possuem projetos completos. Seus artefatos serão criados somente quando houver trabalho efetivo a documentar.
 
@@ -85,13 +80,13 @@ Essa sequência é um roteiro de desenvolvimento, não uma lista de entregas já
 
 A apresentação de cada empresa é a referência do seu universo de negócio. A configuração da base é a fonte dos parâmetros sintéticos, e mudanças devem atualizar **dados, testes, documentação e índices em lote**.
 
-Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `gestao-negocios/cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
+Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Na Retenção EAD da GENA, use `gestao-negocios/cases/gena/projetos/retencao-ead/`; na simulação logística da NorteVia, use `gestao-negocios/cases/nortevia-distribuicao/projetos/abastecimento-logistica/`. Os respectivos READMEs explicam a reprodução.
 
 ## Contato
 
 [LinkedIn](https://linkedin.com/in/msampaioac) para conversar sobre Gestão e Negócios, Estratégia e Business Intelligence.
 
 
-## Simulação transversal COVID-19
+## Simulações didáticas COVID-19
 
-A GENA agora possui uma simulação retrospectiva documentada dentro dos três projetos existentes — planejamento, retenção EAD e governança de indicadores. Ela não cria um quarto projeto nem substitui o próximo trabalho de análise da base EAD; os resultados de crise são didáticos, separados dos dados de 2025 e não representam execução ou impacto real. O ponto de entrada é a [apresentação da GENA](cases/gena/README.md).
+Há cenários retrospectivos documentados dentro dos três projetos de cada empresa fictícia. Na [GENA](cases/gena/README.md), a simulação trata de continuidade educacional e retenção EAD; na [NorteVia](cases/nortevia-distribuicao/README.md), aborda abastecimento, logística de alimentos e caixa. Os dados, resultados e decisões dos dois cases são hipotéticos, setorialmente distintos e não representam execução, efeito causal ou impacto real.
