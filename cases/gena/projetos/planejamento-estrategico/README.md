@@ -27,11 +27,11 @@ O desafio de gestão é converter sinais dispersos em decisões de portfólio: p
 
 ## Base disponível para exame
 
-A primeira melhoria autorizada é a base sintética, gerador Python, testes de contrato/reconciliação e conciliação do snapshot EAD. A abertura de 2.880 em janeiro perde 40 conclusões e 40 transferências do denominador, deixando 2.800 elegíveis; 770 cancelamentos produzem 27,5% de churn e 2.030 retidos (72,5%). Há 1.090 ingressantes entre março e novembro, todos ativos no fechamento e sem churn estimado no grupo; o fechamento é 3.120 e o total anual distinto é 3.970.
+A preparação de dados disponível no projeto de Retenção EAD inclui a base sintética, gerador Python, testes de contrato/reconciliação e conciliação do snapshot EAD. A abertura de 2.880 em janeiro perde 40 conclusões e 40 transferências do denominador, deixando 2.800 elegíveis; 770 cancelamentos produzem 27,5% de churn e 2.030 retidos (72,5%). Há 1.090 ingressantes entre março e novembro, todos ativos no fechamento e sem churn estimado no grupo; o fechamento é 3.120 e o total anual distinto é 3.970.
 
 NPS 39 usa 200 respostas (118/42/40). A inadimplência EAD de 13,5% é monetária na posição de referência de títulos de 2025 vencidos até 31/12/2025, com alvo em centavos ao mais próximo: calibração, não validação real. O corte de 28/02/2025 exclui financeiro, NPS e saídas de abril a dezembro de 2025; engajamento de 06/01 a 28/02 é independente do desfecho, sem conclusão de que baixo engajamento provoque churn.
 
-A amostra didática EAD usa Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; isso é premissa, não autorização para inferência. Consulte o [índice da base](../../dados/gena/README.md), o [contrato](../../docs/contrato-dados-gena.md), a [validação](../../dados/gena/validacao.md), o [gerador](../../scripts/gerar_dados_gena.py) e os [testes](../../tests/test_dados_gena.py).
+A amostra didática EAD usa Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; isso é premissa, não autorização para inferência. Consulte o [índice da base](../retencao-ead/dados/README.md), o [contrato](../retencao-ead/docs/contrato-dados.md), a [validação](../retencao-ead/dados/validacao.md), o [gerador](../retencao-ead/scripts/gerar_dados_gena.py) e os [testes](../retencao-ead/tests/test_dados_gena.py).
 
 
 ### Diagnóstico do problema
@@ -183,10 +183,10 @@ Próximos passos: executar a geração e os testes, registrar a reconciliação 
 
 ## Referências do portfólio
 
-- [Portfólio de Gestão Estratégica](../../README.md)
-- [Documento-base fictício da GENA](../../docs/empresa-ficticia-grupo-educacional.md)
-- [Apresentação executiva](../../docs/apresentacao-executiva.md)
-- [Detalhamento: redução de churn EAD](./reducao-churn-ead.md)
-- [Governança de indicadores e BI](../governanca-indicadores-bi.md)
-- [Templates do portfólio](../../templates/README.md)
-- [Base sintética GENA](../../dados/gena/README.md) · [Contrato](../../docs/contrato-dados-gena.md) · [Validação](../../dados/gena/validacao.md) · [Gerador](../../scripts/gerar_dados_gena.py) · [Testes](../../tests/test_dados_gena.py)
+- [Portfólio de Gestão Estratégica](../../../../README.md)
+- [Documento-base fictício da GENA](../../README.md)
+- [Apresentação executiva](../../visao-executiva.md)
+- [Detalhamento: redução de churn EAD](../retencao-ead/README.md)
+- [Governança de indicadores e BI](../governanca-indicadores/README.md)
+- [Templates do portfólio](../../../../templates/README.md)
+- [Base sintética GENA](../retencao-ead/dados/README.md) · [Contrato](../retencao-ead/docs/contrato-dados.md) · [Validação](../retencao-ead/dados/validacao.md) · [Gerador](../retencao-ead/scripts/gerar_dados_gena.py) · [Testes](../retencao-ead/tests/test_dados_gena.py)

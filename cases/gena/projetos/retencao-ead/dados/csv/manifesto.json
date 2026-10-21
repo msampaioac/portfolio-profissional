@@ -45,7 +45,7 @@
     "nps": "118 promotores, 42 passivos e 40 detratores entre 200 respostas"
   },
   "config": {
-    "arquivo": "dados/gena/config.json",
+    "arquivo": "dados/config.json",
     "sha256": "98444bcb176af6ecdc0b1925cf1c1af642e6203e192a9003520cca15664dc561"
   },
   "config_sha256": "98444bcb176af6ecdc0b1925cf1c1af642e6203e192a9003520cca15664dc561",

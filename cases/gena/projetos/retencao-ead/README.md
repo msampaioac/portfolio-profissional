@@ -2,9 +2,20 @@
 
 **Estudo simulado · Retenção e experiência do aluno, com base sintética para exame**
 
-[Portfólio](../../README.md) · [Plano estratégico](README.md) · [Empresa fictícia](../../docs/empresa-ficticia-grupo-educacional.md) · [Governança de indicadores](../governanca-indicadores-bi.md) · [Base](../../dados/gena/README.md) · [Contrato](../../docs/contrato-dados-gena.md) · [Validação](../../dados/gena/validacao.md)
+[Portfólio](../../../../README.md) · [Plano estratégico](../planejamento-estrategico/README.md) · [Empresa fictícia](../../README.md) · [Governança de indicadores](../governanca-indicadores/README.md) · [Base](dados/README.md) · [Contrato](docs/contrato-dados.md) · [Validação](dados/validacao.md)
 
 > **Estágio:** a base sintética é verificável para exame e a primeira melhoria cobre gerador, testes e reconciliação; este case continua sendo desenho de projeto. Não há modelo treinado, piloto executado, análise causal, risco validado, efeito medido ou ROI. Os números são sintéticos/calibrados e diferentes de operação real.
+
+## Artefatos deste projeto
+
+| Pasta | Conteúdo |
+|:---|:---|
+| [dados/](dados/README.md) | Seis CSV, configuração, dicionário, manifesto e reconciliação |
+| [docs/](docs/contrato-dados.md) | Contrato de dados e registro de mudanças |
+| [scripts/](scripts/gerar_dados_gena.py) | Gerador reproduzível e validador |
+| [tests/](tests/test_dados_gena.py) | Testes automatizados de integridade e reprodução |
+
+Todos os artefatos específicos de Retenção EAD ficam nesta pasta. O contexto institucional está na apresentação da GENA; os outros projetos estão em pastas próprias.
 
 ## 1. A decisão de negócio
 
@@ -25,11 +36,11 @@ A empresa possui sinais acadêmicos, financeiros e de atendimento em sistemas di
 
 ## Base disponível para exame
 
-A primeira melhoria autoriza base sintética, gerador Python, testes e reconciliação — não dashboard, modelo, piloto, efeito ou ROI. A conciliação EAD usa 2.880 na abertura de 01/01/2025; 40 conclusões e 40 transferências são retiradas retroativamente, deixando 2.800 elegíveis. São 770 cancelamentos (27,5%), 2.030 retidos (72,5%) e 1.090 ingressantes de março a novembro, todos ativos no fechamento e sem churn estimado no grupo. O fechamento é 3.120, enquanto 3.970 é o total anual de indivíduos distintos.
+A etapa de preparação de dados entrega base sintética, gerador Python, testes e reconciliação — não dashboard, modelo, piloto, efeito ou ROI. A conciliação EAD usa 2.880 na abertura de 01/01/2025; 40 conclusões e 40 transferências são retiradas retroativamente, deixando 2.800 elegíveis. São 770 cancelamentos (27,5%), 2.030 retidos (72,5%) e 1.090 ingressantes de março a novembro, todos ativos no fechamento e sem churn estimado no grupo. O fechamento é 3.120, enquanto 3.970 é o total anual de indivíduos distintos.
 
-NPS 39 é calibrado com 200 respostas finais (118 promotores, 42 passivos, 40 detratores). A inadimplência monetária na posição de referência é de 13,5% dos títulos de 2025 vencidos em 31/12/2025, alvo em centavos ao mais próximo; é calibração/checagem de coerência, não validação real. O ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas; valores inteiros em centavos não significam `alunos × ticket = receita/ROI`.
+NPS 39 é calibrado com 200 respostas finais (118 promotores, 42 passivos, 40 detratores). A inadimplência monetária na posição de referência é o saldo aberto equivalente a 13,5% do valor devido dos títulos de 2025 vencidos até 31/12/2025, com alvo arredondado em centavos; é calibração/checagem de coerência, não validação real. O ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas; valores inteiros em centavos não significam `alunos × ticket = receita/ROI`.
 
-Para o corte de features em 28/02/2025, financeiro, NPS e saídas de abril a dezembro de 2025 não são utilizáveis; em particular, dezembro fica fora. O engajamento de oito semanas (06/01–28/02), gerado a partir dos 2.880 da abertura, é independente do desfecho; portanto, não existe conclusão de que baixo engajamento provoque churn. Administração, Pedagogia e Gestão Pública e os polos Cidade Nova, Cruzeiro do Sul e Sena Madureira são premissas didáticas, não autorização para inferência. Detalhes de entradas, saídas e contrato estão no [índice da base](../../dados/gena/README.md), [contrato](../../docs/contrato-dados-gena.md) e [validação](../../dados/gena/validacao.md).
+Para o corte de features em 28/02/2025, financeiro, NPS e saídas de abril a dezembro de 2025 não são utilizáveis; em particular, dezembro fica fora. O engajamento de oito semanas (06/01–28/02), gerado a partir dos 2.880 da abertura, é independente do desfecho; portanto, não existe conclusão de que baixo engajamento provoque churn. Administração, Pedagogia e Gestão Pública e os polos Cidade Nova, Cruzeiro do Sul e Sena Madureira são premissas didáticas, não autorização para inferência. Detalhes de entradas, saídas e contrato estão no [índice da base](dados/README.md), [contrato](docs/contrato-dados.md) e [validação](dados/validacao.md).
 
 
 ## 3. Objetivo e critério de sucesso
@@ -64,7 +75,7 @@ A meta anual ilustrativa é reduzir o churn em **15% relativos** na mesma popula
 | Atendimento não resolvido deteriora a experiência | Solicitações, prazo, resolução e pesquisas | Pesquisas podem ter viés de resposta |
 | Contato preventivo melhora a permanência | Grupo atendido, comparação e janela de observação | Diferenças de perfil podem distorcer a avaliação |
 
-Essas hipóteses não foram testadas. A seleção dos sinais deve ocorrer após definição das métricas no [case de governança](../governanca-indicadores-bi.md).
+Essas hipóteses não foram testadas. A seleção dos sinais deve ocorrer após definição das métricas no [case de governança](../governanca-indicadores/README.md).
 
 ## 6. Segmentação proposta
 
@@ -118,6 +129,6 @@ Definir antes do início a janela, os desfechos, a população elegível, o trat
 
 Tradução de um indicador em decisão de projeto; delimitação de escopo; hipóteses testáveis; priorização de entregas; coordenação de áreas; avaliação de riscos e resultados sem prometer impacto não observado.
 
-**Próximos passos:** executar o gerador e os testes, registrar a reconciliação e a validação das regras da base sintética. Em etapas futuras, implementar análise diagnóstica SQL, desenhar dashboard, avaliar modelo, executar piloto e medir efeito/custo; nenhuma dessas frentes é apresentada como concluída.
+**Próximo trabalho:** análise diagnóstica da base sintética e consultas SQL. Gerador, testes e reconciliação já estão disponíveis e foram executados; devem ser reexecutados quando houver alterações. Dashboard, modelo, piloto e avaliação de efeito/custo permanecem etapas futuras.
 
-[Modelos de gestão](../../templates/README.md) · [Índice dos cases](../README.md) · [Base sintética](../../dados/gena/README.md) · [Gerador](../../scripts/gerar_dados_gena.py) · [Testes](../../tests/test_dados_gena.py) · [Voltar ao portfólio](../../README.md)
+[Modelos de gestão](../../../../templates/README.md) · [Índice dos cases](../../../README.md) · [Base sintética](dados/README.md) · [Gerador](scripts/gerar_dados_gena.py) · [Testes](tests/test_dados_gena.py) · [Voltar ao portfólio](../../../../README.md)

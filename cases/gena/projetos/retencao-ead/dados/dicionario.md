@@ -1,6 +1,6 @@
 # Dicionário de dados GENA EAD
 
-Esta é a primeira melhoria da base fictícia do GENA. O gerador é [`scripts/gerar_dados_gena.py`](../../scripts/gerar_dados_gena.py), a configuração é [`config.json`](config.json), o manifesto é [`csv/manifesto.json`](csv/manifesto.json) e o contrato documental geral está em [`docs/contrato-dados-gena.md`](../../docs/contrato-dados-gena.md).
+Esta é a primeira melhoria da base fictícia do GENA. O gerador é [`scripts/gerar_dados_gena.py`](../scripts/gerar_dados_gena.py), a configuração é [`config.json`](config.json), o manifesto é [`csv/manifesto.json`](csv/manifesto.json) e o contrato documental geral está em [`docs/contrato-dados.md`](../docs/contrato-dados.md).
 
 ## Escopo e aviso
 

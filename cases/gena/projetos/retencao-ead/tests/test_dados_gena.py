@@ -1,6 +1,6 @@
 """Testes de contrato dos dados fictícios, sem bibliotecas externas.
 
-Rodar na raiz: python3 -m unittest discover -s tests -v
+Rodar na pasta do projeto de Retenção EAD: python3 -m unittest discover -s tests -v
 Testar dados calibrados demonstra consistência, não validação empírica.
 """
 from __future__ import annotations
@@ -32,7 +32,7 @@ class ContratoGENA(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp = tempfile.TemporaryDirectory()
         cls.pasta = Path(cls.tmp.name) / "base"
-        cls.config_path = ROOT / "dados/gena/config.json"
+        cls.config_path = ROOT / "dados/config.json"
         cls.config = json.loads(cls.config_path.read_text())
         cls.manifesto = gerador.generate(cls.config_path, cls.pasta)
         cls.tabelas = {nome: ler_csv(cls.pasta, nome) for nome in gerador.CSV_NAMES}

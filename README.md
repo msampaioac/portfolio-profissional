@@ -1,72 +1,88 @@
 # Portfólio de Gestão Estratégica e de Projetos
 
-## Gestão Estratégica e de Projetos orientada por Dados
+Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são organizados por empresa e, dentro de cada empresa, por projeto. Esta página documenta o escopo geral, o conteúdo das pastas e a evolução prevista.
 
-Meu foco profissional é conectar **análise de dados, prioridades de negócio e execução**: compreender o problema, definir indicadores, organizar iniciativas e estabelecer uma rotina de acompanhamento para apoiar decisões.
+[LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio)
 
-Este portfólio apresenta esse raciocínio aplicado ao setor educacional. O objetivo não é apenas mostrar ferramentas, mas explicar **qual decisão tomar, por que priorizá-la e como acompanhar sua execução**.
+> Os cases atuais utilizam empresas e dados fictícios, com documentação estruturada com apoio de IA. Entregas técnicas, propostas, metas e resultados realizados são identificados separadamente. Não há declaração de clientes atendidos ou impacto profissional obtido.
 
-[LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio) · [GitHub](https://github.com/msampaioac)
+## 1. Como o portfólio está organizado
 
-> **Natureza dos trabalhos:** estudos autorais estruturados com apoio de IA sobre uma empresa fictícia. Há uma base sintética verificável para exame e reprodução; os artefatos não representam projetos implantados, clientes atendidos ou resultados profissionais realizados.
+```text
+.
+├── README.md                         Guia geral do portfólio
+├── cases/
+│   ├── README.md                     Índice das empresas
+│   └── gena/
+│       ├── README.md                 Apresentação e contexto da empresa
+│       ├── visao-executiva.md         Síntese dos projetos da GENA
+│       └── projetos/
+│           ├── planejamento-estrategico/
+│           │   └── README.md         Diagnóstico, prioridades e OKRs
+│           ├── governanca-indicadores/
+│           │   └── README.md         Métricas, responsabilidades e controles
+│           └── retencao-ead/
+│               ├── README.md         Problema, escopo e entregas do projeto
+│               ├── dados/            CSV, configuração, dicionário e conferência
+│               ├── docs/             Contrato de dados e registro de mudanças
+│               ├── scripts/          Geração e validação da base fictícia
+│               └── tests/            Testes automatizados
+└── templates/
+    └── README.md                     Modelos genéricos de gestão
+```
 
-## Comece por aqui
+**Regra principal:** a raiz explica o portfólio; a pasta da empresa explica o negócio; a pasta do projeto contém seu trabalho. Dados, scripts, testes e documentos específicos não ficam soltos na raiz nem misturados entre empresas.
 
-**Leitura rápida:** [síntese executiva dos cases](docs/apresentacao-executiva.md). Veja o problema, a recomendação e a evidência disponível antes de abrir a documentação completa.
+Os [modelos genéricos](templates/README.md) são a única biblioteca compartilhada: diagnóstico, OKRs, canvas, 5W2H, riscos, decisões e checklist de governança. Modelos preenchidos devem ficar no projeto que os utiliza.
 
-**Avaliação aprofundada:** escolha um dos três estudos abaixo. Todos compartilham o mesmo [universo de negócio — GENA](docs/empresa-ficticia-grupo-educacional.md), permitindo acompanhar a conexão entre estratégia, projetos e governança.
+## 2. Empresas do portfólio
 
-## Cases em destaque
-
-| Estudo | Decisão de negócio | Evidências disponíveis |
+| Empresa | Contexto | Onde começar |
 |:---|:---|:---|
-| **[Planejamento estratégico do GENA](cases/grupo-educacional/README.md)** | Como priorizar crescimento, retenção e transformação digital? | SWOT, objetivos, OKRs propostos, critérios de priorização, roteiro de 90 dias e riscos |
-| **[Redução de churn no EAD](cases/grupo-educacional/reducao-churn-ead.md)** | Como agir antes do abandono sem prometer um efeito ainda não medido? | Hipóteses, [base sintética](dados/gena/README.md), [contrato de dados](docs/contrato-dados-gena.md) e [reconciliação e testes](dados/gena/validacao.md) |
-| **[Governança de indicadores e BI](cases/governanca-indicadores-bi.md)** | Como fazer áreas diferentes decidirem com métricas comparáveis? | Dicionário de indicadores, RACI, controles de qualidade e critérios de aceite |
+| **GENA — Grupo Educacional Nascente do Acre** | Grupo educacional fictício; estratégia, permanência e gestão por indicadores | [Apresentação da empresa](cases/gena/README.md) ou [visão executiva](cases/gena/visao-executiva.md) |
 
-**Estágio:** planejamento documentado, com preparação de dados do case EAD executada em ambiente simulado. A implementação operacional, o dashboard, o modelo e o piloto continuam futuros; não há impacto ou ROI realizado.
+Novas empresas serão incluídas em `cases/<empresa>/`, cada uma com sua própria apresentação e seus projetos. Não serão criadas pastas vazias apenas para sugerir experiência inexistente.
 
-## Evidência técnica disponível para exame
+## 3. Trabalhos disponíveis e estágio atual
 
-A [base fictícia da GENA](dados/gena/README.md) possui **seis CSV, gerador Python, dicionário e testes automatizados**. Os dados preservam os 3.120 ativos EAD finais e os 10.040 ativos institucionais, com entradas, saídas e população elegível documentadas.
+| Empresa / projeto | O que está disponível | O que ainda precisa ser desenvolvido |
+|:---|:---|:---|
+| GENA / [Planejamento estratégico](cases/gena/projetos/planejamento-estrategico/README.md) | Diagnóstico, SWOT, objetivos, OKRs propostos, prioridades, riscos e roteiro de execução | Aplicação operacional e acompanhamento dos resultados |
+| GENA / [Retenção EAD](cases/gena/projetos/retencao-ead/README.md) | Plano do projeto, seis CSV fictícios, gerador Python, dicionário, reconciliação e 13 testes | Análise diagnóstica, SQL, painel, segmentação validada e avaliação do piloto |
+| GENA / [Governança de indicadores](cases/gena/projetos/governanca-indicadores/README.md) | Dicionário de indicadores, papéis, RACI, regras de qualidade e critérios de aceite | Implantação da governança e homologação operacional |
 
-A [reconciliação](dados/gena/validacao.md) permite conferir churn, retenção, posição financeira, NPS e hashes dos arquivos. Os números são calibrados para o cenário fictício: demonstram consistência e reprodutibilidade, não eficácia de uma intervenção.
+As frentes **Jornada Ensino Médio → Graduação** e **Adimplência e Finanças** constam do planejamento da GENA, mas ainda não possuem projetos completos. Seus artefatos serão criados somente quando houver trabalho efetivo a documentar.
 
-Para examinar a implementação: [gerador](scripts/gerar_dados_gena.py) · [testes](tests/test_dados_gena.py) · [contrato e limites](docs/contrato-dados-gena.md).
+## 4. O que será trabalhado nos projetos
 
-## Competências demonstradas nos artefatos
-
-| Frente | Como aparece no portfólio |
+| Frente de trabalho | Entregas a desenvolver conforme o escopo |
 |:---|:---|
-| Diagnóstico e estratégia | Relação entre contexto, restrições, hipóteses e escolhas |
-| Gestão de projetos | Escopo, dependências, papéis, riscos e critérios para avançar ou interromper |
-| Gestão por resultados | Separação entre objetivo, resultado-chave, indicador operacional e iniciativa |
-| Business Intelligence e governança | Definições de métricas, granularidade, qualidade e rotina de decisão |
-| Comunicação executiva | Síntese que conecta evidência, recomendação e decisão requerida |
+| Diagnóstico e estratégia | Problema de negócio, evidências, hipóteses, alternativas e priorização |
+| Gestão de projetos | Objetivos, escopo, responsáveis, backlog, cronograma, riscos e critérios de aceite |
+| Dados e análise | Contrato de dados, fontes, tratamento, testes, consultas e análise reproduzível |
+| BI e comunicação executiva | Indicadores, visualizações e recomendações vinculadas a decisões |
+| Execução e avaliação | Plano de ação, rotina de acompanhamento, custos e avaliação de benefícios, quando houver evidência |
 
-A primeira melhoria usa **Python para geração e testes de contrato/reconciliação**; SQL, BigQuery e Power BI têm evidências técnicas no [portfólio de Análise de Dados](https://github.com/msampaioac/data-analytics-portfolio), outro repositório. Aqui, o foco é o **raciocínio de gestão que orienta a análise e a execução**. A análise diagnóstica em SQL e o dashboard Power BI são etapas futuras; não apresento modelo, piloto, efeito ou ROI implementados neste repositório.
+Cada projeto deve explicar **problema → diagnóstico → decisão → execução → medição**, distinguindo o que foi entregue do que continua planejado. Não é obrigatório usar todas as ferramentas ou todos os frameworks em cada trabalho.
 
-## Como avaliar o meu raciocínio
+## 5. Próxima etapa e sequência de evolução
 
-Nos cases, procure a sequência **problema → diagnóstico → escolha → execução → medição**. As alternativas descartadas, as limitações dos dados e as condições para revisar uma decisão fazem parte da proposta, e não ficam escondidas no final.
+O próximo trabalho é a **análise diagnóstica da base fictícia de Retenção EAD**. A sequência prevista é:
 
-Para discutir os trabalhos em entrevista, três perguntas ajudam a aprofundar a avaliação:
+1. Explorar a base, implementar consultas e registrar limites da simulação.
+2. Traduzir os achados em hipóteses e alternativas de gestão, sem afirmar causalidade.
+3. Desenvolver um painel e uma síntese executiva com métricas consistentes.
+4. Detalhar os instrumentos de execução do projeto e o desenho de avaliação do piloto.
+5. Avaliar efeitos e viabilidade econômica somente quando existirem dados e método apropriados.
 
-1. Por que priorizar governança e retenção antes de acelerar a expansão?
-2. Como distinguir uma meta de negócio de uma entrega do projeto?
-3. Que evidência justificaria continuar, ajustar ou interromper o piloto?
+Essa sequência é um roteiro de desenvolvimento, não uma lista de entregas já concluídas. Não há modelo preditivo treinado, piloto executado, redução comprovada de churn ou ROI realizado.
 
-## Navegação do repositório
+## 6. Regras de manutenção
 
-| Área | Conteúdo |
-|:---|:---|
-| [Cases](cases/README.md) | Estudos aplicados e roteiro de avaliação |
-| [Documentação](docs/README.md) | Síntese executiva, empresa fictícia e estágio das entregas |
-| [Base sintética GENA](dados/gena/README.md) | Contrato, CSV, gerador, testes e reconciliação da primeira melhoria |
-| [Modelos de trabalho](templates/README.md) | Diagnóstico, OKRs, canvas, 5W2H, riscos e decisões |
+A apresentação de cada empresa é a referência do seu universo de negócio. A configuração da base é a fonte dos parâmetros sintéticos, e mudanças devem atualizar **dados, testes, documentação e índices em lote**.
 
-## Contato profissional
+Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
 
-Para conversar sobre oportunidades em **Gestão Estratégica, Gestão de Projetos e BI**, entre em contato pelo [LinkedIn](https://linkedin.com/in/msampaioac).
+## Contato
 
-Este repositório demonstra propostas e formas de raciocínio. Experiência profissional, formação e trajetória devem ser consultadas no perfil do autor; não são inferidas dos dados da empresa fictícia.
+[LinkedIn](https://linkedin.com/in/msampaioac) para conversar sobre Gestão Estratégica, Gestão de Projetos e Business Intelligence.

@@ -2,7 +2,7 @@
 
 **Dados sintéticos · Versão 1.0.0 · Referência de 2025**
 
-[Portfólio](../../README.md) · [Case de retenção](../../cases/grupo-educacional/reducao-churn-ead.md) · [Contrato de dados](../../docs/contrato-dados-gena.md) · [Dicionário](dicionario.md) · [Reconciliação e testes](validacao.md)
+[Portfólio](../../../../../README.md) · [Case de retenção](../README.md) · [Contrato de dados](../docs/contrato-dados.md) · [Dicionário](dicionario.md) · [Reconciliação e testes](validacao.md)
 
 ## O que avaliar primeiro
 
@@ -26,9 +26,10 @@ Os microdados cobrem somente EAD. Básica, presencial e pós/extensão aparecem 
 
 ## Como reproduzir
 
-Na raiz de uma cópia do repositório, com **Python 3.10 ou superior**, sem bibliotecas externas:
+Na raiz de uma cópia do repositório, entre primeiro na pasta do projeto. Use **Python 3.10 ou superior**, sem bibliotecas externas:
 
 ```bash
+cd cases/gena/projetos/retencao-ead
 python3 scripts/gerar_dados_gena.py
 python3 -m unittest discover -s tests -v
 python3 scripts/validar_dados_gena.py
@@ -36,20 +37,20 @@ python3 scripts/validar_dados_gena.py
 
 O primeiro comando gera os arquivos CSV e o manifesto; o segundo executa os testes; o terceiro recalcula os indicadores, verifica o manifesto e atualiza [validacao.md](validacao.md). Falhas impedem emitir o relatório como aprovado.
 
-O gerador também aceita uma configuração e pasta de saída alternativas:
+Já dentro da pasta do projeto, o gerador também aceita uma configuração e pasta de saída alternativas:
 
 ```bash
-python3 scripts/gerar_dados_gena.py --config dados/gena/config.json --output /tmp/gena-reproducao
+python3 scripts/gerar_dados_gena.py --config dados/config.json --output /tmp/gena-reproducao
 ```
 
-Consulte o [gerador](../../scripts/gerar_dados_gena.py), os [testes](../../tests/test_dados_gena.py), o [validador](../../scripts/validar_dados_gena.py) e a [configuração oficial](config.json). Não é necessário instalar pacotes ou usar uma chave de API.
+Consulte o [gerador](../scripts/gerar_dados_gena.py), os [testes](../tests/test_dados_gena.py), o [validador](../scripts/validar_dados_gena.py) e a [configuração oficial](config.json). Não é necessário instalar pacotes ou usar uma chave de API.
 
 ## O que já existe e o que ainda não existe
 
 **Disponível:** base sintética, dicionário, regras de geração, reconciliação e controles automatizados. **Ainda não implementado:** análise diagnóstica por curso/polo, consultas SQL de negócio, dashboard, segmentação validada, piloto e mensuração de impacto.
 
-Não use os desfechos de dezembro, a elegibilidade retrospectiva ou a posição financeira final como informações conhecidas em fevereiro. O [contrato](../../docs/contrato-dados-gena.md) explica os limites temporais e as premissas simplificadoras.
+Não use os desfechos de dezembro, a elegibilidade retrospectiva ou a posição financeira final como informações conhecidas em fevereiro. O [contrato](../docs/contrato-dados.md) explica os limites temporais e as premissas simplificadoras.
 
 ## Manutenção em lote
 
-A configuração é a fonte única de parâmetros. Qualquer mudança deve regenerar os dados e atualizar simultaneamente os documentos relacionados. O [registro de mudanças](../../docs/registro-mudancas-gena.md) explica o que foi preservado, o que foi definido e o que continua pendente.
+A configuração é a fonte única de parâmetros. Qualquer mudança deve regenerar os dados e atualizar simultaneamente os documentos relacionados. O [registro de mudanças](../docs/registro-mudancas.md) explica o que foi preservado, o que foi definido e o que continua pendente.

@@ -556,7 +556,7 @@ def _manifest(
         "semente": int(config["semente"]),
         "seed": int(config["semente"]),
         "config_sha256": _sha256_bytes(config_bytes),
-        "config": {"arquivo": "dados/gena/config.json", "sha256": _sha256_bytes(config_bytes)},
+        "config": {"arquivo": "dados/config.json", "sha256": _sha256_bytes(config_bytes)},
         "snapshot": str(config["snapshot"]),
         "data_corte_sinais": str(config["data_corte_sinais"]),
         "contagens": counts,
@@ -620,8 +620,8 @@ def _default_root() -> Path:
 def main(argv: list[str] | None = None) -> int:
     root = _default_root()
     parser = argparse.ArgumentParser(description="Gera dados fictícios determinísticos do GENA EAD")
-    parser.add_argument("--config", default=str(root / "dados" / "gena" / "config.json"))
-    parser.add_argument("--output", default=str(root / "dados" / "gena" / "csv"))
+    parser.add_argument("--config", default=str(root / "dados" / "config.json"))
+    parser.add_argument("--output", default=str(root / "dados" / "csv"))
     args = parser.parse_args(argv)
     manifest = generate(args.config, args.output)
     total_rows = sum(manifest["contagens"].values())

@@ -111,4 +111,4 @@ Probabilidade e impacto devem ser avaliados com escala explícita e justificativ
 - [ ] Metas, projeções e observações não são confundidas.
 - [ ] O indicador está associado a uma decisão e a uma rotina de acompanhamento.
 
-Consulte o [case de governança de indicadores](../cases/governanca-indicadores-bi.md) para ver uma aplicação proposta, e o [plano estratégico](../cases/grupo-educacional/README.md) para o desdobramento das prioridades.
+Consulte o [case de governança de indicadores](../cases/gena/projetos/governanca-indicadores/README.md) para ver uma aplicação proposta, e o [plano estratégico](../cases/gena/projetos/planejamento-estrategico/README.md) para o desdobramento das prioridades.

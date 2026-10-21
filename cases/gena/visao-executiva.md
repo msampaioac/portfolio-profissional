@@ -1,8 +1,10 @@
-# Síntese executiva do portfólio
+# GENA — Visão executiva dos projetos
 
-**Gestão Estratégica e de Projetos orientada por Dados**
+**Documento da empresa e dos projetos**
 
-[Portfólio principal](../README.md) · [Contato no LinkedIn](https://linkedin.com/in/msampaioac)
+Gestão Estratégica e de Projetos orientada por Dados
+
+[Portfólio](../../README.md) · [Empresas](../README.md) · [Contexto da GENA](README.md)
 
 ## A decisão em uma página
 
@@ -25,13 +27,13 @@ Essas interpretações são hipóteses de planejamento; os indicadores não comp
 
 | Estudo | O que demonstra | Onde verificar |
 |:---|:---|:---|
-| Planejamento estratégico | Priorização, objetivos e coordenação de iniciativas | [SWOT, OKRs e execução](../cases/grupo-educacional/README.md) |
-| Retenção EAD | Tradução de um indicador em hipótese, piloto e critério de decisão | [Plano de intervenção e avaliação](../cases/grupo-educacional/reducao-churn-ead.md) |
-| Governança de indicadores | Consistência de métricas e responsabilidades | [Dicionário, RACI e controles](../cases/governanca-indicadores-bi.md) |
+| Planejamento estratégico | Priorização, objetivos e coordenação de iniciativas | [SWOT, OKRs e execução](projetos/planejamento-estrategico/README.md) |
+| Retenção EAD | Tradução de um indicador em hipótese, piloto e critério de decisão | [Plano de intervenção e avaliação](projetos/retencao-ead/README.md) |
+| Governança de indicadores | Consistência de métricas e responsabilidades | [Dicionário, RACI e controles](projetos/governanca-indicadores/README.md) |
 
 ## O que levar ao comitê
 
-**Aprovação solicitada no cenário simulado:** concluir a primeira melhoria de base sintética, gerador Python, testes e reconciliação, com critérios de aceite e rastreabilidade. Dashboard, modelo, piloto, efeito e ROI ficam para etapas posteriores; não são entregas desta melhoria.
+**Estágio disponível no cenário simulado:** base sintética, gerador Python, dicionário, reconciliação e 13 testes automatizados aprovados, inclusive após a reorganização das pastas. Dashboard, modelo, piloto, efeito e ROI ficam para etapas posteriores; não são entregas deste estágio.
 
 A meta anual ilustrativa é reduzir o churn EAD em **15% relativos**, de 27,5% para **23,375%** na mesma população e janela de referência. Isso equivale a 4,125 pontos percentuais, não a uma redução de 15 pontos. O cenário de 2025 precisa ser atualizado antes de um ciclo de execução em 2027.
 
@@ -39,17 +41,18 @@ Um piloto de 90 dias pode testar viabilidade, qualidade e sinais de permanência
 
 ## Entregas e limites
 
-**Já disponível para exame:** documentação de estratégia, contrato e base sintética calibrada, referências de gerador/testes e reconciliação do EAD. **Ainda futuro:** implementação operacional completa, análise diagnóstica SQL, dashboard, treinamento de modelo preditivo, piloto, análise causal, validação de risco e comprovação de impacto ou ROI.
+**Disponível para exame:** documentação de estratégia, contrato, base sintética calibrada, dicionário, gerador, reconciliação do EAD e 13 testes automatizados aprovados. **Ainda futuro:** implementação operacional completa, análise diagnóstica SQL, dashboard, treinamento de modelo preditivo, piloto, análise causal, validação de risco e comprovação de impacto ou ROI.
 
 ### Base disponível para exame
 
 A conciliação fixa a abertura EAD em 2.880; 40 conclusões e 40 transferências saem retroativamente do denominador, resultando em 2.800 elegíveis, 770 cancelamentos (27,5%), 2.030 retidos (72,5%) e 1.090 ingressantes ativos de março a novembro. O fechamento é 3.120, enquanto 3.970 é o total anual de indivíduos distintos. NPS 39 é calibrado com 200 respostas (118 promotores, 42 passivos e 40 detratores).
 
-Financeiro, NPS e saídas de abril a dezembro de 2025 não são features para o corte de 28/02/2025. As oito semanas de engajamento (06/01–28/02) partem dos 2.880 da abertura e são geradas independentemente do desfecho; não há conclusão de que baixo engajamento provoque churn. A amostra didática EAD cobre Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira, sem autorização para inferência.
+Financeiro, NPS e saídas de abril a dezembro de 2025 não são features para o corte de 28/02/2025. As oito semanas de engajamento (06/01–28/02) partem dos 2.880 da abertura e são geradas independentemente do desfecho; não há conclusão de que baixo engajamento provoque churn. A amostra didática EAD cobre Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira, sem base para inferência.
 
-[Índice da base](../dados/gena/README.md) · [Contrato](contrato-dados-gena.md) · [Validação](../dados/gena/validacao.md) · [Gerador Python](../scripts/gerar_dados_gena.py) · [Testes](../tests/test_dados_gena.py).
+[Projeto de Retenção EAD](projetos/retencao-ead/README.md) · [Índice da base](projetos/retencao-ead/dados/README.md) · [Contrato](projetos/retencao-ead/docs/contrato-dados.md) · [Validação](projetos/retencao-ead/dados/validacao.md) · [Gerador Python](projetos/retencao-ead/scripts/gerar_dados_gena.py) · [Testes](projetos/retencao-ead/tests/test_dados_gena.py).
 
+Os estudos foram estruturados com apoio de IA. A base é simulada; qualquer uso operacional exige revisão, validação das definições e dados com uso aprovado.
 
-Os estudos foram estruturados com apoio de IA. A base é simulada; qualquer uso operacional exige revisão, validação das definições e dados autorizados.
+## Referência documental
 
-[Contexto completo da empresa](empresa-ficticia-grupo-educacional.md) · [Índice dos cases](../cases/README.md) · [Base sintética e contrato](../dados/gena/README.md) · [Portfólio técnico de Dados](https://github.com/msampaioac/data-analytics-portfolio)
+Este documento é a visão executiva da empresa GENA e de seus projetos. A [documentação institucional da empresa](README.md) é a base de referência; os artefatos operacionais ficam nos respectivos projetos: [planejamento estratégico](projetos/planejamento-estrategico/README.md), [retenção EAD](projetos/retencao-ead/README.md) e [governança de indicadores](projetos/governanca-indicadores/README.md).

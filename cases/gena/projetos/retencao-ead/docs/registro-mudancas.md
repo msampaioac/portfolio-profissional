@@ -1,6 +1,12 @@
 # Registro de mudanças — dados fictícios da GENA
 
-[Portfólio](../README.md) · [Contrato de dados](contrato-dados-gena.md) · [Base sintética](../dados/gena/README.md)
+[Portfólio](../../../../../README.md) · [Contrato de dados](contrato-dados.md) · [Base sintética](../dados/README.md)
+
+## Reorganização por empresa e projeto — 21/10/2026
+
+Os artefatos deste projeto passaram a ficar em `cases/gena/projetos/retencao-ead/`. Dados, documentação, scripts e testes foram movidos juntos; os links, comandos e caminhos do manifesto foram atualizados.
+
+Esta reorganização não muda o cenário, a semente, os seis CSV nem os indicadores: a versão dos dados continua **1.0.0**. Os testes são reexecutados no novo diretório. A raiz do repositório documenta o escopo geral; a apresentação da GENA reúne seus projetos.
 
 ## Versão 1.0.0 — 21/10/2026
 

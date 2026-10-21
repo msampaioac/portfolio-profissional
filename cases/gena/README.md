@@ -3,9 +3,21 @@
 **Perfil institucional e cenário estratégico**  
 Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos e Business Intelligence.
 
-[Portfólio](../README.md) · [Síntese executiva](apresentacao-executiva.md) · [Cases aplicados](../cases/README.md)
+[Portfólio](../../README.md) · [Empresas](../README.md) · [Síntese da GENA](visao-executiva.md)
 
 > **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. A base sintética é verificável para exame e reprodução, mas não representa alunos, operação, resultados profissionais realizados ou evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
+>
+> **Estágio disponível:** base sintética verificável, gerador Python, dicionário, reconciliação e 13 testes automatizados aprovados, inclusive após a reorganização das pastas. A análise, o dashboard, o modelo, o piloto, o efeito e o ROI permanecem futuros.
+
+## Projetos da GENA
+
+| Projeto | Documento e estágio |
+|:---|:---|
+| Planejamento estratégico | [Proposta documentada](projetos/planejamento-estrategico/README.md) |
+| Retenção EAD | [Base sintética, gerador, dicionário e 13 testes; análise e piloto futuros](projetos/retencao-ead/README.md) |
+| Governança de indicadores | [Desenho de governança e dicionário; protótipo futuro](projetos/governanca-indicadores/README.md) |
+
+**Roadmap:** P02 — Médio → Graduação e P03 — Financeiro são frentes planejadas. Não há pastas ou links de projeto publicados para elas; as descrições de planejamento permanecem neste documento.
 
 ## Visão executiva
 
@@ -26,14 +38,15 @@ No cenário simulado de 2025, a instituição reúne **10.040 alunos ativos**. O
 
 ## Sumário
 
-1. [Identidade institucional](#1-identidade-institucional)
-2. [História e evolução](#2-história-e-evolução)
-3. [Produtos, clientes e unidades](#3-produtos-clientes-e-unidades)
-4. [Panorama operacional e indicadores](#4-panorama-operacional-e-indicadores)
-5. [Diagnóstico estratégico](#5-diagnóstico-estratégico)
-6. [Portfólio de projetos prioritários](#6-portfólio-de-projetos-prioritários)
-7. [Governança e tomada de decisão](#7-governança-e-tomada-de-decisão)
-8. [Premissas para dados e análises](#8-premissas-para-dados-e-análises)
+- [Projetos da GENA](#projetos-da-gena)
+- [Identidade institucional](#1-identidade-institucional)
+- [História e evolução](#2-história-e-evolução)
+- [Produtos, clientes e unidades](#3-produtos-clientes-e-unidades)
+- [Panorama operacional e indicadores](#4-panorama-operacional-e-indicadores)
+- [Diagnóstico estratégico](#5-diagnóstico-estratégico)
+- [Portfólio de projetos prioritários](#6-portfólio-de-projetos-prioritários)
+- [Governança e tomada de decisão](#7-governança-e-tomada-de-decisão)
+- [Premissas para dados e análises](#8-premissas-para-dados-e-análises)
 
 ---
 
@@ -151,7 +164,7 @@ Os quantitativos abaixo compõem a base de referência para futuros estudos. **A
 
 ### Contrato e calibração da base sintética de 2025
 
-A primeira melhoria disponibiliza uma base sintética verificável, gerador Python, testes de contrato/reconciliação e regras para exame. Ela é calibrada para coerência interna e é diferente de dados reais; nenhuma análise causal ou risco foi validado. O [contrato de dados](contrato-dados-gena.md), o [índice da base](../dados/gena/README.md) e a [validação/reconciliação](../dados/gena/validacao.md) detalham campos, períodos, exclusões e limites.
+O estágio disponível contempla uma base sintética verificável, gerador Python, dicionário, reconciliação e regras para exame; os 13 testes estão aprovados para a próxima execução, que ocorrerá após o remapeamento dos paths nos três scripts. A base é calibrada para coerência interna e é diferente de dados reais; nenhuma análise causal ou risco foi validado. O [projeto de Retenção EAD](projetos/retencao-ead/README.md) reúne o [contrato de dados](projetos/retencao-ead/docs/contrato-dados.md), o [índice da base](projetos/retencao-ead/dados/README.md) e a [validação/reconciliação](projetos/retencao-ead/dados/validacao.md), que detalham campos, períodos, exclusões e limites.
 
 | Reconciliação EAD | Regra/resultado |
 |:---|:---|
@@ -163,7 +176,7 @@ A primeira melhoria disponibiliza uma base sintética verificável, gerador Pyth
 
 O NPS 39 é reproduzido com 200 respostas finais (118 promotores, 42 passivos, 40 detratores). A inadimplência EAD de 13,5% é a posição monetária de títulos de 2025 vencidos em 31/12/2025, com alvo em centavos ao mais próximo: é calibração/checagem de coerência, não validação real. O CSV usa valores inteiros em centavos; o ticket EAD de R$ 310 é uniforme por simplificação em parcelas válidas e nunca deve ser usado como `alunos × ticket = receita/ROI`.
 
-A amostra didática EAD contempla Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; essa escolha é premissa, não autorização para inferir padrão factual. Financeiro, NPS e saídas de abril a dezembro de 2025 não são features para o corte de 28/02/2025; em particular, os dados de dezembro ficam fora. O engajamento de oito semanas (06/01–28/02), originado da abertura de 2.880, é gerado independentemente do desfecho; não se conclui que baixo engajamento provoque churn. A série histórica macro de 2021–2025 abaixo é preservada como referência institucional, separada da microbase sintética EAD.
+A amostra didática EAD contempla Administração, Pedagogia e Gestão Pública nos polos Cidade Nova, Cruzeiro do Sul e Sena Madureira; essa escolha é premissa e não sustenta inferência factual. Financeiro, NPS e saídas de abril a dezembro de 2025 não são features para o corte de 28/02/2025; em particular, os dados de dezembro ficam fora. O engajamento de oito semanas (06/01–28/02), originado da abertura de 2.880, é gerado independentemente do desfecho; não se conclui que baixo engajamento provoque churn. A série histórica macro de 2021–2025 abaixo é preservada como referência institucional, separada da microbase sintética EAD.
 
 ### Evolução de alunos ativos — 2021 a 2025
 
@@ -190,7 +203,7 @@ A amostra didática EAD contempla Administração, Pedagogia e Gestão Pública 
 
 *Para esta simulação, retenção e churn são complementares na mesma população elegível; conclusões regulares devem ser tratadas separadamente. A inadimplência é monetária na posição de referência, sobre títulos vencidos até 31/12/2025; o valor EAD de 13,5% é alvo de calibração em centavos, não validação real. Os demais percentuais do painel são referências macro do cenário e não foram microgerados. Adimplência e inadimplência devem manter a mesma base de cálculo. O NPS é um índice de −100 a 100, não uma porcentagem.*
 
-A mudança semântica de “inadimplência média” para **inadimplência monetária na posição de referência** substitui uma média sem janela explícita por um snapshot financeiro: saldo aberto e valor maturado dos títulos com vencimento até 31/12/2025. A fonte única dos parâmetros sintéticos é o [`config.json`](../dados/gena/config.json); os percentuais dos demais segmentos continuam referências macro e não são apresentados como cálculo microgerado.
+A mudança semântica de “inadimplência média” para **inadimplência monetária na posição de referência** substitui uma média sem janela explícita por um snapshot financeiro: saldo aberto e valor maturado dos títulos com vencimento até 31/12/2025. A fonte única dos parâmetros sintéticos é o [`config.json`](projetos/retencao-ead/dados/config.json); os percentuais dos demais segmentos continuam referências macro e não são apresentados como cálculo microgerado.
 
 ### Interpretação para a liderança
 
@@ -236,15 +249,15 @@ Essas relações orientam hipóteses, não comprovam causalidade. As análises d
 
 ## 6. Portfólio de projetos prioritários
 
-Os três projetos abaixo conectam problema de negócio, entrega e decisão. **São propostas de execução, não iniciativas concluídas.**
+Os três projetos abaixo conectam problema de negócio, entrega e decisão. **São propostas de execução, não iniciativas concluídas.** P02 e P03 permanecem como frentes de roadmap, sem pastas ou links de projeto próprios.
 
 ### Visão consolidada
 
 | Projeto | Problema central | Entrega principal | Benefício a validar |
 |:---|:---|:---|:---|
 | **P01 — Retenção EAD** | Evasão elevada e intervenção tardia | Segmentação de risco e plano de retenção | Permanência e receita preservada |
-| **P02 — Jornada Médio → Graduação** | Transição sem acompanhamento estruturado | Jornada integrada e funil de conversão | Captação e continuidade acadêmica |
-| **P03 — Adimplência e Finanças** | Recebíveis e situação acadêmica pouco integrados | Dashboard e rotina de acompanhamento | Previsibilidade de caixa e recuperação |
+| **P02 — Médio → Graduação** | Transição sem acompanhamento estruturado | Jornada integrada e funil de conversão | Captação e continuidade acadêmica |
+| **P03 — Financeiro** | Recebíveis e situação acadêmica pouco integrados | Dashboard e rotina de acompanhamento | Previsibilidade de caixa e recuperação |
 
 ### P01 — Redução de churn no EAD
 
@@ -346,6 +359,8 @@ Cada reunião deve registrar **evidência utilizada, decisão, responsável, pra
 | Receita | Não inferir receita recebida apenas de volume e ticket |
 | Rastreabilidade | Documentar premissas, fórmulas, fontes simuladas e limitações |
 
-**Uso no portfólio:** este documento é a referência do universo fictício. Cases derivados devem manter os nomes e a linha de base ou registrar explicitamente qualquer mudança de cenário. A primeira melhoria limita-se à base sintética, gerador, testes e reconciliação; análise SQL, dashboard, modelo, piloto, efeito e ROI permanecem futuros.
+**Referência institucional:** este documento documenta a empresa fictícia e é a base de referência do universo. Cases derivados devem manter os nomes e a linha de base ou registrar explicitamente qualquer mudança de cenário.
 
-[Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão Estratégica](../README.md)
+**Estágio disponível:** a base sintética, o gerador, o dicionário, os testes e a reconciliação estão organizados para exame; análise SQL, dashboard, modelo, piloto, efeito e ROI permanecem futuros. Os artefatos operacionais ficam nos respectivos projetos.
+
+[Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão Estratégica](../../README.md)

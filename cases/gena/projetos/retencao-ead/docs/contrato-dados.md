@@ -2,7 +2,7 @@
 
 **Versão 1.0.0 · Cenário de 2025 · Dados inteiramente sintéticos**
 
-[Portfólio](../README.md) · [Empresa fictícia](empresa-ficticia-grupo-educacional.md) · [Base e reprodução](../dados/gena/README.md) · [Dicionário](../dados/gena/dicionario.md)
+[Portfólio](../../../../../README.md) · [Empresa fictícia](../../../README.md) · [Base e reprodução](../dados/README.md) · [Dicionário](../dados/dicionario.md)
 
 ## 1. O que esta entrega permite examinar
 
@@ -10,7 +10,7 @@ A base materializa o contexto do projeto de retenção EAD: identificação sint
 
 Isso é uma **entrega de preparação de dados**, não a execução de um piloto nem a validação de uma estratégia. Os dados foram calibrados para conservar o cenário institucional; reproduzir esses números não constitui descoberta, comprovação externa ou impacto profissional.
 
-Os parâmetros oficiais estão em [config.json](../dados/gena/config.json). Alterações futuras devem atualizar essa configuração, regenerar a base, executar os testes e revisar todos os documentos afetados em um único lote.
+Os parâmetros oficiais estão em [config.json](../dados/config.json). Alterações futuras devem atualizar essa configuração, regenerar a base, executar os testes e revisar todos os documentos afetados em um único lote.
 
 ## 2. População e movimento de matrículas
 
@@ -94,7 +94,7 @@ Churn, fotografia final, mensalidade, posição financeira e composição de NPS
 
 ## 7. Reprodutibilidade e atualização
 
-A geração usa apenas a biblioteca padrão do Python. A semente e a configuração tornam os bytes dos arquivos e seus hashes reproduzíveis no ambiente suportado. O [manifesto](../dados/gena/csv/manifesto.json) registra contagens e SHA-256, sem carimbo de tempo variável.
+A geração usa apenas a biblioteca padrão do Python. A semente e a configuração tornam os bytes dos arquivos e seus hashes reproduzíveis no ambiente suportado. O [manifesto](../dados/csv/manifesto.json) registra contagens e SHA-256, sem carimbo de tempo variável.
 
 A rotina obrigatória de mudança é: modificar configuração ou gerador; regenerar em pasta limpa; executar testes e reconciliação; registrar a mudança; atualizar o perfil institucional, os cases, a síntese e o estado das entregas; publicar tudo em conjunto.
 

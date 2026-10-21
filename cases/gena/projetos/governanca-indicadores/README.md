@@ -19,7 +19,7 @@ O desenho proposto cria uma camada semântica mínima antes de qualquer dashboar
 
 ### Base disponível para exame
 
-O contrato da primeira melhoria está no [índice da base](../dados/gena/README.md), na [especificação](../docs/contrato-dados-gena.md) e na [validação/reconciliação](../dados/gena/validacao.md). O gerador está referenciado em [`scripts/gerar_dados_gena.py`](../scripts/gerar_dados_gena.py) e os testes em [`tests/test_dados_gena.py`](../tests/test_dados_gena.py); não se antecipa que todos os testes passaram antes da execução correspondente.
+O contrato da primeira melhoria está no [índice da base](../retencao-ead/dados/README.md), na [especificação](../retencao-ead/docs/contrato-dados.md) e na [validação/reconciliação](../retencao-ead/dados/validacao.md). O gerador está referenciado em [`scripts/gerar_dados_gena.py`](../retencao-ead/scripts/gerar_dados_gena.py) e os testes em [`tests/test_dados_gena.py`](../retencao-ead/tests/test_dados_gena.py); não se antecipa que todos os testes passaram antes da execução correspondente.
 
 A convenção inclui 2.030 retidos (72,5%), 1.090 ingressantes ativos de março a novembro sem churn estimado no grupo, 3.120 no fechamento e 3.970 indivíduos distintos no ano. NPS 39 usa 200 respostas (118/42/40). Inadimplência significa **monetária na posição de referência**; no EAD, 13,5% é alvo de calibração em títulos vencidos até 31/12/2025, não validação real.
 
@@ -160,11 +160,11 @@ A proposta aplica minimização, controle de acesso, segregação de ambientes, 
 
 ## 10. Referências internas
 
-- [Portfólio de Gestão Estratégica — índice](../README.md)
-- [Índice de cases](README.md)
-- [Grupo Educacional — índice](grupo-educacional/README.md)
-- [Empresa fictícia Grupo Educacional](../docs/empresa-ficticia-grupo-educacional.md)
-- [Templates do portfólio](../templates/README.md)
-- [Base sintética GENA](../dados/gena/README.md) · [Contrato](../docs/contrato-dados-gena.md) · [Validação](../dados/gena/validacao.md)
+- [Portfólio de Gestão Estratégica — índice](../../../../README.md)
+- [Índice de cases](../../../README.md)
+- [Grupo Educacional — índice](../planejamento-estrategico/README.md)
+- [Empresa fictícia Grupo Educacional](../../README.md)
+- [Templates do portfólio](../../../../templates/README.md)
+- [Base sintética GENA](../retencao-ead/dados/README.md) · [Contrato](../retencao-ead/docs/contrato-dados.md) · [Validação](../retencao-ead/dados/validacao.md)
 
 **Contribuição demonstrada:** especificação de métricas, responsabilidades e controles que tornam uma proposta de BI verificável antes de sua implementação.

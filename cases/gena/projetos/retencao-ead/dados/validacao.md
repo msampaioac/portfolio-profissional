@@ -2,7 +2,7 @@
 
 **Versão 1.0.0 · Cenário de 2025 · Conferência de dados sintéticos**
 
-[Base e reprodução](README.md) · [Contrato](../../docs/contrato-dados-gena.md) · [Dicionário](dicionario.md)
+[Base e reprodução](README.md) · [Contrato](../docs/contrato-dados.md) · [Dicionário](dicionario.md)
 
 Esta reconciliação foi recalculada a partir dos CSV. A base é calibrada: o resultado demonstra consistência técnica, não descoberta, execução operacional, validade empírica ou efeito de retenção.
 
@@ -68,12 +68,15 @@ Hashes completos e tamanhos estão em [manifesto.json](csv/manifesto.json). A co
 
 Os testes de contrato validam as regras sintéticas, não predizem evasão nem homologam a operação de uma instituição real. Reexecute após qualquer alteração.
 
+A partir da raiz do repositório, entre na pasta do projeto:
+
 ```bash
+cd cases/gena/projetos/retencao-ead
 python3 scripts/gerar_dados_gena.py
 python3 -m unittest discover -s tests -v
 python3 scripts/validar_dados_gena.py
 ```
 
-[Testes](../../tests/test_dados_gena.py) · [Validador](../../scripts/validar_dados_gena.py) · [Registro de mudanças](../../docs/registro-mudancas-gena.md)
+[Testes](../tests/test_dados_gena.py) · [Validador](../scripts/validar_dados_gena.py) · [Registro de mudanças](../docs/registro-mudancas.md)
 
 **Próxima etapa, ainda não realizada:** análise diagnóstica, consultas SQL, painel e desenho detalhado de avaliação do piloto. Não há resultado de intervenção, ROI ou modelo treinado.
