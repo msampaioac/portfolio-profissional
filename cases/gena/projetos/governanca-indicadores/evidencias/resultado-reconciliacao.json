@@ -1,0 +1,163 @@
+{
+  "artefato": {
+    "nome": "reconciliacao_indicadores",
+    "referencia_dados": "2025-12-31",
+    "sem_timestamp_execucao": true,
+    "snapshot": "2025-12-31",
+    "versao": "1.0",
+    "versao_config": "1.0.0"
+  },
+  "comparacao_churn": {
+    "denominador_coorte_elegivel": 2800,
+    "denominador_fotografia_ativos_fechamento": 3120,
+    "diferenca_pontos_percentuais": "2.820512820512820512820512820512820512820512820513",
+    "interpretacao": "A diferenca e correcao de definicao do denominador; nao e aumento de churn nem efeito de negocio.",
+    "percentual_coorte": "27.5",
+    "percentual_fotografia": "24.679487179487179487179487179487179487179487179487",
+    "saidas": 770
+  },
+  "complementares": {
+    "engajamento": {
+      "dominios_validados": true,
+      "janela_fim": "2025-02-28",
+      "janela_inicio": "2025-01-06",
+      "linhas": 23040,
+      "matriculas": 2880,
+      "semanas_por_matricula": 8
+    },
+    "engajamento_nao_entra_nos_cinco_indicadores": true,
+    "referencias": {
+      "graduacao_ead_confere": true,
+      "linhas": 4,
+      "segmentos": [
+        "Educacao Basica",
+        "Graduacao EAD",
+        "Graduacao presencial",
+        "Pos-graduacao e extensao"
+      ]
+    }
+  },
+  "controles": {
+    "elegibilidade_derivada_de_abertura_status": true,
+    "flag_elegivel_churn_validada": true,
+    "fontes_auxiliares": {
+      "alunos_ead.csv": "identificacao/FK",
+      "engajamento_semanal_ead.csv": "contagem/qualidade complementar (nao entra nos cinco indicadores)",
+      "referencias_segmentos.csv": "referencias agregadas/configuracao"
+    },
+    "fontes_de_calculo": [
+      "matriculas_ead.csv",
+      "financeiro_ead.csv",
+      "pesquisa_nps_ead.csv"
+    ],
+    "manifesto_inclui_seis_csv": true
+  },
+  "conversao": {
+    "motivo": "Nao ha CRM, funil ou dados de conversao nesta fonte.",
+    "status": "nao_calculada",
+    "testada": false
+  },
+  "execucao": {
+    "referencia_dados": "2025-12-31",
+    "resultado_testes": "OK",
+    "testes_executados": 12
+  },
+  "ficcionalidade": {
+    "aviso": "Base inteiramente fictícia; reconciliação técnica de contrato, bytes e definições, sem validação de mercado ou efeito de negócio.",
+    "controle_tecnico_nao_valida_mercado": true,
+    "dados_inteiramente_ficticios": true
+  },
+  "indicadores": {
+    "adimplencia_monetaria": {
+      "percentual": "86.5",
+      "saldo_liquidado_centavos": 1012051730,
+      "total_devido_centavos": 1170002000
+    },
+    "churn": {
+      "denominador": 2800,
+      "numerador": 770,
+      "percentual": "27.5"
+    },
+    "inadimplencia_monetaria": {
+      "arredondamento": "ROUND_HALF_UP",
+      "percentual": "13.5",
+      "saldo_aberto_centavos": 157950270,
+      "total_devido_centavos": 1170002000
+    },
+    "nps": {
+      "detratores": 40,
+      "passivos": 42,
+      "promotores": 118,
+      "respostas": 200,
+      "valor": 39
+    },
+    "retencao": {
+      "denominador": 2800,
+      "numerador": 2030,
+      "percentual": "72.5"
+    }
+  },
+  "integridade": {
+    "arquivos": {
+      "alunos_ead.csv": {
+        "contagem": 3970,
+        "sha256": "b4c61c4d334051f4153d1fb80799d39b3d737f58d0d09216509343777fff3c97",
+        "tamanho_bytes": 290690,
+        "uso": "identificacao/FK"
+      },
+      "engajamento_semanal_ead.csv": {
+        "contagem": 23040,
+        "sha256": "35e03dde7f1ab2936a8899b91bf1f9f2fa03fb6cb8a2a2c851ae97fb3eee988f",
+        "tamanho_bytes": 1112703,
+        "uso": "contagem/qualidade complementar (nao entra nos cinco indicadores)"
+      },
+      "financeiro_ead.csv": {
+        "contagem": 37742,
+        "sha256": "a043ff6c8abf5ba487504458995018dcb6dfd293bdee812dbc5a834d3bb3573c",
+        "tamanho_bytes": 2953288,
+        "uso": "calculo"
+      },
+      "matriculas_ead.csv": {
+        "contagem": 3970,
+        "sha256": "fc00679dbbb9fd0edd36f8131e7ed892e88d24caa708d087b8ce7f670b6de7a9",
+        "tamanho_bytes": 423681,
+        "uso": "calculo"
+      },
+      "pesquisa_nps_ead.csv": {
+        "contagem": 200,
+        "sha256": "b73848de17410486a053408f6bbd264d901192051138106851bb467a9991df74",
+        "tamanho_bytes": 9088,
+        "uso": "calculo"
+      },
+      "referencias_segmentos.csv": {
+        "contagem": 4,
+        "sha256": "6b7bf5385a766dfb756fde3e1a1d14d171a21ef2759fd3ce2719a33b6fd05ead",
+        "tamanho_bytes": 345,
+        "uso": "referencias agregadas/configuracao"
+      }
+    },
+    "config_hash_verificado": true,
+    "config_sha256": "98444bcb176af6ecdc0b1925cf1c1af642e6203e192a9003520cca15664dc561",
+    "csv_verificados": 6,
+    "manifesto_csv_sha256_verificado": true
+  },
+  "populacao": {
+    "abertura": 2880,
+    "ativos_fechamento": 3120,
+    "conclusoes": 40,
+    "elegiveis": 2800,
+    "equacoes": [
+      "2880 - 40 - 40 = 2800",
+      "2800 = 770 + 2030",
+      "2030 + 1090 = 3120",
+      "2880 + 1090 = 3970"
+    ],
+    "fk_alunos_matriculas_valida": true,
+    "ids_unicos": true,
+    "ingressantes": 1090,
+    "retidos": 2030,
+    "saidas_cancelamento": 770,
+    "transferencias": 40,
+    "unicos": 3970
+  }
+}

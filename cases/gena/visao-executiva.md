@@ -29,11 +29,13 @@ Essas interpretações são hipóteses de planejamento; os indicadores não comp
 |:---|:---|:---|
 | Planejamento estratégico | Priorização, objetivos e coordenação de iniciativas | [SWOT, OKRs e execução](projetos/planejamento-estrategico/README.md) |
 | Retenção EAD | Tradução de um indicador em hipótese, piloto e critério de decisão | [Plano de intervenção e avaliação](projetos/retencao-ead/README.md) |
-| Governança de indicadores | Consistência de métricas e responsabilidades | [Dicionário, RACI e controles](projetos/governanca-indicadores/README.md) |
+| Governança de indicadores | Correção de uma divergência didática, cinco indicadores recalculados e decisões rastreáveis | [Contrato, evidências, testes próprios e defesa do case](projetos/governanca-indicadores/README.md) |
 
 ## O que levar ao comitê
 
-**Estágio disponível no cenário simulado:** base sintética, gerador Python, dicionário, reconciliação e 13 testes automatizados aprovados, inclusive após a reorganização das pastas. Dashboard, modelo, piloto, efeito e ROI ficam para etapas posteriores; não são entregas deste estágio.
+**Estágio disponível no cenário simulado:** base sintética, gerador e 13 testes de contrato no projeto de Retenção EAD; ciclo de governança com fontes, modelo lógico, decisões, cálculo independente de cinco indicadores e testes próprios. Dashboard, modelo, implantação empresarial, piloto, efeito e ROI ficam para etapas posteriores.
+
+No exemplo de governança, a leitura de churn com denominador inadequado é 24,68%; com a coorte elegível, 27,50%. A diferença de 2,82 pontos percentuais é **correção de definição**, não aumento de evasão ou efeito de intervenção. Conversão Médio → Graduação permanece preliminar, sem dados de funil.
 
 A meta anual ilustrativa é reduzir o churn EAD em **15% relativos**, de 27,5% para **23,375%** na mesma população e janela de referência. Isso equivale a 4,125 pontos percentuais, não a uma redução de 15 pontos. O cenário de 2025 precisa ser atualizado antes de um ciclo de execução em 2027.
 
@@ -41,7 +43,7 @@ Um piloto de 90 dias pode testar viabilidade, qualidade e sinais de permanência
 
 ## Entregas e limites
 
-**Disponível para exame:** documentação de estratégia, contrato, base sintética calibrada, dicionário, gerador, reconciliação do EAD e 13 testes automatizados aprovados. **Ainda futuro:** implementação operacional completa, análise diagnóstica SQL, dashboard, treinamento de modelo preditivo, piloto, análise causal, validação de risco e comprovação de impacto ou ROI.
+**Disponível para exame:** documentação de estratégia; base e controles da Retenção EAD; inventário, contrato, modelo lógico, comparação de definições, decisões e reconciliação executável da Governança. **Ainda futuro:** implementação operacional completa, análise diagnóstica SQL, dashboard, treinamento de modelo preditivo, piloto, análise causal, validação de risco e comprovação de impacto ou ROI.
 
 ### Base disponível para exame
 

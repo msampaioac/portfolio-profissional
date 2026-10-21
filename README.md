@@ -20,7 +20,11 @@ Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são o
 │           ├── planejamento-estrategico/
 │           │   └── README.md         Diagnóstico, prioridades e OKRs
 │           ├── governanca-indicadores/
-│           │   └── README.md         Métricas, responsabilidades e controles
+│           │   ├── README.md         Problema, decisões e evidências
+│           │   ├── docs/             Contrato, fontes, modelo e defesa do case
+│           │   ├── evidencias/       Comparação e reconciliação executada
+│           │   ├── scripts/          Cálculo reproduzível dos indicadores
+│           │   └── tests/            Controles do ciclo de governança
 │           └── retencao-ead/
 │               ├── README.md         Problema, escopo e entregas do projeto
 │               ├── dados/            CSV, configuração, dicionário e conferência
@@ -49,7 +53,7 @@ Novas empresas serão incluídas em `cases/<empresa>/`, cada uma com sua própri
 |:---|:---|:---|
 | GENA / [Planejamento estratégico](cases/gena/projetos/planejamento-estrategico/README.md) | Diagnóstico, SWOT, objetivos, OKRs propostos, prioridades, riscos e roteiro de execução | Aplicação operacional e acompanhamento dos resultados |
 | GENA / [Retenção EAD](cases/gena/projetos/retencao-ead/README.md) | Plano do projeto, seis CSV fictícios, gerador Python, dicionário, reconciliação e 13 testes | Análise diagnóstica, SQL, painel, segmentação validada e avaliação do piloto |
-| GENA / [Governança de indicadores](cases/gena/projetos/governanca-indicadores/README.md) | Dicionário de indicadores, papéis, RACI, regras de qualidade e critérios de aceite | Implantação da governança e homologação operacional |
+| GENA / [Governança de indicadores](cases/gena/projetos/governanca-indicadores/README.md) | Inventário, modelo lógico, contrato, decisões, comparação de denominadores, cinco indicadores recalculados, script, testes próprios e defesa do case | Implantação e homologação operacional; conversão ainda preliminar e sem dados de funil |
 
 As frentes **Jornada Ensino Médio → Graduação** e **Adimplência e Finanças** constam do planejamento da GENA, mas ainda não possuem projetos completos. Seus artefatos serão criados somente quando houver trabalho efetivo a documentar.
 

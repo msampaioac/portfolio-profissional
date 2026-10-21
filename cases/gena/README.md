@@ -7,7 +7,7 @@ Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos
 
 > **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. A base sintética é verificável para exame e reprodução, mas não representa alunos, operação, resultados profissionais realizados ou evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
 >
-> **Estágio disponível:** base sintética verificável, gerador Python, dicionário, reconciliação e 13 testes automatizados aprovados, inclusive após a reorganização das pastas. A análise, o dashboard, o modelo, o piloto, o efeito e o ROI permanecem futuros.
+> **Estágio disponível:** Retenção EAD possui base sintética, gerador e 13 testes de contrato. Governança reúne inventário, modelo lógico, decisões e um ciclo técnico reproduzível de cinco indicadores, com testes próprios. Análise diagnóstica, dashboard, modelo, implantação empresarial, piloto e comprovação de impacto permanecem futuros.
 
 ## Projetos da GENA
 
@@ -15,7 +15,7 @@ Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos
 |:---|:---|
 | Planejamento estratégico | [Proposta documentada](projetos/planejamento-estrategico/README.md) |
 | Retenção EAD | [Base sintética, gerador, dicionário e 13 testes; análise e piloto futuros](projetos/retencao-ead/README.md) |
-| Governança de indicadores | [Desenho de governança e dicionário; protótipo futuro](projetos/governanca-indicadores/README.md) |
+| Governança de indicadores | [Ciclo técnico com evidências e testes próprios; implantação futura e conversão preliminar](projetos/governanca-indicadores/README.md) |
 
 **Roadmap:** P02 — Médio → Graduação e P03 — Financeiro são frentes planejadas. Não há pastas ou links de projeto publicados para elas; as descrições de planejamento permanecem neste documento.
 
