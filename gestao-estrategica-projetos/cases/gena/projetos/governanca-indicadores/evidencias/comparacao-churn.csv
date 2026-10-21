@@ -1,0 +1,3 @@
+cenario,saidas_churn,denominador,percentual_churn,diferenca_p.p.,leitura
+foto_ativos_fechamento,770,3120,24.679487179487179487179487179487179487179487179487,2.820512820512820512820512820512820512820512820513,denominador didatico incorreto; nao representa churn da coorte
+coorte_abertura_elegivel,770,2800,27.5,0,definicao corrigida: abertura menos concluido e transferido
