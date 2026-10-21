@@ -3,6 +3,8 @@
 **Perfil institucional e cenário estratégico**  
 Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos e Business Intelligence.
 
+[Portfólio](../README.md) · [Síntese executiva](apresentacao-executiva.md) · [Cases aplicados](../cases/README.md)
+
 > **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. Os dados não representam resultados profissionais realizados nem evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
 
 ## Visão executiva
