@@ -2,7 +2,7 @@
 
 Modelos reutilizáveis para organizar estratégia, projetos e decisões. **São estruturas de preenchimento, não registros de projetos executados.** Os campos entre colchetes devem ser adaptados ao contexto.
 
-[Portfólio](../README.md) · [Cases aplicados](../cases/README.md)
+[Portfólio de Gestão](../README.md) · [Cases aplicados](../cases/README.md)
 
 ## Escolha o modelo
 

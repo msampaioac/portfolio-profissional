@@ -2,7 +2,7 @@
 
 **Estudo simulado · Retenção e experiência do aluno, com base sintética para exame**
 
-[Portfólio](../../../../README.md) · [Plano estratégico](../planejamento-estrategico/README.md) · [Empresa fictícia](../../README.md) · [Governança de indicadores](../governanca-indicadores/README.md) · [Base](dados/README.md) · [Contrato](docs/contrato-dados.md) · [Validação](dados/validacao.md)
+[Portfólio de Gestão](../../../../README.md) · [Plano estratégico](../planejamento-estrategico/README.md) · [Empresa fictícia](../../README.md) · [Governança de indicadores](../governanca-indicadores/README.md) · [Base](dados/README.md) · [Contrato](docs/contrato-dados.md) · [Validação](dados/validacao.md)
 
 > **Estágio:** a base sintética é verificável para exame e a primeira melhoria cobre gerador, testes e reconciliação; este case continua sendo desenho de projeto. Não há modelo treinado, piloto executado, análise causal, risco validado, efeito medido ou ROI. Os números são sintéticos/calibrados e diferentes de operação real.
 

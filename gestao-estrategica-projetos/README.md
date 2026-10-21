@@ -2,14 +2,14 @@
 
 Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são organizados por empresa e, dentro de cada empresa, por projeto. Esta página documenta o escopo geral, o conteúdo das pastas e a evolução prevista.
 
-[LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio técnico de Dados e BI](https://github.com/msampaioac/data-analytics-portfolio)
+[LinkedIn e contato](https://linkedin.com/in/msampaioac) · [Portfólio unificado](../README.md) · [Análise de Dados](../analise-dados/README.md)
 
 > Os cases atuais utilizam empresas e dados fictícios, com documentação estruturada com apoio de IA. Entregas técnicas, propostas, metas e resultados realizados são identificados separadamente. Não há declaração de clientes atendidos ou impacto profissional obtido.
 
 ## 1. Como o portfólio está organizado
 
 ```text
-.
+gestao-estrategica-projetos/
 ├── README.md                         Guia geral do portfólio
 ├── cases/
 │   ├── README.md                     Índice das empresas
@@ -85,7 +85,7 @@ Essa sequência é um roteiro de desenvolvimento, não uma lista de entregas já
 
 A apresentação de cada empresa é a referência do seu universo de negócio. A configuração da base é a fonte dos parâmetros sintéticos, e mudanças devem atualizar **dados, testes, documentação e índices em lote**.
 
-Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
+Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `gestao-estrategica-projetos/cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
 
 ## Contato
 

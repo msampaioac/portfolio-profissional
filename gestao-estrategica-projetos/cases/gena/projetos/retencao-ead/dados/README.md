@@ -2,7 +2,7 @@
 
 **Dados sintéticos · Versão 1.0.0 · Referência de 2025**
 
-[Portfólio](../../../../../README.md) · [Case de retenção](../README.md) · [Contrato de dados](../docs/contrato-dados.md) · [Dicionário](dicionario.md) · [Reconciliação e testes](validacao.md)
+[Portfólio de Gestão](../../../../../README.md) · [Case de retenção](../README.md) · [Contrato de dados](../docs/contrato-dados.md) · [Dicionário](dicionario.md) · [Reconciliação e testes](validacao.md)
 
 ## O que avaliar primeiro
 
@@ -29,7 +29,7 @@ Os microdados cobrem somente EAD. Básica, presencial e pós/extensão aparecem 
 Na raiz de uma cópia do repositório, entre primeiro na pasta do projeto. Use **Python 3.10 ou superior**, sem bibliotecas externas:
 
 ```bash
-cd cases/gena/projetos/retencao-ead
+cd gestao-estrategica-projetos/cases/gena/projetos/retencao-ead
 python3 scripts/gerar_dados_gena.py
 python3 -m unittest discover -s tests -v
 python3 scripts/validar_dados_gena.py

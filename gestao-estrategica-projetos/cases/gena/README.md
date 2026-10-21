@@ -3,7 +3,7 @@
 **Perfil institucional e cenário estratégico**  
 Documento-base para estudos de caso em Gestão Estratégica, Gestão de Projetos e Business Intelligence.
 
-[Portfólio](../../README.md) · [Empresas](../README.md) · [Síntese da GENA](visao-executiva.md)
+[Portfólio de Gestão](../../README.md) · [Empresas](../README.md) · [Síntese da GENA](visao-executiva.md)
 
 > **Nota de simulação:** a organização, suas unidades, sua trajetória e todos os indicadores são fictícios. A base sintética é verificável para exame e reprodução, mas não representa alunos, operação, resultados profissionais realizados ou evidências sobre o mercado educacional. Referências geográficas e nomes de instituições reais são utilizados apenas como contexto.
 >

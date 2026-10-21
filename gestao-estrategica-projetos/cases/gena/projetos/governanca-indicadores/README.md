@@ -2,7 +2,7 @@
 
 **Case de portfólio · GENA · Dados, Estratégia e Projetos**
 
-[Portfólio](../../../../README.md) · [Empresa GENA](../../README.md) · [Defesa do case](docs/defesa-do-case.md) · [Evidência reproduzível](evidencias/reconciliacao.md)
+[Portfólio de Gestão](../../../../README.md) · [Empresa GENA](../../README.md) · [Defesa do case](docs/defesa-do-case.md) · [Evidência reproduzível](evidencias/reconciliacao.md)
 
 > Estudo fictício desenvolvido com apoio de IA na documentação e no código. Há execução técnica reproduzível sobre dados sintéticos; não há implantação empresarial, aprovação de uma equipe real ou impacto de retenção medido.
 
@@ -74,7 +74,7 @@ Repetir este script prova reprodução sobre os mesmos dados, não qualidade de 
 A partir da raiz do repositório, com Python 3.10 ou superior, sem bibliotecas externas:
 
 ```bash
-cd cases/gena/projetos/governanca-indicadores
+cd gestao-estrategica-projetos/cases/gena/projetos/governanca-indicadores
 python3 scripts/reconciliar_indicadores.py
 python3 -m unittest discover -s tests -v
 ```

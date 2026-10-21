@@ -14,7 +14,27 @@ from datetime import date
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+PROJETO = Path(__file__).resolve().parents[1]
+
+
+def _encontrar_raiz_unificada(projeto: Path) -> Path:
+    """Encontra a raiz Git mais próxima ou reconhece a subpasta de Gestão."""
+    for candidato in (projeto, *projeto.parents):
+        marcador = candidato / ".git"
+        if marcador.is_dir() or marcador.is_file():
+            return candidato
+    for candidato in (projeto, *projeto.parents):
+        if candidato.name == "gestao-estrategica-projetos":
+            return candidato.parent
+    return projeto.parents[3] if len(projeto.parents) > 3 else projeto.parent
+
+
+ROOT = PROJETO
+REPO_ROOT = _encontrar_raiz_unificada(PROJETO)
+try:
+    PROJECT_DOC_PATH = PROJETO.relative_to(REPO_ROOT).as_posix()
+except ValueError:
+    PROJECT_DOC_PATH = PROJETO.name
 
 
 def exigir(condicao: bool, mensagem: str) -> None:
@@ -181,7 +201,7 @@ def main(argv=None):
         "A partir da raiz do repositório, entre na pasta do projeto:",
         "",
         "```bash",
-        "cd cases/gena/projetos/retencao-ead",
+        f"cd {PROJECT_DOC_PATH}",
         "python3 scripts/gerar_dados_gena.py",
         "python3 -m unittest discover -s tests -v",
         "python3 scripts/validar_dados_gena.py",

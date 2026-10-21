@@ -4,14 +4,14 @@
 >
 > Construo análises end-to-end com SQL, Python, BigQuery e Power BI, transformando bases públicas em indicadores, visualizações e recomendações para decisão.
 
-[LinkedIn](https://linkedin.com/in/msampaioac) · [GitHub](https://github.com/msampaioac)
+[Portfólio unificado](../README.md) · [Gestão Estratégica e de Projetos](../gestao-estrategica-projetos/README.md) · [LinkedIn](https://linkedin.com/in/msampaioac)
 
 ## Projetos em destaque
 
 | Projeto | Problema | Stack | Entrega |
 |---|---|---|---|
 | [COVID-19 Brasil Analytics](./Análise%20Espacial%20e%20Temporal%20da%20COVID-19%20no%20Brasil/) | Comparar vacinação, pressão hospitalar e desigualdades territoriais | BigQuery, SQL analítico, modelagem dimensional | Consultas por pergunta de negócio e documentação técnica |
-| [Perfil dos Estudantes Brasileiros](./Perfil%20dos%20Estudantes%20Brasileiros%20%282019-2023%29/) | Integrar dados educacionais e acompanhar evolução, perfil e infraestrutura | BigQuery, GoogleSQL, Python, Power BI | Base analítica, notebook exploratório, modelo semântico e especificação de dashboard |
+| [Perfil dos Estudantes Brasileiros](./Perfil%20dos%20Estudantes%20Brasileiros%20%282015-ano-corrente%29/) | Integrar dados educacionais e acompanhar evolução, perfil e infraestrutura | BigQuery, GoogleSQL, Python, Power BI | Base analítica, notebook exploratório, modelo semântico e especificação de dashboard |
 
 ## O que este portfólio demonstra
 

@@ -2,7 +2,7 @@
 
 **Versão 1.0.0 · Cenário de 2025 · Dados inteiramente sintéticos**
 
-[Portfólio](../../../../../README.md) · [Empresa fictícia](../../../README.md) · [Base e reprodução](../dados/README.md) · [Dicionário](../dados/dicionario.md)
+[Portfólio de Gestão](../../../../../README.md) · [Empresa fictícia](../../../README.md) · [Base e reprodução](../dados/README.md) · [Dicionário](../dados/dicionario.md)
 
 ## 1. O que esta entrega permite examinar
 

@@ -4,7 +4,7 @@
 
 Gestão Estratégica e de Projetos orientada por Dados
 
-[Portfólio](../../README.md) · [Empresas](../README.md) · [Contexto da GENA](README.md)
+[Portfólio de Gestão](../../README.md) · [Empresas](../README.md) · [Contexto da GENA](README.md)
 
 ## A decisão em uma página
 
