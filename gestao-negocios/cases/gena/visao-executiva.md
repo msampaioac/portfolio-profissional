@@ -2,7 +2,7 @@
 
 **Documento da empresa e dos projetos**
 
-Gestão Estratégica e de Projetos orientada por Dados
+Gestão e Negócios orientada por Dados
 
 [Portfólio de Gestão](../../README.md) · [Empresas](../README.md) · [Contexto da GENA](README.md)
 

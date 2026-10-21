@@ -24,7 +24,7 @@ def _encontrar_raiz_unificada(projeto: Path) -> Path:
         if marcador.is_dir() or marcador.is_file():
             return candidato
     for candidato in (projeto, *projeto.parents):
-        if candidato.name == "gestao-estrategica-projetos":
+        if candidato.name == "gestao-negocios":
             return candidato.parent
     return projeto.parents[3] if len(projeto.parents) > 3 else projeto.parent
 

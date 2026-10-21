@@ -4,7 +4,7 @@
 
 ## Reorganização no portfólio unificado — 21/10/2026
 
-O projeto foi reorganizado na subpasta `gestao-estrategica-projetos/`; o snapshot de 2025 e a configuração 1.0.0 permanecem os mesmos, e os dados não foram alterados.
+O projeto foi reorganizado na subpasta `gestao-negocios/`; o snapshot de 2025 e a configuração 1.0.0 permanecem os mesmos, e os dados não foram alterados.
 
 ## Reorganização por empresa e projeto — 21/10/2026
 

@@ -4,7 +4,7 @@
 >
 > Construo análises end-to-end com SQL, Python, BigQuery e Power BI, transformando bases públicas em indicadores, visualizações e recomendações para decisão.
 
-[Portfólio unificado](../README.md) · [Gestão Estratégica e de Projetos](../gestao-estrategica-projetos/README.md) · [LinkedIn](https://linkedin.com/in/msampaioac)
+[Portfólio unificado](../README.md) · [Gestão e Negócios](../gestao-negocios/README.md) · [LinkedIn](https://linkedin.com/in/msampaioac)
 
 ## Projetos em destaque
 

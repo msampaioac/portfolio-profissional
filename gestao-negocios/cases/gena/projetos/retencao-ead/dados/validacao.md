@@ -71,7 +71,7 @@ Os testes de contrato validam as regras sintéticas, não predizem evasão nem h
 A partir da raiz do repositório, entre na pasta do projeto:
 
 ```bash
-cd gestao-estrategica-projetos/cases/gena/projetos/retencao-ead
+cd gestao-negocios/cases/gena/projetos/retencao-ead
 python3 scripts/gerar_dados_gena.py
 python3 -m unittest discover -s tests -v
 python3 scripts/validar_dados_gena.py

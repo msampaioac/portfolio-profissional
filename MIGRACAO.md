@@ -6,12 +6,12 @@
 
 ## Estrutura adotada
 
-Os dois portfólios foram incorporados às pastas `analise-dados/` e `gestao-estrategica-projetos/`. Os nomes internos dos projetos e a organização da GENA por empresa e projeto foram preservados. Após verificação de redundância e confirmação do proprietário, os dois repositórios de origem foram excluídos.
+Atualmente, os dois portfólios estão organizados em `analise-dados/` e `gestao-negocios/`. A pasta de gestão foi originalmente incorporada como `gestao-estrategica-projetos/` e renomeada para `gestao-negocios/` em 21/10/2026. Os nomes internos dos projetos e a organização da GENA por empresa e projeto foram preservados. Após verificação de redundância e confirmação do proprietário, os dois repositórios de origem foram excluídos.
 
 | Pasta no portfólio único | Repositório de origem excluído | Referência originalmente incorporada |
 |:---|:---|:---|
 | [analise-dados](analise-dados/README.md) | `msampaioac/data-analytics-portfolio` | [ad0c4dd](https://github.com/msampaioac/portfolio-profissional/commit/ad0c4dd66755bdf07ff549dc43c96830b1bb5e18) — 65 arquivos e 36 commits no histórico principal à época da importação |
-| [gestao-estrategica-projetos](gestao-estrategica-projetos/README.md) | `msampaioac/gestao-estrategica-projetos-portfolio` | [fe692b7](https://github.com/msampaioac/portfolio-profissional/commit/fe692b7f1137a1400ac5449cfdaefff53a0d7318) — 37 arquivos e 14 commits no histórico principal à época da importação |
+| [gestao-negocios](gestao-negocios/README.md) | `msampaioac/gestao-estrategica-projetos-portfolio` | [fe692b7](https://github.com/msampaioac/portfolio-profissional/commit/fe692b7f1137a1400ac5449cfdaefff53a0d7318) — 37 arquivos e 14 commits no histórico principal à época da importação |
 
 ## Conteúdo e histórico
 
@@ -32,7 +32,7 @@ Essas tags guardam as árvores antigas para consulta histórica; não são pasta
 
 A auditoria verificou, em cada origem, uma única branch (`main`) e ausência de tags adicionais, issues, pull requests, releases, forks e estrelas. Não havia discussões habilitadas. Foi criado e validado um backup em bundles Git de todas as referências disponíveis, acompanhado dos metadados públicos consultados, antes de executar a exclusão.
 
-Com confirmação explícita, foram removidos somente `data-analytics-portfolio` e `gestao-estrategica-projetos-portfolio`. O repositório principal e os demais projetos da conta não foram excluídos. Os endereços antigos deixam de funcionar; as referências de navegação desta documentação apontam para o portfólio único ou para commits preservados nele.
+Com confirmação explícita, foram removidos somente `data-analytics-portfolio` e `gestao-negocios-portfolio`. O repositório principal e os demais projetos da conta não foram excluídos. Os endereços antigos deixam de funcionar; as referências de navegação desta documentação apontam para o portfólio único ou para commits preservados nele.
 
 O backup Git permite reconstruir cópias locais, mas não recria a identidade dos repositórios excluídos no GitHub, seus links externos ou configurações de conta.
 
@@ -40,7 +40,7 @@ O backup Git permite reconstruir cópias locais, mas não recria a identidade do
 
 - Criar o índice único e links entre os dois portfólios.
 - Corrigir a navegação de Perfil dos Estudantes Brasileiros para o diretório existente `(2015-ano-corrente)`.
-- Adaptar comandos executados a partir da raiz para incluir `gestao-estrategica-projetos/`.
+- Adaptar comandos executados a partir da raiz para incluir `gestao-negocios/`.
 - Atualizar a geração das instruções de reprodução da Retenção EAD para reconhecer a raiz consolidada.
 - Verificar links, imagens locais, âncoras e os testes de Retenção EAD e Governança.
 - Atualizar o guia e este registro após a exclusão dos redundantes, sem deixar links ativos para os endereços removidos.

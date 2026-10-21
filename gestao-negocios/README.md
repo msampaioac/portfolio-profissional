@@ -1,4 +1,4 @@
-# Portfólio de Gestão Estratégica e de Projetos
+# Portfólio de Gestão e Negócios
 
 Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são organizados por empresa e, dentro de cada empresa, por projeto. Esta página documenta o escopo geral, o conteúdo das pastas e a evolução prevista.
 
@@ -9,7 +9,7 @@ Este portfólio conecta **Dados, Estratégia e Execução**. Os trabalhos são o
 ## 1. Como o portfólio está organizado
 
 ```text
-gestao-estrategica-projetos/
+gestao-negocios/
 ├── README.md                         Guia geral do portfólio
 ├── cases/
 │   ├── README.md                     Índice das empresas
@@ -85,8 +85,8 @@ Essa sequência é um roteiro de desenvolvimento, não uma lista de entregas já
 
 A apresentação de cada empresa é a referência do seu universo de negócio. A configuração da base é a fonte dos parâmetros sintéticos, e mudanças devem atualizar **dados, testes, documentação e índices em lote**.
 
-Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `gestao-estrategica-projetos/cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
+Após alterações de pastas, verificar os links e executar novamente os comandos do projeto. Em Retenção EAD, os comandos são rodados dentro de `gestao-negocios/cases/gena/projetos/retencao-ead/`; o [guia da base](cases/gena/projetos/retencao-ead/dados/README.md) explica a reprodução.
 
 ## Contato
 
-[LinkedIn](https://linkedin.com/in/msampaioac) para conversar sobre Gestão Estratégica, Gestão de Projetos e Business Intelligence.
+[LinkedIn](https://linkedin.com/in/msampaioac) para conversar sobre Gestão e Negócios, Estratégia e Business Intelligence.

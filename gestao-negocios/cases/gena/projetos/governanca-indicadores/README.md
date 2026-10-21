@@ -74,7 +74,7 @@ Repetir este script prova reprodução sobre os mesmos dados, não qualidade de 
 A partir da raiz do repositório, com Python 3.10 ou superior, sem bibliotecas externas:
 
 ```bash
-cd gestao-estrategica-projetos/cases/gena/projetos/governanca-indicadores
+cd gestao-negocios/cases/gena/projetos/governanca-indicadores
 python3 scripts/reconciliar_indicadores.py
 python3 -m unittest discover -s tests -v
 ```

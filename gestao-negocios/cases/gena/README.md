@@ -363,4 +363,4 @@ Cada reunião deve registrar **evidência utilizada, decisão, responsável, pra
 
 **Estágio disponível:** a base sintética, o gerador, o dicionário, os testes e a reconciliação estão organizados para exame; análise SQL, dashboard, modelo, piloto, efeito e ROI permanecem futuros. Os artefatos operacionais ficam nos respectivos projetos.
 
-[Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão Estratégica](../../README.md)
+[Voltar ao início](#grupo-educacional-nascente-do-acre--gena) · [Portfólio de Gestão e Negócios](../../README.md)
